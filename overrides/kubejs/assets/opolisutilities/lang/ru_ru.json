@@ -1,5 +1,5 @@
 {
-  "item.opolisutilities.copper_nugget": "Медный самородок",
+  "item.opolisutilities.copper_nugget": "Медный кусочек",
   "item.opolisutilities.wooden_shears": "Деревянные ножницы",
   "item.opolisutilities.home_stone": "Камень возвращения",
   "item.opolisutilities.advanced_home_stone": "Улучшенный камень возвращения",
@@ -63,4 +63,3 @@
   "enchantment.opolisutilities.warden_smite": "Кара хранителя",
   "itemGroup.opolis_utilities": "Opolis Utilities"
 }
-
