@@ -54,6 +54,35 @@ forge_args() {
   printf '%s\n' "$args"
 }
 
+sync_resource_pack_hash() {
+  local properties="$SERVER_DIR/server.properties"
+  [[ -f "$properties" ]] || return 0
+  command -v curl >/dev/null 2>&1 || {
+    say "WARNING: curl not found; resource pack hash was not refreshed"
+    return 0
+  }
+
+  local url digest current
+  url="$(sed -n 's/^resource-pack=//p' "$properties" | head -n 1)"
+  url="${url//\\:/:}"
+  [[ -n "$url" ]] || return 0
+
+  if ! digest="$(curl -fsSL "$url" | sha1sum | awk '{print $1}')"; then
+    say "WARNING: could not download the resource pack; keeping the existing hash"
+    return 0
+  fi
+  [[ "$digest" =~ ^[0-9a-f]{40}$ ]] || {
+    say "WARNING: invalid resource pack hash; keeping the existing hash"
+    return 0
+  }
+
+  current="$(sed -n 's/^resource-pack-sha1=//p' "$properties" | head -n 1)"
+  if [[ "$current" != "$digest" ]]; then
+    sed -i "s/^resource-pack-sha1=.*/resource-pack-sha1=$digest/" "$properties"
+    say "resource pack hash updated: $digest"
+  fi
+}
+
 send_command() {
   is_running || die "server is not running"
   [[ $# -gt 0 ]] || die "console command is empty"
@@ -72,6 +101,7 @@ cmd_start() {
   fi
   rm -f "$PID_FILE"
   [[ -f "$SERVER_DIR/eula.txt" ]] || die "server is not installed; run: ./serverctl install"
+  sync_resource_pack_hash
   local java args
   java="$(java_bin)"
   args="$(forge_args)"
