@@ -1,0 +1,18 @@
+{
+  "block.ftbquests.aux_task_screen": "Экран задания",
+  "block.ftbquests.screen_1": "Экран задания (1×1)",
+  "block.ftbquests.screen_3": "Экран задания (3×3)",
+  "block.ftbquests.screen_5": "Экран задания (5×5)",
+  "block.ftbquests.screen_7": "Экран задания (7×7)",
+  "block.ftbquests.screen.text_shadow": "Отображать тени текста",
+  "block.ftbquests.screen.no_permission": "У вас нет права настраивать этот блок!",
+  "block.ftbquests.stage_barrier": "Барьер этапа",
+  "block.ftbquests.detector": "Детектор квестов",
+  "item.ftbquests.missing_item": "Отсутствующий предмет",
+  "item.ftbquests.barrier.nogui": "Интерфейс ещё в разработке",
+  "item.ftbquests.barrier.disabled": "Работает только в режиме редактирования!",
+  "item.ftbquests.barrier.config": "Переименуйте на наковальне, указав ID квеста",
+  "item.ftbquests.stage_barrier.config": "Переименуйте на наковальне, указав этап",
+  "item.ftbquests.task_screen_configurator": "Настройщик экрана задания",
+  "item.ftbquests.task_screen_configurator.tooltip": "Крадитесь и нажмите ПКМ по экрану задания, чтобы привязать его"
+}
