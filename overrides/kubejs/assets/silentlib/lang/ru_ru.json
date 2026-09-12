@@ -1,0 +1,4 @@
+{
+  "item.silentlib.lootContainer.itemReceived": "Получено: %d × %s",
+  "item.silentlib.lootContainer.table": "Таблица добычи: %s"
+}
