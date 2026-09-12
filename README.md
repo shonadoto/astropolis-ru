@@ -20,6 +20,21 @@ ID заданий, зависимости, условия, награды, ре�
 
 Архив содержит только manifest и overrides. Файлы модов лаунчер скачивает с CurseForge по их project/file ID.
 
+## Автоматический ресурспак
+
+Клиентские языковые файлы можно собрать в отдельный ресурспак:
+
+```bash
+python3 tools/build_resource_pack.py
+```
+
+Архив создаётся в `dist/Astropolis-RU-ResourcePack-2.2-ru.1.zip`. Он содержит все файлы
+`overrides/kubejs/assets/*/lang/ru_ru.json` и подходит для автоматической раздачи через
+параметры `resource-pack`, `resource-pack-sha1` и `require-resource-pack` выделенного сервера.
+
+Изменения русских языковых файлов в ветке `main` автоматически обновляют постоянный релиз
+`resourcepack-latest` в GitHub Releases.
+
 ## Выделенный сервер
 
 На Linux сервер устанавливается и управляется единым скриптом:
