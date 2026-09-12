@@ -1,0 +1,17 @@
+{
+  "item.rftoolsstorage.storage_module0": "Модуль хранилища (уровень 1)",
+  "item.rftoolsstorage.storage_module1": "Модуль хранилища (уровень 2)",
+  "item.rftoolsstorage.storage_module2": "Модуль хранилища (уровень 3)",
+  "item.rftoolsstorage.storage_module3": "Модуль хранилища (уровень 4)",
+  "item.rftoolsstorage.storage_module6": "Модуль удалённого хранилища (НЕ ИСПОЛЬЗОВАТЬ)",
+  "item.rftoolsstorage.storage_module_tablet": "Планшет хранилища",
+  "item.rftoolsstorage.filter_module": "Модуль фильтра",
+  "item.rftoolsstorage.oredict_module": "Модуль типа по словарю руд",
+  "item.rftoolsstorage.generic_module": "Модуль общего типа",
+  "item.rftoolsstorage.tablet_scanner": "Планшет (сканер)",
+  "item.rftoolsstorage.storage_control_module": "Модуль экрана: управление хранилищем",
+  "item.rftoolsstorage.dump_module": "Модуль экрана: выгрузка",
+  "block.rftoolsstorage.modular_storage": "Модульное хранилище",
+  "block.rftoolsstorage.remote_storage": "Удалённое хранилище",
+  "block.rftoolsstorage.storage_scanner": "Сканер хранилищ"
+}
