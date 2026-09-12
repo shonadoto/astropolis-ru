@@ -1,0 +1,13 @@
+{
+  "block.hostilenetworks.sim_chamber": "Камера симуляции",
+  "block.hostilenetworks.loot_fabricator": "Фабрикатор добычи",
+  "item.hostilenetworks.deep_learner": "Глубокий обучатель",
+  "item.hostilenetworks.data_model": "Модель данных: %s",
+  "item.hostilenetworks.blank_data_model": "Основа модели",
+  "item.hostilenetworks.prediction": "Предсказание: %s",
+  "item.hostilenetworks.empty_prediction": "Матрица предсказания",
+  "item.hostilenetworks.overworld_prediction": "Обобщённое предсказание Верхнего мира",
+  "item.hostilenetworks.nether_prediction": "Обобщённое предсказание Незера",
+  "item.hostilenetworks.end_prediction": "Обобщённое предсказание Энда",
+  "item.hostilenetworks.twilight_prediction": "Обобщённое предсказание Сумеречного леса"
+}
