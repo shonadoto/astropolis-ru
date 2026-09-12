@@ -240,5 +240,7 @@
   "message.rftoolsutility.weakness_module.header": "Этот модуль даёт эффект слабости при использовании в контроллере среды",
   "message.rftoolsutility.weakness_module.power": "Потребление: ",
   "message.rftoolsutility.weakness_module.warning": "Этот модуль работает только на мобах (см. конфиг)",
-  "message.rftoolsutility.wire.header": "Провод — это очень простой и не лагающий редстоун-провод. Может быть только прямым"
+  "message.rftoolsutility.wire.header": "Провод — это очень простой и не лагающий редстоун-провод. Может быть только прямым",
+  "block.rftoolsutility.screen_hitblock": "Область взаимодействия с экраном (служебная)",
+  "item.rftoolsutility.teleport_probe": "Зонд телепорта"
 }

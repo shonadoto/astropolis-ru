@@ -39,5 +39,6 @@
   "message.rftoolsstorage.storage_scanner.gold": "Бонус инфузии: снижено энергопотребление",
   "message.rftoolsstorage.storage_scanner.header": "Эта машина сканирует все ближайшие инвентари и показывает их в списке. Вы можете искать и получать предметы из этих инвентарей",
   "message.rftoolsstorage.tablet_scanner.gold": "Таблет содержит ссылку на сканер хранилища: ПКМ — открыть интерфейс сканера, крадущийся ПКМ — открыть интерфейс таблет",
-  "message.rftoolsstorage.tablet_scanner.header": "Таблет, который можно использовать для доступа к удалённым интерфейсам и информации"
+  "message.rftoolsstorage.tablet_scanner.header": "Таблет, который можно использовать для доступа к удалённым интерфейсам и информации",
+  "block.rftoolsstorage.crafting_manager": "Менеджер крафта (в разработке)"
 }

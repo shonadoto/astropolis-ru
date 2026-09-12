@@ -45,5 +45,6 @@
   "tooltip.essence.lightning_summoner.tooltip.shift": "Нажмите ПКМ по затопленному громоотводу, чтобы создать грозовую воду",
   "tooltip.essence.spawner_shard_extractor.tooltip": "Зажмите SHIFT, чтобы узнать больше",
   "tooltip.essence.spawner_shard_extractor.tooltip.shift": "Нажмите ПКМ по спавнеру, чтобы сломать его и получить шанс на выпадение осколков",
-  "world.essence.needs_lightning_water": "Все соседние блоки должны быть грозовой водой!"
+  "world.essence.needs_lightning_water": "Все соседние блоки должны быть грозовой водой!",
+  "block.essence.lightning_water_block": "Грозовая вода"
 }

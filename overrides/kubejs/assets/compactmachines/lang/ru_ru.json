@@ -60,5 +60,7 @@
   "tooltip.compactmachines.machine.bound_to": "Привязана к: %1$s",
   "tooltip.compactmachines.room_name": "Привязана к комнате: %s",
   "tooltip.compactmachines.room_upgrade_type": "Тип: %s",
-  "tooltip.compactmachines.tutorial_apply_room_upgrade": "Используйте на привязанном блоке машины, чтобы применить улучшение."
+  "tooltip.compactmachines.tutorial_apply_room_upgrade": "Используйте на привязанном блоке машины, чтобы применить улучшение.",
+  "block.compactmachines.machine_void_air": "Пустотный воздух компактной машины",
+  "item.compactmachines.chunkloader_upgrade": "Улучшение загрузки чанков"
 }

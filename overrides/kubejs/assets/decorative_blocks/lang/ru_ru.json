@@ -13,5 +13,6 @@
   "wiki.decorative_blocks.support.condition1": "§7ПКМ в воздухе крадучись:",
   "wiki.decorative_blocks.support.condition2": "§7ПКМ топором:",
   "wiki.decorative_blocks.support.condition3": "§7ПКМ топором крадучись:",
-  "itemGroup.decorative_blocks.general": "Декоративные блоки"
+  "itemGroup.decorative_blocks.general": "Декоративные блоки",
+  "item.decorative_blocks.blockstate_copy_item": "Копировщик состояния блока (служебный)"
 }
