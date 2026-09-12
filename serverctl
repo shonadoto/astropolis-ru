@@ -292,6 +292,41 @@ cmd_ai_deploy() {
   fi
 }
 
+cmd_ai_configure() {
+  [[ -t 0 ]] || die "ai-configure must be run from an interactive terminal"
+  local key template tmp
+  read -r -s -p "OpenAI API key: " key
+  printf '\n'
+  [[ "$key" == sk-* ]] || die "the key must start with sk-"
+  template="$ENV_FILE"
+  [[ -f "$template" ]] || template="$ROOT_DIR/.server.env.example"
+  tmp="$(mktemp "$ROOT_DIR/.server.env.tmp.XXXXXX")"
+  chmod 600 "$tmp"
+  awk -v key="$key" '
+    BEGIN { replaced = 0 }
+    /^OPENAI_API_KEY=/ {
+      if (!replaced) print "OPENAI_API_KEY=" key
+      replaced = 1
+      next
+    }
+    { print }
+    END { if (!replaced) print "OPENAI_API_KEY=" key }
+  ' "$template" > "$tmp"
+  mv "$tmp" "$ENV_FILE"
+  chmod 600 "$ENV_FILE"
+  unset key
+  stop_ai_bridge
+  # Export the just-written values without printing them.
+  set -a
+  source "$ENV_FILE"
+  set +a
+  start_ai_bridge
+  say "OpenAI key saved to .server.env (mode 600); verify with './serverctl ai-status'"
+  if is_running; then
+    say "Restart Minecraft once to register /ai if this is the first setup"
+  fi
+}
+
 cmd_logs() {
   [[ -f "$CONSOLE_LOG" ]] || die "no console log yet"
   tail -n "${LOG_LINES:-100}" -F "$CONSOLE_LOG"
@@ -326,6 +361,7 @@ Usage: ./serverctl <command> [arguments]
   status              show process status
   ai-status           show AI bridge health and configuration state
   ai-deploy           deploy /ai files and start its loopback bridge
+  ai-configure        securely read and save the OpenAI API key
   logs                follow the console log (Ctrl+C only exits the viewer)
   console <command>   send a Minecraft console command
   backup              flush saves and create a timestamped backup
@@ -342,6 +378,7 @@ case "$command" in
   status) cmd_status ;;
   ai-status) cmd_ai_status ;;
   ai-deploy) cmd_ai_deploy ;;
+  ai-configure) cmd_ai_configure ;;
   logs) cmd_logs ;;
   console) send_command "$@" ;;
   backup) cmd_backup ;;
