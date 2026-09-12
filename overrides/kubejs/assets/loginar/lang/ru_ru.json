@@ -1,0 +1,21 @@
+{
+  "block.loginar.huge_loginar_urn": "Огромная урна Loginar",
+  "block.loginar.large_loginar_urn": "Большая урна Loginar",
+  "block.loginar.medium_loginar_urn": "Средняя урна Loginar",
+  "block.loginar.small_loginar_urn": "Малая урна Loginar",
+  "block.loginar.super_loginar_urn": "Суперурна Loginar",
+  "block.loginar.tiny_loginar_urn": "Крошечная урна Loginar",
+  "item.loginar.backpack_upgrade": "Ранцевое улучшение урны",
+  "item.loginar.backpack_upgrade.desc": "Позволяет открывать урну, не устанавливая её",
+  "item.loginar.item_swapper_upgrade": "Улучшение урны «Замена предметов»",
+  "item.loginar.item_swapper_upgrade.desc": "Позволяет извлекать отдельные предметы из урны назначенной клавишей",
+  "item.loginar.loginar_antenna": "Антенна Loginar",
+  "item.loginar.loginar_antenna.lit": "Антенна слабо светится…",
+  "item.loginar.loginar_calamari": "Кальмар Loginar",
+  "item.loginar.loginar_spawn_egg": "Яйцо призыва логинара",
+  "item.loginar.loginar_tentacle": "Щупальце логинара",
+  "item.loginar.lunch_box": "Ланч-бокс",
+  "item.loginar.lunch_box.desc": "Хранит еду. Нажмите ПКМ, чтобы поесть; Shift + ПКМ — чтобы открыть.",
+  "item.loginar.vacuum_upgrade": "Вакуумное улучшение урны",
+  "item.loginar.vacuum_upgrade.desc": "Притягивает и сохраняет лежащие рядом предметы"
+}
