@@ -1,0 +1,4 @@
+# Client-only mods from Astropolis 2.2 that crash a dedicated Forge server.
+# Format: <CurseForge project ID>-<file ID>.jar
+238372-3878735.jar  # Neat
+441114-4018074.jar  # Neko's Enchanted Books

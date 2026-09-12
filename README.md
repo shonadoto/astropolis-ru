@@ -20,6 +20,30 @@ ID заданий, зависимости, условия, награды, ре�
 
 Архив содержит только manifest и overrides. Файлы модов лаунчер скачивает с CurseForge по их project/file ID.
 
+## Выделенный сервер
+
+На Linux сервер устанавливается и управляется единым скриптом:
+
+```bash
+./serverctl install
+./serverctl start
+./serverctl status
+./serverctl logs
+```
+
+Остановка, перезапуск, консольная команда и резервная копия:
+
+```bash
+./serverctl stop
+./serverctl restart
+./serverctl console "say Сервер скоро перезапустится"
+./serverctl backup
+```
+
+По умолчанию сервер использует 4–10 ГБ памяти, работает на порту `25565` и хранит мир в локальном каталоге `server/`. Настройки можно переопределить в `.server.env` по образцу [.server.env.example](.server.env.example).
+
+Команда установки записывает `eula=true`; запускающий её владелец сервера должен принять [Minecraft EULA](https://aka.ms/MinecraftEULA).
+
 ## Проверка перевода
 
 ```bash

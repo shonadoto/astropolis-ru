@@ -1,0 +1,191 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+ROOT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+ENV_FILE="$ROOT_DIR/.server.env"
+[[ -f "$ENV_FILE" ]] && source "$ENV_FILE"
+
+SERVER_DIR="${ASTROPOLIS_SERVER_DIR:-$ROOT_DIR/server}"
+MIN_RAM="${MIN_RAM:-4G}"
+MAX_RAM="${MAX_RAM:-10G}"
+STOP_TIMEOUT="${STOP_TIMEOUT:-120}"
+CONSOLE_LOG="$SERVER_DIR/console.log"
+COMMAND_FILE="$SERVER_DIR/.console-input"
+PID_FILE="$SERVER_DIR/.server.pid"
+BACKUP_DIR="${BACKUP_DIR:-$ROOT_DIR/backups}"
+
+say() { printf '[astropolis] %s\n' "$*"; }
+die() { say "ERROR: $*" >&2; exit 1; }
+
+read_pid() {
+  [[ -s "$PID_FILE" ]] || return 1
+  local pid
+  read -r pid < "$PID_FILE"
+  [[ "$pid" =~ ^[0-9]+$ ]] || return 1
+  printf '%s\n' "$pid"
+}
+
+is_running() {
+  local pid
+  pid="$(read_pid)" || return 1
+  kill -0 "$pid" 2>/dev/null || return 1
+  [[ "$(readlink -f "/proc/$pid/cwd" 2>/dev/null || true)" == "$(readlink -f "$SERVER_DIR")" ]]
+}
+
+java_bin() {
+  if [[ -n "${JAVA_BIN:-}" && -x "$JAVA_BIN" ]]; then
+    printf '%s\n' "$JAVA_BIN"
+  elif [[ -s "$SERVER_DIR/.astropolis-java" ]] && [[ -x "$(cat "$SERVER_DIR/.astropolis-java")" ]]; then
+    cat "$SERVER_DIR/.astropolis-java"
+  else
+    local candidate
+    candidate="$(find "$ROOT_DIR/runtime" -path '*/bin/java' -type f -perm -u+x 2>/dev/null | sort -r | head -n 1)"
+    [[ -n "$candidate" ]] || die "Java 17 not found; run: ./serverctl install"
+    printf '%s\n' "$candidate"
+  fi
+}
+
+forge_args() {
+  [[ -s "$SERVER_DIR/.astropolis-forge" ]] || die "Forge is not installed; run: ./serverctl install"
+  local version
+  read -r version < "$SERVER_DIR/.astropolis-forge"
+  local args="$SERVER_DIR/libraries/net/minecraftforge/forge/$version/unix_args.txt"
+  [[ -f "$args" ]] || die "Forge arguments not found: $args"
+  printf '%s\n' "$args"
+}
+
+send_command() {
+  is_running || die "server is not running"
+  [[ $# -gt 0 ]] || die "console command is empty"
+  printf '%s\n' "$*" >> "$COMMAND_FILE"
+}
+
+cmd_install() {
+  is_running && die "stop the server before installing or deploying"
+  ASTROPOLIS_SERVER_DIR="$SERVER_DIR" python3 "$ROOT_DIR/tools/install_server.py"
+}
+
+cmd_start() {
+  if is_running; then
+    say "already running (PID $(read_pid))"
+    return 0
+  fi
+  rm -f "$PID_FILE"
+  [[ -f "$SERVER_DIR/eula.txt" ]] || die "server is not installed; run: ./serverctl install"
+  local java args
+  java="$(java_bin)"
+  args="$(forge_args)"
+  : > "$COMMAND_FILE"
+  touch "$CONSOLE_LOG"
+  say "starting with Java 17, RAM $MIN_RAM..$MAX_RAM"
+  (
+    cd "$SERVER_DIR"
+    setsid bash -c '
+      echo "$$" > "$1"
+      exec "$2" "-Xms$3" "-Xmx$4" \
+        -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 \
+        -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch \
+        "@$5" nogui < <(tail -n 0 -F "$6") >> "$7" 2>&1
+    ' bash "$PID_FILE" "$java" "$MIN_RAM" "$MAX_RAM" "$args" "$COMMAND_FILE" "$CONSOLE_LOG" &
+  )
+  for _ in {1..50}; do
+    is_running && break
+    sleep 0.1
+  done
+  is_running || die "server process did not start; inspect $CONSOLE_LOG"
+  say "started (PID $(read_pid)); use './serverctl logs' to follow startup"
+}
+
+cmd_stop() {
+  if ! is_running; then
+    rm -f "$PID_FILE"
+    say "already stopped"
+    return 0
+  fi
+  local pid waited=0
+  pid="$(read_pid)"
+  say "requesting graceful shutdown (PID $pid)"
+  printf 'stop\n' >> "$COMMAND_FILE"
+  while kill -0 "$pid" 2>/dev/null && (( waited < STOP_TIMEOUT )); do
+    sleep 1
+    ((waited+=1))
+  done
+  if kill -0 "$pid" 2>/dev/null; then
+    say "console shutdown timed out; sending SIGTERM"
+    kill "$pid" 2>/dev/null || true
+    for _ in {1..20}; do
+      kill -0 "$pid" 2>/dev/null || break
+      sleep 1
+    done
+  fi
+  if kill -0 "$pid" 2>/dev/null; then
+    say "SIGTERM timed out; sending SIGKILL"
+    kill -KILL "$pid" 2>/dev/null || true
+  fi
+  rm -f "$PID_FILE"
+  say "stopped"
+}
+
+cmd_status() {
+  if is_running; then
+    local pid
+    pid="$(read_pid)"
+    say "RUNNING (PID $pid, port ${SERVER_PORT:-25565})"
+    ps -p "$pid" -o pid=,etime=,%cpu=,%mem=,rss=,cmd=
+  else
+    say "STOPPED"
+    return 1
+  fi
+}
+
+cmd_logs() {
+  [[ -f "$CONSOLE_LOG" ]] || die "no console log yet"
+  tail -n "${LOG_LINES:-100}" -F "$CONSOLE_LOG"
+}
+
+cmd_backup() {
+  mkdir -p "$BACKUP_DIR"
+  local stamp archive
+  stamp="$(date -u +%Y%m%d-%H%M%S)"
+  archive="$BACKUP_DIR/astropolis-$stamp.tar.gz"
+  if is_running; then
+    send_command "save-all flush"
+    sleep 5
+  fi
+  local paths=()
+  for path in world server.properties whitelist.json ops.json banned-ips.json banned-players.json; do
+    [[ -e "$SERVER_DIR/$path" ]] && paths+=("$path")
+  done
+  ((${#paths[@]})) || die "nothing to back up yet"
+  tar -C "$SERVER_DIR" -czf "$archive" "${paths[@]}"
+  say "backup created: $archive"
+}
+
+usage() {
+  cat <<'EOF'
+Usage: ./serverctl <command> [arguments]
+
+  install             download mods, install Forge, deploy the RU pack
+  start               start the server in the background
+  stop                save and stop the server cleanly
+  restart             stop, then start
+  status              show process status
+  logs                follow the console log (Ctrl+C only exits the viewer)
+  console <command>   send a Minecraft console command
+  backup              flush saves and create a timestamped backup
+EOF
+}
+
+command="${1:-}"
+shift || true
+case "$command" in
+  install|deploy) cmd_install ;;
+  start) cmd_start ;;
+  stop) cmd_stop ;;
+  restart) cmd_stop; cmd_start ;;
+  status) cmd_status ;;
+  logs) cmd_logs ;;
+  console) send_command "$@" ;;
+  backup) cmd_backup ;;
+  *) usage; [[ -z "$command" ]] || exit 2 ;;
+esac
