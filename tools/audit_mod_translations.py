@@ -103,7 +103,7 @@ def main() -> None:
                             )
                         )
                     }
-                    priority = "P0" if quest_missing else ("P1" if refs and missing else ("P2" if missing else "DONE"))
+                    priority = "DONE" if not missing else ("P0" if quest_missing else ("P1" if refs else "P2"))
                     rows.append({
                         "priority": priority,
                         "namespace": namespace,
@@ -126,7 +126,7 @@ def main() -> None:
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     fieldnames = list(rows[0]) if rows else []
     with OUTPUT.open("w", encoding="utf-8", newline="") as stream:
-        writer = csv.DictWriter(stream, fieldnames=fieldnames, dialect="excel-tab")
+        writer = csv.DictWriter(stream, fieldnames=fieldnames, dialect="excel-tab", lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
