@@ -284,7 +284,7 @@
 		}
 		{
 			dependencies: ["5FF0A481ABC549F2"]
-			description: ["Улучшенный растущий истинный кварц"]
+			description: ["Улучшенный цветущий истинный кварц"]
 			id: "79A114E60E576DD6"
 			rewards: [{
 				id: "20FCA5FB164452F6"
@@ -301,7 +301,7 @@
 		}
 		{
 			dependencies: ["79A114E60E576DD6"]
-			description: ["Продвинутый растущий истинный кварц"]
+			description: ["Продвинутый цветущий истинный кварц"]
 			id: "0EE6CDF39B41C17F"
 			rewards: [{
 				id: "7846E8DCB6040040"
