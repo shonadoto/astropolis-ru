@@ -6,5 +6,6 @@
   "item.geckolib3.jackintheboxitem": "Чёртик из табакерки",
   "item.geckolib3.pistol": "Пистолет",
   "block.geckolib3.habitatblock": "Террариум геккона",
-  "block.geckolib3.fertilizerblock": "Удобрение"
+  "block.geckolib3.fertilizerblock": "Удобрение",
+  "itemGroup.geckolib_examples": "Geckolib Examples"
 }

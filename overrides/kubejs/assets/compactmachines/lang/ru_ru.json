@@ -3,6 +3,18 @@
   "item.compactmachines.tunnels.fluid": "Жидкостный туннель",
   "item.compactmachines.tunnels.item": "Предметный туннель",
   "item.compactmachines.upgrades.chunkloader": "Улучшение загрузки чанков",
-  "item.compactmachines.upgrades.unnamed": "Улучшение безымянной комнаты"
+  "item.compactmachines.upgrades.unnamed": "Улучшение безымянной комнаты",
+  "advancement.compactmachines.foundations": "Основы",
+  "advancement.compactmachines.foundations.desc": "Добудьте разрушаемый блок стены.",
+  "advancement.compactmachines.got_shrinking_device": "Персональное устройство сжатия",
+  "advancement.compactmachines.got_shrinking_device.desc": "Получите персональное устройство сжатия",
+  "advancement.compactmachines.how_did_you_get_here": "Как ты сюда попал?!",
+  "advancement.compactmachines.how_did_you_get_here.desc": "В какой машине находится игрок?!",
+  "advancement.compactmachines.recursion": "Рекурсивные комнаты",
+  "advancement.compactmachines.recursion.desc": "Чтобы понять рекурсию, нужно сначала понять рекурсию.",
+  "advancement.compactmachines.root": "Compact Machines",
+  "advancement.compactmachines.root.desc": "",
+  "biome.compactmachines.machine": "Компактная машина",
+  "jei.compactmachines.machines": "Машины используются для создания карманных измерений. Создайте машину и разместите её в мире, затем используйте персональное устройство сжатия, чтобы попасть внутрь.",
+  "jei.compactmachines.shrinking_device": "Используйте персональное устройство сжатия (PSD) на машине, чтобы войти в компактное пространство."
 }
-

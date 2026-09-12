@@ -1,0 +1,13 @@
+{
+  "text.autoconfig.forgivingvoid.option.damageOnFall": "Урон при падении",
+  "text.autoconfig.forgivingvoid.option.dimensionAllowList": "Список разрешённых измерений",
+  "text.autoconfig.forgivingvoid.option.dimensionDenyList": "Список запрещённых измерений",
+  "text.autoconfig.forgivingvoid.option.disableVanillaAntiCheatWhileFalling": "Отключить античит ванильной игры при падении",
+  "text.autoconfig.forgivingvoid.option.fallingHeight": "Высота падения",
+  "text.autoconfig.forgivingvoid.option.preventDeath": "Предотвратить смерть",
+  "text.autoconfig.forgivingvoid.option.triggerAtY": "Активировать на Y",
+  "text.autoconfig.forgivingvoid.option.triggerInEnd": "Активировать в Энде",
+  "text.autoconfig.forgivingvoid.option.triggerInNether": "Активировать в Незере",
+  "text.autoconfig.forgivingvoid.option.triggerInOverworld": "Активировать в Верхнем мире",
+  "text.autoconfig.forgivingvoid.title": "Прощающая Пустота"
+}

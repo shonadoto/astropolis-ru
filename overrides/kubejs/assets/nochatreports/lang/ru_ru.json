@@ -1,0 +1,12 @@
+{
+  "gui.nochatreports.encryption_state_off": "§c§lОтключено§r",
+  "gui.nochatreports.encryption_state_on": "§a§lВключено§r",
+  "gui.nochatreports.encryption_warning.check": "Больше не показывать",
+  "gui.nochatreports.encryption_warning.learn_more": "Узнать больше",
+  "gui.nochatreports.realms_warning.check": "Больше не показывать",
+  "gui.nochatreports.realms_warning.contents": "Серверы Realms не являются частными. Владельцы Realms не могут отключить отчеты о чатах, и Mojang использует дополнительный мониторинг чатов для выявления потенциального «онлайн-вреда» и доведения его до сведения пользователей. Если после этого будет установлено, что вы нарушаете стандарты сообщества Minecraft - даже если участники чата не обиделись - вы будете временно или навсегда заблокированы во всех многопользовательских сервисах. Настоятельно рекомендуется использовать шифрование.",
+  "gui.nochatreports.realms_warning.header": "Внимание: Realms",
+  "gui.nochatreports.realms_warning.learn_more": "Узнать больше",
+  "nochatreports.connect.await": "Ожидание повторного подключения: %1$s секунд…",
+  "nochatreports.connect.nokey_rejected": "Сервер отклонил соединение без ключа подписи чата."
+}

@@ -1,4 +1,7 @@
 {
   "item.silentlib.lootContainer.itemReceived": "Получено: %d × %s",
-  "item.silentlib.lootContainer.table": "Таблица добычи: %s"
+  "item.silentlib.lootContainer.table": "Таблица добычи: %s",
+  "command.silentlib.nbt.noItemInHand": "Нет предмета в основной руке",
+  "command.silentlib.nbt.noItemTag": "У %s нет NBT-данных",
+  "command.silentlib.nbt.notBlockEntity": "%s не является блочным объектом"
 }

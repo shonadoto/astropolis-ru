@@ -1,0 +1,11 @@
+{
+  "blackdogsmoddinglibrary.dialogs.confirm.title": "Подтвердить",
+  "blackdogsmoddinglibrary.radial.page_footer": "Страница %d из %d",
+  "blackdogsmoddinglibrary.radial.right_click_for": "§9ПКМ§r для",
+  "blackdogsmoddinglibrary.radial.right_click_for_options": "§9ПКМ§r для опций",
+  "blackdogsmoddinglibrary.tooltip.item.level": "Уровень",
+  "blackdogsmoddinglibrary.tooltip.item.level_progress": "%d (%d/%d)",
+  "blackdogsmoddinglibrary.tooltip.item.max_level": "§5Макс.§r",
+  "blackdogsmoddinglibrary.tooltip.item.not_able_to_level": "§cНельзя улучшить§r",
+  "blackdogsmoddinglibrary.tooltip.item.soulbound_achieved": "Вы чувствуете, что слились со своим %s, теперь даже смерть не разлучит вас с ним!"
+}

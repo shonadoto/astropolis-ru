@@ -14,5 +14,14 @@
   "item.ftbquests.barrier.config": "Переименуйте на наковальне, указав ID квеста",
   "item.ftbquests.stage_barrier.config": "Переименуйте на наковальне, указав этап",
   "item.ftbquests.task_screen_configurator": "Настройщик экрана задания",
-  "item.ftbquests.task_screen_configurator.tooltip": "Крадитесь и нажмите ПКМ по экрану задания, чтобы привязать его"
+  "item.ftbquests.task_screen_configurator.tooltip": "Крадитесь и нажмите ПКМ по экрану задания, чтобы привязать его",
+  "ftbquests.file.progression_mode.default": "По умолчанию",
+  "ftbquests.quest_link.shape": "Форма",
+  "ftbquests.quest_link.size": "Размер",
+  "ftbquests.quest_link.x": "X",
+  "ftbquests.quest_link.y": "Y",
+  "ftbquests.reward.ftbquests.command.silent": "Бесшумный",
+  "ftbquests.task.ftbquests.observation.observe_type": "Тип",
+  "itemGroup.ftbquests.ftbquests": "Квесты FTB",
+  "key.categories.ftbquests": "Квесты FTB"
 }

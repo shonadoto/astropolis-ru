@@ -36,5 +36,12 @@
   "item.immersiveengineering.shader.name.acepride": "Ас",
   "item.immersiveengineering.fusilier_spawn_egg": "Яйцо призыва фузилёра",
   "item.immersiveengineering.commando_spawn_egg": "Яйцо призыва коммандос",
-  "item.immersiveengineering.bulwark_spawn_egg": "Яйцо призыва бастиона"
+  "item.immersiveengineering.bulwark_spawn_egg": "Яйцо призыва бастиона",
+  "advancement.immersiveengineering.main_root": "Immersive Engineering",
+  "entity.immersiveengineering.sawblade": "Пильный диск",
+  "fluid_type.immersiveengineering.biodiesel": "Биодизель",
+  "fluid_type.immersiveengineering.concrete": "Жидкий бетон",
+  "fluid_type.immersiveengineering.creosote": "Креозот",
+  "fluid_type.immersiveengineering.ethanol": "Этанол",
+  "fluid_type.immersiveengineering.plantoil": "Растительное масло"
 }

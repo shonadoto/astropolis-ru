@@ -21,5 +21,21 @@
   "item.ironchest.diamond_to_crystal_chest_upgrade": "Улучшение сундука: алмазный → кристальный",
   "item.ironchest.wood_to_iron_chest_upgrade": "Улучшение сундука: деревянный → железный",
   "item.ironchest.wood_to_copper_chest_upgrade": "Улучшение сундука: деревянный → медный",
-  "item.ironchest.diamond_to_obsidian_chest_upgrade": "Улучшение сундука: алмазный → обсидиановый"
+  "item.ironchest.diamond_to_obsidian_chest_upgrade": "Улучшение сундука: алмазный → обсидиановый",
+  "_comment": "Группы предметов",
+  "book.ironchest.dirtchest9000.page1": "Добро пожаловать в ваш новый Грязесундук 9000! Мы надеемся, что вы будете наслаждаться многими годами хранения вашей стопки земли в нашем хранилище.",
+  "book.ironchest.dirtchest9000.page2": "Использование: просто поместите выбранную вами стопку земли в очень отзывчивый слот и наслаждайтесь удобством — земля всегда будет под рукой, когда вы проходите мимо этого сундука!",
+  "book.ironchest.dirtchest9000.page3": "Мы надеемся, что вам понравилось читать это руководство, и что вы рассмотрите возможность использования нашей продукции в будущем! С уважением, коллектив авторов руководства по Грязесундуку 9000.",
+  "book.ironchest.dirtchest9000.page4": "Гарантия: этот продукт не имеет никакой гарантии. Ваша земля может не сохраниться, может медленно просачиваться в окружающую среду или, наоборот, вообще ничего не произойти.",
+  "book.ironchest.dirtchest9000.page5": "Грязесундук 9000 заботится об окружающей среде. Пожалуйста, утилизируйте это руководство ответственно и ни в коем случае не бросайте его в лаву. Нам будет очень грустно.",
+  "book.ironchest.dirtchest9000.title": "Как пользоваться Грязесундуком 9000!",
+  "ironchest.container.copper_chest": "Медный сундук",
+  "ironchest.container.crystal_chest": "Кристальный сундук",
+  "ironchest.container.diamond_chest": "Алмазный сундук",
+  "ironchest.container.dirt_chest": "Грязесундук 9000!",
+  "ironchest.container.gold_chest": "Золотой сундук",
+  "ironchest.container.iron_chest": "Железный сундук",
+  "ironchest.container.obsidian_chest": "Обсидиановый сундук",
+  "ironchest.container.silver_chest": "Серебряный сундук",
+  "itemGroup.ironchest": "Iron Chests"
 }

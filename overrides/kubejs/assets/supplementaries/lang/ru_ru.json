@@ -10,5 +10,12 @@
   "wood_type.maidensmerrymaking.pine": "сосны",
   "wood_type.maidensmerrymaking.exposed_pine": "потемневшей сосны",
   "wood_type.maidensmerrymaking.weathered_pine": "обветренной сосны",
-  "wood_type.maidensmerrymaking.aged_pine": "старой сосны"
+  "wood_type.maidensmerrymaking.aged_pine": "старой сосны",
+  "advancements.husbandry.turn_table.description": "Используй поворотный стол для вращения",
+  "advancements.husbandry.turn_table.title": "Опять головокружение...",
+  "advancements.husbandry.wrench.description": "Используй гаечный ключ, чтобы повернуть какой-то блок.",
+  "advancements.husbandry.wrench.title": "Медная рука",
+  "itemGroup.supplementaries.supplementaries": "Supplementaries",
+  "supplementaries.gui.controls": "Supplementaries",
+  "trinkets.slot.legs.key": "Ключ"
 }

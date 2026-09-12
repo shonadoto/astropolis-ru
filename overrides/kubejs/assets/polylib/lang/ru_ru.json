@@ -1,0 +1,11 @@
+{
+  "energy_bar.polylib.capacity": "Вместимость:",
+  "energy_bar.polylib.energy_storage": "Хранилище энергии",
+  "energy_bar.polylib.rf": "RF",
+  "energy_bar.polylib.stored": "Сохранено:",
+  "fluid_tank.polylib.capacity": "Вместимость:",
+  "fluid_tank.polylib.contains": "Содержит:",
+  "fluid_tank.polylib.fluid_storage": "Хранилище жидкости",
+  "fluid_tank.polylib.mb": "мБ",
+  "fluid_tank.polylib.stored": "Сохранено:"
+}
