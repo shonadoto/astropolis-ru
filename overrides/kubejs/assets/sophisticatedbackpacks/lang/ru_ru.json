@@ -1,0 +1,20 @@
+{
+  "item.sophisticatedbackpacks.copper_backpack": "Медный рюкзак",
+  "block.sophisticatedbackpacks.copper_backpack": "Медный рюкзак",
+  "item.sophisticatedbackpacks.stack_upgrade_starter_tier": "Начальное улучшение «Переполнение»",
+  "item.sophisticatedbackpacks.stack_upgrade_starter_tier.tooltip": "Умножает количество хранимых в слоте стаков на 1,5",
+  "item.sophisticatedbackpacks.chipped.botanist_workbench_upgrade": "Chipped: улучшение «Верстак ботаника»",
+  "item.sophisticatedbackpacks.chipped.botanist_workbench_upgrade.tooltip": "Добавляет верстак ботаника из Chipped во вкладку улучшений",
+  "item.sophisticatedbackpacks.chipped.glassblower_workbench_upgrade": "Chipped: улучшение «Верстак стеклодува»",
+  "item.sophisticatedbackpacks.chipped.glassblower_workbench_upgrade.tooltip": "Добавляет верстак стеклодува из Chipped во вкладку улучшений",
+  "item.sophisticatedbackpacks.chipped.carpenter_workbench_upgrade": "Chipped: улучшение «Верстак плотника»",
+  "item.sophisticatedbackpacks.chipped.carpenter_workbench_upgrade.tooltip": "Добавляет верстак плотника из Chipped во вкладку улучшений",
+  "item.sophisticatedbackpacks.chipped.mason_workbench_upgrade": "Chipped: улучшение «Верстак каменщика»",
+  "item.sophisticatedbackpacks.chipped.mason_workbench_upgrade.tooltip": "Добавляет верстак каменщика из Chipped во вкладку улучшений",
+  "item.sophisticatedbackpacks.chipped.shepherd_workbench_upgrade": "Chipped: улучшение «Верстак пастуха»",
+  "item.sophisticatedbackpacks.chipped.shepherd_workbench_upgrade.tooltip": "Добавляет верстак пастуха из Chipped во вкладку улучшений",
+  "item.sophisticatedbackpacks.chipped.philosopher_workbench_upgrade": "Chipped: улучшение «Верстак философа»",
+  "item.sophisticatedbackpacks.chipped.philosopher_workbench_upgrade.tooltip": "Добавляет верстак философа из Chipped во вкладку улучшений",
+  "item.sophisticatedbackpacks.chipped.tinkerer_workbench_upgrade": "Chipped: улучшение «Верстак мастера»",
+  "item.sophisticatedbackpacks.chipped.tinkerer_workbench_upgrade.tooltip": "Добавляет верстак мастера из Chipped во вкладку улучшений"
+}
