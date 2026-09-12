@@ -1,0 +1,18 @@
+{
+  "block.laserio.laser_connector": "Лазерный соединитель",
+  "block.laserio.laser_node": "Лазерный узел",
+  "item.laserio.card_energy": "Энергетическая карта",
+  "item.laserio.card_fluid": "Жидкостная карта",
+  "item.laserio.card_holder": "Держатель карт",
+  "item.laserio.card_item": "Предметная карта",
+  "item.laserio.card_redstone": "Редстоуновая карта",
+  "item.laserio.filter_basic": "Базовый фильтр",
+  "item.laserio.filter_count": "Количественный фильтр",
+  "item.laserio.filter_mod": "Фильтр модов",
+  "item.laserio.filter_tag": "Фильтр тегов",
+  "item.laserio.laser_wrench": "Лазерный ключ",
+  "item.laserio.logic_chip": "Логическая микросхема",
+  "item.laserio.logic_chip_raw": "Необработанная логическая микросхема",
+  "item.laserio.overclocker_card": "Ускоритель карты",
+  "item.laserio.overclocker_node": "Ускоритель узла"
+}
