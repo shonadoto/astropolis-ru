@@ -152,14 +152,21 @@ def main() -> None:
 
         custom = read_pack(namespace)
         missing = set(english) - set(built_in) - set(custom)
+        untranslated_built_in = {
+            key
+            for key in set(english) & set(built_in) - set(custom)
+            if built_in[key] == english[key]
+        }
         imported: dict[str, str] = {}
         skipped_placeholders = 0
-        for key in sorted(missing):
+        for key in sorted(missing | untranslated_built_in):
             candidate = source_ru.get(key)
             if candidate is None:
                 candidates = by_english.get(english[key], set())
                 candidate = next(iter(candidates)) if len(candidates) == 1 else None
             if not isinstance(candidate, str):
+                continue
+            if candidate == english[key]:
                 continue
             if conversion_types(english[key]) != conversion_types(candidate):
                 skipped_placeholders += 1

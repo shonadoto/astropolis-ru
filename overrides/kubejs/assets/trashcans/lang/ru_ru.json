@@ -1,0 +1,16 @@
+{
+  "trashcans.advancement.trash_can.description": "Создайте мусорную корзину",
+  "trashcans.advancement.trash_can.title": "Не забывайте о переработке",
+  "trashcans.advancement.ultimate_trash_can.description": "Создайте предельную мусорную корзину",
+  "trashcans.advancement.ultimate_trash_can.title": "Предельная мусорная корзина",
+  "trashcans.block.energy_trash_can": "Энергетическая мусорная корзина",
+  "trashcans.block.item_trash_can": "Предметная мусорная корзина",
+  "trashcans.block.liquid_trash_can": "Жидкостная мусорная корзина",
+  "trashcans.block.ultimate_trash_can": "Предельная мусорная корзина",
+  "trashcans.energy_trash_can.info": "Уничтожает энергию и позволяет ограничить скорость её передачи",
+  "trashcans.gui.arrow.left": "Уменьшить лимит энергии",
+  "trashcans.gui.arrow.right": "Увеличить лимит энергии",
+  "trashcans.item_trash_can.info": "Уничтожает предметы и содержит фильтр на 9 предметов",
+  "trashcans.liquid_trash_can.info": "Уничтожает жидкости и газы и содержит фильтр на 9 жидкостей",
+  "trashcans.ultimate_trash_can.info": "Уничтожает предметы, жидкости и энергию"
+}

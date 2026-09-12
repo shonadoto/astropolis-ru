@@ -61,5 +61,19 @@
   "narration.jade.bookName": "Название книги: %s",
   "narration.jade.health": "Здоровье: %s",
   "toast.jade.toggle_hint.1": "Jade теперь закрыт",
-  "toast.jade.toggle_hint.2": "Для повторного открытия нажмите %s."
+  "toast.jade.toggle_hint.2": "Для повторного открытия нажмите %s.",
+  "config.jade.danger_zone_desc": "Спокойно, это не §oDanger Zone",
+  "config.jade.display_mode_lite_desc.fabric": "Удерживайте Shift, чтобы показать дополнительные сведения",
+  "config.jade.format_title_name": "Название заголовка",
+  "config.jade.plugin_jade.registry_name_off": "ВЫКЛ.",
+  "config.jade.plugin_jade.registry_name_on": "ВКЛ.",
+  "gui.jade.server_features": "*{0} {0,choice,1#серверная функция|1<серверных функций}",
+  "gui.jade.server_features.tip": "На этой странице доступно {0} {0,choice,1#серверная функция|1<серверных функций}.\nУстановите Jade на сервер, чтобы полностью их включить.",
+  "jade.fluid2": "%s %s / %s",
+  "jade.hopper.locked": "Воронка заблокирована",
+  "jade.mobduplication.time": "Перезарядка дублирования: %d с",
+  "jade.seconds": "%d с",
+  "narration.jade.blockpos": "X%s Y%s Z%s ",
+  "narration.jade.distance": "Расстояние %s",
+  "narration.jade.negative": "минус %s"
 }

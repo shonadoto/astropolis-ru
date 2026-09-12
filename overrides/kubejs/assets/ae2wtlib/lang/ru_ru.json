@@ -1,4 +1,16 @@
 {
   "item.ae2wtlib.quantum_bridge_card": "Карта квантового моста",
-  "item.ae2wtlib.quantum_bridge_card.desc": "Позволяет беспроводным терминалам подключаться через квантовый мост без ограничения дальности"
+  "item.ae2wtlib.quantum_bridge_card.desc": "Позволяет беспроводным терминалам подключаться через квантовый мост без ограничения дальности",
+  "gui.ae2wtlib.Magnet": "Фильтр магнита",
+  "gui.ae2wtlib.blacklist": "Чёрный список",
+  "gui.ae2wtlib.copy_insert": "Копировать в фильтр помещения",
+  "gui.ae2wtlib.copy_pickup": "Копировать в фильтр подбора",
+  "gui.ae2wtlib.filter": " Фильтр: ",
+  "gui.ae2wtlib.insert": "Помещение",
+  "gui.ae2wtlib.pickup": "Подбор",
+  "gui.ae2wtlib.switch": "Сменить фильтры",
+  "gui.ae2wtlib.whitelist": "Белый список",
+  "itemGroup.ae2wtlib.general": "Беспроводные терминалы AE2 (AE2WTLib)",
+  "itemGroup.ae2wtlib": "Беспроводные терминалы AE2 (AE2WTLib)",
+  "text.autoconfig.de/mari_023/ae2wtlib.title": "Беспроводные терминалы AE2"
 }

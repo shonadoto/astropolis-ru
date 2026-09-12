@@ -13,7 +13,7 @@
   "io_setting.energymeter.off": "Выкл.",
   "io_setting.energymeter.out": "Выход",
   "io_setting.energymeter.screen": "Экран",
-  "itemGroup.energymeter": "Energy Meter",
+  "itemGroup.energymeter": "Измеритель энергии",
   "label.energymeter.accuracy": "Точность",
   "label.energymeter.interval": "I",
   "label.energymeter.meter": "Энергометр",

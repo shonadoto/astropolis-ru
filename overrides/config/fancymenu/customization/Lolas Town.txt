@@ -61,14 +61,12 @@ element {
   button_element_executable_block_identifier = 94a6a1cb-fbec-48fb-9999-c5788031f093-1711818153943
   [executable_action_instance:fbbf9534-bb19-4341-935d-0672445b0139-1711818153947][action_type:openlink] = https://www.bisecthosting.com/5UP3R
   [executable_block:94a6a1cb-fbec-48fb-9999-c5788031f093-1711818153943][type:generic] = [executables:fbbf9534-bb19-4341-935d-0672445b0139-1711818153947;]
-  backgroundnormal = [source:local]config/fancymenu/assets/bhrent.png
-  backgroundhovered = [source:local]config/fancymenu/assets/bhrenth.png
   restartbackgroundanimations = true
   loopbackgroundanimations = true
   nine_slice_custom_background = false
   nine_slice_border_x = 5
   nine_slice_border_y = 5
-  label = 
+  label = Арендовать сервер
   navigatable = true
   element_type = custom_button
   instance_identifier = 8410604a-4eda-407e-a349-bb28f011aa411669654319997
@@ -123,14 +121,12 @@ vanilla_button {
 vanilla_button {
   button_element_executable_block_identifier = 650e0fbe-712b-4d87-a57d-6ee939e74818-1711818153808
   [executable_block:650e0fbe-712b-4d87-a57d-6ee939e74818-1711818153808][type:generic] = [executables:]
-  backgroundnormal = [source:local]config/fancymenu/assets/bhmulti.png
-  backgroundhovered = [source:local]config/fancymenu/assets/bhmultih.png
   restartbackgroundanimations = true
   loopbackgroundanimations = true
   nine_slice_custom_background = false
   nine_slice_border_x = 5
   nine_slice_border_y = 5
-  label = 
+  label = Сетевая игра
   navigatable = true
   element_type = vanilla_button
   instance_identifier = mc_titlescreen_multiplayer_button
@@ -158,14 +154,12 @@ vanilla_button {
 vanilla_button {
   button_element_executable_block_identifier = 60058bb3-5e5f-4b3e-a181-987c09bb53d7-1711818153822
   [executable_block:60058bb3-5e5f-4b3e-a181-987c09bb53d7-1711818153822][type:generic] = [executables:]
-  backgroundnormal = [source:local]config/fancymenu/assets/bhsetting.png
-  backgroundhovered = [source:local]config/fancymenu/assets/bhsettingh.png
   restartbackgroundanimations = true
   loopbackgroundanimations = true
   nine_slice_custom_background = false
   nine_slice_border_x = 5
   nine_slice_border_y = 5
-  label = 
+  label = Настройки
   navigatable = true
   element_type = vanilla_button
   instance_identifier = mc_titlescreen_options_button
@@ -257,14 +251,12 @@ vanilla_button {
 vanilla_button {
   button_element_executable_block_identifier = 76ac4bf5-d77e-491d-8ead-946f2cbe68ec-1711818153834
   [executable_block:76ac4bf5-d77e-491d-8ead-946f2cbe68ec-1711818153834][type:generic] = [executables:]
-  backgroundnormal = [source:local]config/fancymenu/assets/bhmod.png
-  backgroundhovered = [source:local]config/fancymenu/assets/bhmodh.png
   restartbackgroundanimations = true
   loopbackgroundanimations = true
   nine_slice_custom_background = false
   nine_slice_border_x = 5
   nine_slice_border_y = 5
-  label = 
+  label = Моды
   navigatable = true
   element_type = vanilla_button
   instance_identifier = forge_titlescreen_mods_button
@@ -292,14 +284,12 @@ vanilla_button {
 vanilla_button {
   button_element_executable_block_identifier = d8edd23c-6037-49bc-b493-0699d901151b-1711818153831
   [executable_block:d8edd23c-6037-49bc-b493-0699d901151b-1711818153831][type:generic] = [executables:]
-  backgroundnormal = [source:local]config/fancymenu/assets/bhsingle.png
-  backgroundhovered = [source:local]config/fancymenu/assets/bhsingleh.png
   restartbackgroundanimations = true
   loopbackgroundanimations = true
   nine_slice_custom_background = false
   nine_slice_border_x = 5
   nine_slice_border_y = 5
-  label = 
+  label = Одиночная игра
   navigatable = true
   element_type = vanilla_button
   instance_identifier = mc_titlescreen_singleplayer_button
@@ -359,14 +349,12 @@ vanilla_button {
 vanilla_button {
   button_element_executable_block_identifier = 9797065b-ac81-41bf-82b3-9989281c9d36-1711818153823
   [executable_block:9797065b-ac81-41bf-82b3-9989281c9d36-1711818153823][type:generic] = [executables:]
-  backgroundnormal = [source:local]config/fancymenu/assets/bhquit.png
-  backgroundhovered = [source:local]config/fancymenu/assets/bhquith.png
   restartbackgroundanimations = true
   loopbackgroundanimations = true
   nine_slice_custom_background = false
   nine_slice_border_x = 5
   nine_slice_border_y = 5
-  label = 
+  label = Выйти из игры
   navigatable = true
   element_type = vanilla_button
   instance_identifier = mc_titlescreen_quit_button
@@ -528,4 +516,3 @@ deep_element {
   height = 30
   element_type = title_screen_splash
 }
-

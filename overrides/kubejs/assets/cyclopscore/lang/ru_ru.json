@@ -1,0 +1,14 @@
+{
+  "general.cyclopscore.dev_world": "Мир разработчика",
+  "gui.cyclopscore.down": "Вниз",
+  "gui.cyclopscore.infobook": "Информационная книга",
+  "gui.cyclopscore.left": "Влево",
+  "gui.cyclopscore.rewards": "Награды",
+  "gui.cyclopscore.right": "Вправо",
+  "gui.cyclopscore.scrollbar": "Прокрутка",
+  "gui.cyclopscore.search": "Поиск",
+  "gui.cyclopscore.up": "Вверх",
+  "infobook.cyclopscore.external": "Веб-версия",
+  "infobook.cyclopscore.keybinding": "Назначение клавиши",
+  "infobook.cyclopscore.keybindings": "Назначения клавиш"
+}

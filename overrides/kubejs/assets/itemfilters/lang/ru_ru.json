@@ -1,0 +1,14 @@
+{
+  "itemfilters.help_text.damage": "Повреждение предмета\n▶ Можно использовать операторы сравнения, например \"<10\" или \">=5\",\nа также проценты, например \">50%\"",
+  "itemfilters.help_text.filter": "Фильтр (ПКМ, чтобы очистить)",
+  "itemfilters.help_text.max_count": "Максимальный размер стака\n▶ Можно использовать операторы сравнения, например \"<64\" или \">=16\"",
+  "itemfilters.help_text.nbt": "Строка NBT\n▶ Например: { text:\"hello\", value: 1, active: true }",
+  "itemfilters.help_text.regex": "Регулярное выражение\nСопоставляется с идентификатором предмета\n▶ Например, \"^minecraft:\" соответствует всем предметам Minecraft",
+  "itemfilters.help_text.variants": "Tab, колёсико мыши или ↑/↓: переместить выделение\nEnter: выбрать выделенное",
+  "itemfilters.help_text.weak_nbt": "Неполная строка NBT\n▶ Например: { text:\"hello\", value: 1, active: true }\n▶ Проверяются только указанные поля NBT; остальные поля предмета игнорируются",
+  "itemfilters.variants": "Варианты [%d]",
+  "itemGroup.itemfilters.main": "Фильтры предметов",
+  "itemGroup.itemfilters.itemfilters": "Фильтры предметов",
+  "item.itemfilters.always_true": "Фильтр «Всегда истина»",
+  "item.itemfilters.always_false": "Фильтр «Всегда ложь»"
+}

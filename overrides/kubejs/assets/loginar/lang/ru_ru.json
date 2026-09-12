@@ -17,5 +17,20 @@
   "item.loginar.lunch_box": "Ланч-бокс",
   "item.loginar.lunch_box.desc": "Хранит еду. Нажмите ПКМ, чтобы поесть; Shift + ПКМ — чтобы открыть.",
   "item.loginar.vacuum_upgrade": "Вакуумное улучшение урны",
-  "item.loginar.vacuum_upgrade.desc": "Притягивает и сохраняет лежащие рядом предметы"
+  "item.loginar.vacuum_upgrade.desc": "Притягивает и сохраняет лежащие рядом предметы",
+  "container.loginar.loginar_urn": "Урна Loginar",
+  "container.loginar.lunch_box": "Коробка для обеда",
+  "entity.loginar.loginar": "Loginar",
+  "key.category.loginar": "Хранилище Loginar",
+  "key.loginar.swapUrnItems": "Обменять предметы с урной",
+  "misc.loginar.not_implemented": "Ещё не реализовано! Эта функция пока не работает. :(",
+  "misc.loginar.swapper.holdingUrn": "Нельзя обменять предметы, держа урну",
+  "misc.loginar.swapper.noCompatibleUrn": "Урна с улучшением обмена не найдена",
+  "misc.loginar.urn.upgrades": "Улучшения (%s / %s)",
+  "subtitles.block.loginar.urn.lid": "Крышка урны Loginar двигается",
+  "subtitles.block.loginar.urn.open": "Урна Loginar открывается",
+  "subtitles.entity.loginar.attack": "Loginar лает",
+  "subtitles.entity.loginar.death": "Loginar погибает",
+  "subtitles.entity.loginar.hurt": "Loginar ранен",
+  "subtitles.entity.loginar.idle": "Loginar мурлычет"
 }

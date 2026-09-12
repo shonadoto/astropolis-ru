@@ -29,7 +29,7 @@
   "ftbquests.task.questsadditions.time.elapsedTime": "Время ожидания",
   "ftbquests.task.questsadditions.time.elapsedTime.tooltip": "В секундах",
   "ftbquests.task.questsadditions.time.gameTime": "Использовать игровой таймер",
-  "ftbquests.task.questsadditions.time.gameTime.tooltip": "Прошедшее время вычисляется так:\nGame — внутренние игровые часы.\nSystem — время компьютера.\nAuto — Game на сервере, System в остальных случаях.",
+  "ftbquests.task.questsadditions.time.gameTime.tooltip": "Прошедшее время вычисляется так:\nИгра — внутренние игровые часы.\nСистема — время компьютера.\nАвто — игровые часы на сервере, системное время в остальных случаях.",
   "ftbquests.task.questsadditions.use": "Использовать блок",
   "ftbquests.task.questsadditions.use.block": "Блок",
   "ftbquests.task.questsadditions.use.isItemInteraction": "Взаимодействие предметом",

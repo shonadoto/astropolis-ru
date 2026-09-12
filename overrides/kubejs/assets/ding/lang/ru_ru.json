@@ -1,0 +1,14 @@
+{
+  "config.ding.cat.ding.load.desc": "Настройки сигнала после загрузки игры",
+  "config.ding.cat.ding.load.name": "Загрузка Minecraft",
+  "config.ding.cat.ding.resourcesReload.desc": "Настройки сигнала после перезагрузки ресурсов",
+  "config.ding.cat.ding.resourcesReload.name": "Перезагрузка ресурсов",
+  "config.ding.cat.ding.world.desc": "Настройки сигнала после загрузки мира при подключении к серверу",
+  "config.ding.cat.ding.world.name": "Загрузка мира",
+  "config.ding.prop.volume.desc": "Громкость сигнала после загрузки Minecraft",
+  "config.ding.prop.volume.name": "Громкость при загрузке игры",
+  "config.ding.prop.volumeResourcesReload.desc": "Громкость сигнала после перезагрузки ресурсов",
+  "config.ding.prop.volumeResourcesReload.name": "Громкость при перезагрузке ресурсов",
+  "config.ding.prop.volumeWorld.desc": "Громкость сигнала после загрузки мира при подключении к серверу",
+  "config.ding.prop.volumeWorld.name": "Громкость при загрузке мира"
+}

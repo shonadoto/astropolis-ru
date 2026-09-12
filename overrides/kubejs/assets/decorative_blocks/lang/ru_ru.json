@@ -2,5 +2,16 @@
   "block.decorative_blocks.mangrove_beam": "Мангровая балка",
   "block.decorative_blocks.mangrove_palisade": "Мангровый частокол",
   "block.decorative_blocks.mangrove_seat": "Мангровое сиденье",
-  "block.decorative_blocks.mangrove_support": "Мангровая опора"
+  "block.decorative_blocks.mangrove_support": "Мангровая опора",
+  "key.decorative_blocks.switch_item_state": "Сменить состояние предмета",
+  "wiki.decorative_blocks.copy1": "§3Обычное использование вставляет, использование крадучись копирует.",
+  "wiki.decorative_blocks.copy2": "§3Скопировано: %s",
+  "wiki.decorative_blocks.seat": "§3Используйте крадучись в воздухе, чтобы сменить состояние.",
+  "wiki.decorative_blocks.support.behavior1": "§3Перевернуть блок вверх ногами",
+  "wiki.decorative_blocks.support.behavior2": "§3Переключить сторону между большой и малой",
+  "wiki.decorative_blocks.support.behavior3": "§3Скрыть или показать сторону",
+  "wiki.decorative_blocks.support.condition1": "§7ПКМ в воздухе крадучись:",
+  "wiki.decorative_blocks.support.condition2": "§7ПКМ топором:",
+  "wiki.decorative_blocks.support.condition3": "§7ПКМ топором крадучись:",
+  "itemGroup.decorative_blocks.general": "Декоративные блоки"
 }

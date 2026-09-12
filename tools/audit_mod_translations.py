@@ -22,6 +22,54 @@ MOD_ID_RE = re.compile(r'^\s*modId\s*=\s*["\']([^"\']+)', re.MULTILINE)
 DISPLAY_NAME_RE = re.compile(r'^\s*displayName\s*=\s*["\']([^"\']+)', re.MULTILINE)
 CYRILLIC_RE = re.compile(r"[А-Яа-яЁё]")
 LATIN_WORD_RE = re.compile(r"\b[A-Za-z]{3,}\b")
+SHORTCUT_KEY_RE = re.compile(r"(?:\.shortcuts?\.|\.key\.combo\.|^modifier\.)")
+
+# These values are intentionally language-independent: product names, protocol
+# and unit labels, author/song credits, URLs, or fixed technical identifiers.
+REVIEWED_LITERAL_VALUES = {
+    "AES/CFB8+Base64R", "AES/ECB+Base64R", "AES/GCM+Base64R",
+    "Applied Energistics", "Applied Energistics 2", "Applied Mekanistics",
+    "Caveopolis", "Compact Machines", "Configured", "Cosmopolis", "Curios",
+    "Cyclops Core", "EMC", "Engineer's Decor", "Fairy Lights", "Flux Networks",
+    "FPS", "FTB Chunks", "FTB Teams", "FTB Ultimine", "Functional Storage",
+    "Geodeopolis", "GUI", "Hostile Neural Networks", "HUD",
+    "Immersive Engineering", "IndustrialCraft", "JEI", "JourneyMap",
+    "JourneyMap Discord", "KleeSlabs", "LaserIO", "Loginar", "Markdown",
+    "McJtyLib", "Mekanism", "MinecraftForge", "NBT", "OpenComputers",
+    "Opolis Utilities", "Patchouli", "Pipez", "Placebo", "Rechiseled", "REI",
+    "RFTools", "RFTools Base", "RFTools Storage", "RFTools Utility",
+    "Supplementaries", "Toast Control", "URL", "Violet Moon Forums", "XNet",
+    "XYZ", "YDM's Weapon Master", "YUNG's Better Tater",
+    "Partyp - Pancake Music", "Plantkillable", "-aidancbrady",
+    "minecraftforum.net", "journeymap.info", "RGB:", "Shift", "SHIFT", "Del",
+    "NBT: %s", "UUID: ", "[Quark]\n", "[SoL: Carrot] %s",
+    "§eJourneyMap:§f %1$s", "§lCPU:§r %s", "§lFPS:§r %s",
+    "§lGPU:§r %1$s (OpenGL: %2$s)", "%1$s: %2$s/%3$smB",
+    "%s: %d mBtl", "| %1$sRF",
+    "/invsorter §ebladd§f|§eblrem§f|§eshow§f|§elist§f",
+}
+
+
+def reviewed_equal_literal(key: str, value: str) -> bool:
+    if not LATIN_WORD_RE.search(value):
+        return True
+    if key.startswith("_") or key.endswith("._comment") or key == "_comment":
+        return True
+    if SHORTCUT_KEY_RE.search(key) or key.endswith(".shortcut"):
+        return True
+    if key in {
+        "advancements.mekanism.configuration_copying.title",
+        "gui.mekanism.rgb",
+        "hostilenetworks.color_text.shift",
+        "hostilenetworks.color_text.hud",
+        "holiday.mekanism.signature",
+        "message.pipez.filter.nbt",
+        "pocketstorage.util.key_shift",
+        "quark.jei.hint_preamble",
+        "supplementaries.gui.controls",
+    } or key.startswith("trashcans.gui.energy_trash_can.limit.change"):
+        return True
+    return value in REVIEWED_LITERAL_VALUES
 
 
 def read_json(raw: bytes) -> dict[str, str]:
@@ -105,6 +153,10 @@ def main() -> None:
                         if isinstance(en.get(key), str)
                         and en.get(key) == merged_ru.get(key)
                     }
+                    unreviewed_equal = {
+                        key for key in equal_all
+                        if not reviewed_equal_literal(key, str(merged_ru[key]))
+                    }
                     mixed = {
                         key for key, value in merged_ru.items()
                         if key in en
@@ -126,13 +178,13 @@ def main() -> None:
                             ) if namespace == "rechiseled" else ()))
                         )
                     }
-                    if quest_missing:
+                    if quest_missing and missing_item_blocks:
                         priority = "P0"
                     elif missing_all and refs:
                         priority = "P1"
                     elif missing_all:
                         priority = "P2"
-                    elif mixed:
+                    elif unreviewed_equal:
                         priority = "REVIEW"
                     else:
                         priority = "DONE"
@@ -153,6 +205,7 @@ def main() -> None:
                         "covered_all_keys": len(set(en) & covered_all),
                         "missing_all_keys": len(missing_all),
                         "equal_to_en_all": len(equal_all),
+                        "unreviewed_equal_to_en": len(unreviewed_equal),
                         "mixed_ru_en": len(mixed),
                     })
         except zipfile.BadZipFile:
@@ -175,7 +228,8 @@ def main() -> None:
     missing_all = sum(int(row["missing_all_keys"]) for row in rows)
     print(f"All language keys: {all_keys - missing_all}/{all_keys} covered ({missing_all} missing)")
     print(f"Covered strings equal to English: {sum(int(row['equal_to_en_all']) for row in rows)}")
-    print(f"Mixed Cyrillic/Latin strings to review: {sum(int(row['mixed_ru_en']) for row in rows)}")
+    print(f"Unreviewed English-equal strings: {sum(int(row['unreviewed_equal_to_en']) for row in rows)}")
+    print(f"Mixed Cyrillic/Latin strings (informational): {sum(int(row['mixed_ru_en']) for row in rows)}")
 
 
 if __name__ == "__main__":

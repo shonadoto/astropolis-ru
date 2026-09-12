@@ -46,7 +46,7 @@
   "item.neverenderore.raw_never_ender_tin": "Необработанное олово",
   "item.neverenderore.raw_never_ender_uraninite": "Необработанный уранинит",
   "item.neverenderore.raw_never_ender_uranium": "Необработанный уран",
-  "itemGroup.neverenderore": "Never Ender Ore",
+  "itemGroup.neverenderore": "Бесконечные эндер-руды",
   "title.never_ender_ore.jei_category": "Извлечение руды",
   "tooltip.neverenderore.state_invalid_block": "Состояние: неподходящий для добычи блок",
   "tooltip.neverenderore.state_no_energy": "Состояние: недостаточно энергии",

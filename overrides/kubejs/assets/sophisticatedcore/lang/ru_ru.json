@@ -14,5 +14,19 @@
   "gui.sophisticatedcore.upgrades.chipped_botanist_workbench": "Ботаник",
   "gui.sophisticatedcore.upgrades.chipped_botanist_workbench.tooltip": "Верстак ботаника",
   "upgrade_group.sophisticatedcore.cooking_upgrades": "Печные улучшения",
-  "upgrade_group.sophisticatedcore.stack_upgrades": "Стаковые улучшения"
+  "upgrade_group.sophisticatedcore.stack_upgrades": "Стаковые улучшения",
+  "gui.sophisticatedcore.tooltip.stack_limit": "Лимит: %s",
+  "gui.sophisticatedcore.upgrades.chipped_carpenter_workbench": "Плотник",
+  "gui.sophisticatedcore.upgrades.chipped_carpenter_workbench.tooltip": "Верстак плотника",
+  "gui.sophisticatedcore.upgrades.chipped_glassblower_workbench": "Стеклодув",
+  "gui.sophisticatedcore.upgrades.chipped_glassblower_workbench.tooltip": "Верстак стеклодува",
+  "gui.sophisticatedcore.upgrades.chipped_mason_workbench": "Каменщик",
+  "gui.sophisticatedcore.upgrades.chipped_mason_workbench.tooltip": "Верстак каменщика",
+  "gui.sophisticatedcore.upgrades.chipped_philosopher_workbench": "Философ",
+  "gui.sophisticatedcore.upgrades.chipped_philosopher_workbench.tooltip": "Верстак философа",
+  "gui.sophisticatedcore.upgrades.chipped_shephed_workbench.tooltip": "Верстак пастуха",
+  "gui.sophisticatedcore.upgrades.chipped_shepherd_workbench": "Пастух",
+  "gui.sophisticatedcore.upgrades.chipped_tinkerer_workbench": "Мастер",
+  "gui.sophisticatedcore.upgrades.chipped_tinkerer_workbench.tooltip": "Верстак мастера",
+  "item.sophisticatedcore.storage.tooltip.fluid": "%s мБ %s"
 }

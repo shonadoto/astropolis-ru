@@ -1,0 +1,16 @@
+{
+  "config.jei.advanced.addBookmarksToFront": "Добавлять новые закладки в начало",
+  "config.jei.advanced.addBookmarksToFront.comment": "Если включено, новые закладки добавляются в начало списка; если выключено — в конец",
+  "jei.key.combo.alt": "ALT + %s",
+  "jei.key.combo.command": "CMD + %s",
+  "jei.key.combo.control": "CTRL + %s",
+  "jei.key.combo.shift": "SHIFT + %s",
+  "jei.message.config.folder": "Нажмите, чтобы открыть папку настроек JEI",
+  "key.jei.closeRecipeGui": "Закрыть окно рецептов",
+  "description.jei.wooden.door.1": "Деревянные двери не позволяют монстрам войти в здание.\nТестовые предложения.",
+  "description.jei.wooden.door.2": "Нажатие на дверь переключает её между открытым и закрытым состояниями.",
+  "description.jei.wooden.door.3": "Деревянные двери можно открывать и закрывать сигналом редстоуна.",
+  "description.jei.debug.formatting.1": "Проверка замены форматирования: %s.",
+  "description.jei.debug.formatting.2": "Проверка замены форматирования: %s %s.",
+  "description.jei.debug.formatting.3": "%s внутри"
+}

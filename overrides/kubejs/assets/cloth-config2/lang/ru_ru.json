@@ -1,0 +1,6 @@
+{
+  "text.cloth-config.disabled_tooltip": "Отключено: требования не выполнены",
+  "text.cloth-config.testing.1": "Вы разработчик мода и хотите использовать %1$s? Для начала откройте %2$s. Также можно %3$s.",
+  "text.cloth-config.testing.2": "вики Cloth Config",
+  "text.cloth-config.testing.3": "без особой причины открыть файл настроек Minecraft"
+}

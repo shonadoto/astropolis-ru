@@ -1,0 +1,13 @@
+{
+  "untitledduckmod.config.duck_group_size": "Размер группы уток",
+  "untitledduckmod.config.duck_group_size.tooltip": "Сколько уток появляется в одной группе",
+  "untitledduckmod.config.duck_spawn_weight": "Частота появления уток",
+  "untitledduckmod.config.duck_spawn_weight.tooltip": "Как часто появляются утки: чем больше значение, тем чаще",
+  "untitledduckmod.config.ducks": "Утки",
+  "untitledduckmod.config.geese": "Гуси",
+  "untitledduckmod.config.goose_group_size": "Размер группы гусей",
+  "untitledduckmod.config.goose_group_size.tooltip": "Сколько гусей появляется в одной группе",
+  "untitledduckmod.config.goose_spawn_weight": "Частота появления гусей",
+  "untitledduckmod.config.goose_spawn_weight.tooltip": "Как часто появляются гуси: чем больше значение, тем чаще",
+  "untitledduckmod.config.title": "Настройки Untitled Duck Mod"
+}

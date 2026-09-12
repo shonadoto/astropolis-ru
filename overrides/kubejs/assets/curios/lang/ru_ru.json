@@ -1,0 +1,6 @@
+{
+  "argument.entity.options.curios.description": "Инвентарь Curios существа",
+  "commands.curios.drop.success": "Предметы из слота %s выброшены для %s",
+  "commands.curios.dropAll.success": "Предметы из всех слотов выброшены для %s",
+  "commands.curios.replace.success": "Слот %s для %s заменён на %s"
+}

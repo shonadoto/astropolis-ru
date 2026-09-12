@@ -1,0 +1,8 @@
+{
+  "death.attack.cutting": "%1$s был разрезан на %2$s",
+  "death.attack.cutting.player": "%1$s был разрезан на %3$s при попытке сбежать от %2$s",
+  "text.autoconfig.dangerousstonecutter.option.damage": "Размер урона",
+  "text.autoconfig.dangerousstonecutter.option.enableBloodParticle": "Включить частицы крови",
+  "text.autoconfig.dangerousstonecutter.option.enableJudgmentDangerous": "Включить достижение «Опасное решение»",
+  "text.autoconfig.dangerousstonecutter.title": "Настройки опасного камнереза"
+}

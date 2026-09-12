@@ -67,9 +67,17 @@ def main() -> None:
             output = ROOT / f"overrides/kubejs/assets/{namespace}/lang/ru_ru.json"
             custom = json.loads(output.read_text(encoding="utf-8-sig")) if output.exists() else {}
             imported = {}
-            for key in sorted(set(english) - set(built_in) - set(custom)):
+            missing = set(english) - set(built_in) - set(custom)
+            untranslated_built_in = {
+                key
+                for key in set(english) & set(built_in) - set(custom)
+                if built_in[key] == english[key]
+            }
+            for key in sorted(missing | untranslated_built_in):
                 candidate = source.get(key)
                 if not isinstance(candidate, str):
+                    continue
+                if candidate == english[key]:
                     continue
                 if placeholders(english[key]) != placeholders(candidate):
                     skipped += 1

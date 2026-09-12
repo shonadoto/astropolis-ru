@@ -22,5 +22,6 @@
   "minecraft.fuel": "Топливо",
   "minecraft.item": "Предмет",
   "minecraft.item_tag": "Тег предмета",
-  "minecraft.stack": "Стопка"
+  "minecraft.stack": "Стопка",
+  "minecraft.material": "Материал"
 }

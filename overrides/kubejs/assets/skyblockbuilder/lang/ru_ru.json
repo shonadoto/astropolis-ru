@@ -1,0 +1,6 @@
+{
+  "skyblockbuilder.command.error.teleport_across_dimensions": "Телепортация между измерениями запрещена.",
+  "skyblockbuilder.command.error.teleportation_not_allowed_dimension": "Телепортация в этом измерении запрещена.",
+  "skyblockbuilder.command.success.convert_template": "%s преобразован в %s.",
+  "skyblockbuilder.item.structure_saver.nbt_to_snbt.tooltip": "Сохранить как файл .snbt"
+}
