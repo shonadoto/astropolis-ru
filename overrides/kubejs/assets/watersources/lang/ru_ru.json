@@ -1,0 +1,14 @@
+{
+  "item.watersources.netherite_upgrade": "Незеритовое улучшение",
+  "block.watersources.water_source_tier_5": "Источник воды V уровня",
+  "item_group.watersources.water_sources": "Источники воды",
+  "itemGroup.tabwater_sources": "Источники воды",
+  "item.watersources.iron_upgrade": "Железное улучшение",
+  "block.watersources.water_source_tier_2": "Источник воды II уровня",
+  "block.watersources.water_source_tier_1": "Источник воды I уровня",
+  "item.watersources.diamond_upgrade": "Алмазное улучшение",
+  "block.watersources.water_source_tier_4": "Источник воды IV уровня",
+  "item.watersources.gold_upgrade": "Золотое улучшение",
+  "block.watersources.water_source_tier_3": "Источник воды III уровня"
+}
+
