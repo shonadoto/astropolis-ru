@@ -33,7 +33,8 @@ python3 tools/build_resource_pack.py
 параметры `resource-pack`, `resource-pack-sha1` и `require-resource-pack` выделенного сервера.
 
 Изменения русских языковых файлов в ветке `main` автоматически обновляют постоянный релиз
-`resourcepack-latest` в GitHub Releases.
+`resourcepack-latest` в GitHub Releases. Перед каждым запуском `serverctl` скачивает этот
+релиз, пересчитывает SHA-1 и при необходимости обновляет `server.properties`.
 
 ## Выделенный сервер
 
