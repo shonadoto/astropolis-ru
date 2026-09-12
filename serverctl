@@ -62,12 +62,18 @@ sync_resource_pack_hash() {
     return 0
   }
 
-  local url digest current
+  local url base_url fetch_url digest current versioned_url escaped_url
   url="$(sed -n 's/^resource-pack=//p' "$properties" | head -n 1)"
   url="${url//\\:/:}"
   [[ -n "$url" ]] || return 0
 
-  if ! digest="$(curl -fsSL "$url" | sha1sum | awk '{print $1}')"; then
+  # The resource-pack-latest release asset is replaced in place. Give both the
+  # refresh request and the URL sent to Minecraft a unique query string so the
+  # client and GitHub's CDN cannot reuse an older archive for a newer SHA-1.
+  base_url="${url%%\?sha1=*}"
+  fetch_url="${base_url}?refresh=$(date +%s)-$$"
+
+  if ! digest="$(curl -fsSL "$fetch_url" | sha1sum | awk '{print $1}')"; then
     say "WARNING: could not download the resource pack; keeping the existing hash"
     return 0
   fi
@@ -77,6 +83,12 @@ sync_resource_pack_hash() {
   }
 
   current="$(sed -n 's/^resource-pack-sha1=//p' "$properties" | head -n 1)"
+  versioned_url="${base_url}?sha1=${digest}"
+  escaped_url="${versioned_url//:/\\:}"
+  if [[ "$url" != "$versioned_url" ]]; then
+    sed -i "s|^resource-pack=.*|resource-pack=$escaped_url|" "$properties"
+    say "resource pack URL cache key updated: $digest"
+  fi
   if [[ "$current" != "$digest" ]]; then
     sed -i "s/^resource-pack-sha1=.*/resource-pack-sha1=$digest/" "$properties"
     say "resource pack hash updated: $digest"
