@@ -3,12 +3,7 @@ set -Eeuo pipefail
 
 ROOT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 ENV_FILE="$ROOT_DIR/.server.env"
-if [[ -f "$ENV_FILE" ]]; then
-  # The Minecraft JVM and the local AI bridge need the configured values too.
-  set -a
-  source "$ENV_FILE"
-  set +a
-fi
+[[ -f "$ENV_FILE" ]] && source "$ENV_FILE"
 
 SERVER_DIR="${ASTROPOLIS_SERVER_DIR:-$ROOT_DIR/server}"
 MIN_RAM="${MIN_RAM:-4G}"
@@ -18,14 +13,6 @@ CONSOLE_LOG="$SERVER_DIR/console.log"
 COMMAND_FILE="$SERVER_DIR/.console-input"
 PID_FILE="$SERVER_DIR/.server.pid"
 BACKUP_DIR="${BACKUP_DIR:-$ROOT_DIR/backups}"
-AI_BRIDGE_SCRIPT="$ROOT_DIR/tools/astropolis_ai_bridge.py"
-AI_KUBEJS_SOURCE="$ROOT_DIR/server-assets/kubejs/server_scripts/astropolis_ai.js"
-AI_KUBEJS_TARGET="$SERVER_DIR/kubejs/server_scripts/astropolis_ai.js"
-KUBEJS_COMMON_SOURCE="$ROOT_DIR/overrides/kubejs/config/common.properties"
-KUBEJS_COMMON_TARGET="$SERVER_DIR/kubejs/config/common.properties"
-AI_PID_FILE="$SERVER_DIR/.ai-bridge.pid"
-AI_LOG="$SERVER_DIR/ai-bridge.log"
-AI_BRIDGE_PORT="${AI_BRIDGE_PORT:-8765}"
 
 say() { printf '[astropolis] %s\n' "$*"; }
 die() { say "ERROR: $*" >&2; exit 1; }
@@ -43,78 +30,6 @@ is_running() {
   pid="$(read_pid)" || return 1
   kill -0 "$pid" 2>/dev/null || return 1
   [[ "$(readlink -f "/proc/$pid/cwd" 2>/dev/null || true)" == "$(readlink -f "$SERVER_DIR")" ]]
-}
-
-read_ai_pid() {
-  [[ -s "$AI_PID_FILE" ]] || return 1
-  local pid
-  read -r pid < "$AI_PID_FILE"
-  [[ "$pid" =~ ^[0-9]+$ ]] || return 1
-  printf '%s\n' "$pid"
-}
-
-ai_is_running() {
-  local pid
-  pid="$(read_ai_pid)" || return 1
-  kill -0 "$pid" 2>/dev/null || return 1
-  [[ "$(tr '\0' ' ' < "/proc/$pid/cmdline" 2>/dev/null || true)" == *"astropolis_ai_bridge.py"* ]]
-}
-
-start_ai_bridge() {
-  [[ -f "$AI_BRIDGE_SCRIPT" ]] || {
-    say "WARNING: AI bridge script is missing; /ai will be unavailable"
-    return 0
-  }
-  if ai_is_running; then
-    return 0
-  fi
-  rm -f "$AI_PID_FILE"
-  touch "$AI_LOG"
-  (
-    cd "$ROOT_DIR"
-    ASTROPOLIS_SERVER_DIR="$SERVER_DIR" setsid python3 -u "$AI_BRIDGE_SCRIPT" >> "$AI_LOG" 2>&1 &
-    printf '%s\n' "$!" > "$AI_PID_FILE"
-  )
-  for _ in {1..50}; do
-    if ai_is_running && curl --noproxy '*' -fsS --max-time 1 \
-      "http://127.0.0.1:$AI_BRIDGE_PORT/health" >/dev/null 2>&1; then
-      break
-    fi
-    sleep 0.1
-  done
-  if ai_is_running && curl --noproxy '*' -fsS --max-time 1 \
-    "http://127.0.0.1:$AI_BRIDGE_PORT/health" >/dev/null 2>&1; then
-    say "AI bridge started (PID $(read_ai_pid), loopback port $AI_BRIDGE_PORT)"
-  else
-    rm -f "$AI_PID_FILE"
-    say "WARNING: AI bridge failed to start; inspect $AI_LOG"
-  fi
-}
-
-deploy_ai_integration() {
-  [[ -f "$AI_KUBEJS_SOURCE" ]] || die "AI KubeJS script is missing: $AI_KUBEJS_SOURCE"
-  mkdir -p "$(dirname "$AI_KUBEJS_TARGET")"
-  mkdir -p "$SERVER_DIR/kubejs/ai_bridge/requests" "$SERVER_DIR/kubejs/ai_bridge/results"
-  install -m 0644 "$AI_KUBEJS_SOURCE" "$AI_KUBEJS_TARGET"
-  install -m 0644 "$KUBEJS_COMMON_SOURCE" "$KUBEJS_COMMON_TARGET"
-  say "AI KubeJS command deployed"
-}
-
-stop_ai_bridge() {
-  if ! ai_is_running; then
-    rm -f "$AI_PID_FILE"
-    return 0
-  fi
-  local pid
-  pid="$(read_ai_pid)"
-  kill "$pid" 2>/dev/null || true
-  for _ in {1..30}; do
-    kill -0 "$pid" 2>/dev/null || break
-    sleep 0.1
-  done
-  kill -KILL "$pid" 2>/dev/null || true
-  rm -f "$AI_PID_FILE"
-  say "AI bridge stopped"
 }
 
 java_bin() {
@@ -199,8 +114,6 @@ cmd_start() {
   fi
   rm -f "$PID_FILE"
   [[ -f "$SERVER_DIR/eula.txt" ]] || die "server is not installed; run: ./serverctl install"
-  deploy_ai_integration
-  start_ai_bridge
   sync_resource_pack_hash
   local java args
   java="$(java_bin)"
@@ -229,7 +142,6 @@ cmd_start() {
 cmd_stop() {
   if ! is_running; then
     rm -f "$PID_FILE"
-    stop_ai_bridge
     say "already stopped"
     return 0
   fi
@@ -254,7 +166,6 @@ cmd_stop() {
     kill -KILL "$pid" 2>/dev/null || true
   fi
   rm -f "$PID_FILE"
-  stop_ai_bridge
   say "stopped"
 }
 
@@ -266,65 +177,7 @@ cmd_status() {
     ps -p "$pid" -o pid=,etime=,%cpu=,%mem=,rss=,cmd=
   else
     say "STOPPED"
-  fi
-  if ai_is_running; then
-    say "AI BRIDGE RUNNING (PID $(read_ai_pid), port $AI_BRIDGE_PORT)"
-  else
-    say "AI BRIDGE STOPPED"
-  fi
-  is_running
-}
-
-cmd_ai_status() {
-  if ! ai_is_running; then
-    say "AI bridge is stopped"
     return 1
-  fi
-  curl --noproxy '*' -fsS --max-time 3 "http://127.0.0.1:$AI_BRIDGE_PORT/health"
-  printf '\n'
-}
-
-cmd_ai_deploy() {
-  deploy_ai_integration
-  stop_ai_bridge
-  start_ai_bridge
-  if is_running; then
-    say "Minecraft is already running; /ai will be registered after its next restart"
-  fi
-}
-
-cmd_ai_configure() {
-  [[ -t 0 ]] || die "ai-configure must be run from an interactive terminal"
-  local key template tmp
-  read -r -s -p "OpenAI API key: " key
-  printf '\n'
-  [[ "$key" == sk-* ]] || die "the key must start with sk-"
-  template="$ENV_FILE"
-  [[ -f "$template" ]] || template="$ROOT_DIR/.server.env.example"
-  tmp="$(mktemp "$ROOT_DIR/.server.env.tmp.XXXXXX")"
-  chmod 600 "$tmp"
-  awk -v key="$key" '
-    BEGIN { replaced = 0 }
-    /^OPENAI_API_KEY=/ {
-      if (!replaced) print "OPENAI_API_KEY=" key
-      replaced = 1
-      next
-    }
-    { print }
-    END { if (!replaced) print "OPENAI_API_KEY=" key }
-  ' "$template" > "$tmp"
-  mv "$tmp" "$ENV_FILE"
-  chmod 600 "$ENV_FILE"
-  unset key
-  stop_ai_bridge
-  # Export the just-written values without printing them.
-  set -a
-  source "$ENV_FILE"
-  set +a
-  start_ai_bridge
-  say "OpenAI key saved to .server.env (mode 600); verify with './serverctl ai-status'"
-  if is_running; then
-    say "Restart Minecraft once to register /ai if this is the first setup"
   fi
 }
 
@@ -360,9 +213,6 @@ Usage: ./serverctl <command> [arguments]
   stop                save and stop the server cleanly
   restart             stop, then start
   status              show process status
-  ai-status           show AI bridge health and configuration state
-  ai-deploy           deploy /ai files and start its loopback bridge
-  ai-configure        securely read and save the OpenAI API key
   logs                follow the console log (Ctrl+C only exits the viewer)
   console <command>   send a Minecraft console command
   backup              flush saves and create a timestamped backup
@@ -377,9 +227,6 @@ case "$command" in
   stop) cmd_stop ;;
   restart) cmd_stop; cmd_start ;;
   status) cmd_status ;;
-  ai-status) cmd_ai_status ;;
-  ai-deploy) cmd_ai_deploy ;;
-  ai-configure) cmd_ai_configure ;;
   logs) cmd_logs ;;
   console) send_command "$@" ;;
   backup) cmd_backup ;;
