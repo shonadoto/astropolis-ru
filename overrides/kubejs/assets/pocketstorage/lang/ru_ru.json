@@ -1,0 +1,18 @@
+{
+  "item.pocketstorage.psu_1": "Карманное хранилище (уровень 1)",
+  "item.pocketstorage.psu_1.info": "Хранит %s видов предметов, до %s каждого вида.",
+  "item.pocketstorage.psu_1.info2": "Автоматически подбирает совпадающие предметы",
+  "item.pocketstorage.psu_1.info3": "и уничтожает излишки.",
+  "item.pocketstorage.psu_2": "Карманное хранилище (уровень 2)",
+  "item.pocketstorage.psu_2.info": "Хранит %s видов предметов, до %s каждого вида.",
+  "item.pocketstorage.psu_2.info2": "Автоматически подбирает совпадающие предметы",
+  "item.pocketstorage.psu_2.info3": "и уничтожает излишки.",
+  "item.pocketstorage.psu_3": "Карманное хранилище (уровень 3)",
+  "item.pocketstorage.psu_3.info": "Хранит %s видов предметов, до %s каждого вида.",
+  "item.pocketstorage.psu_3.info2": "Автоматически подбирает совпадающие предметы",
+  "item.pocketstorage.psu_3.info3": "и уничтожает излишки.",
+  "item.pocketstorage.psu_4": "Карманное хранилище (уровень 4)",
+  "item.pocketstorage.psu_4.info": "Хранит %s видов предметов, до %s каждого вида.",
+  "item.pocketstorage.psu_4.info2": "Автоматически подбирает совпадающие предметы",
+  "item.pocketstorage.psu_4.info3": "и уничтожает излишки."
+}
