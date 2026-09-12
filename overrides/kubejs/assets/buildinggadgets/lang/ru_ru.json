@@ -1,0 +1,19 @@
+{
+  "item.buildinggadgets.gadget_building": "Строительный гаджет",
+  "item.buildinggadgets.gadget_copy_paste": "Гаджет копирования и вставки",
+  "item.buildinggadgets.gadget_destruction": "Гаджет разрушения",
+  "item.buildinggadgets.gadget_exchanging": "Гаджет замены",
+  "item.buildinggadgets.construction_paste": "Строительная паста",
+  "item.buildinggadgets.construction_chunk_dense": "Плотный кусок строительной пасты",
+  "item.buildinggadgets.construction_paste_container_t1": "Контейнер строительной пасты",
+  "item.buildinggadgets.construction_paste_container_t2": "Контейнер строительной пасты (уровень 2)",
+  "item.buildinggadgets.construction_paste_container_t3": "Контейнер строительной пасты (уровень 3)",
+  "item.buildinggadgets.construction_paste_container_creative": "Творческий контейнер строительной пасты",
+  "item.buildinggadgets.template": "Шаблон",
+  "block.buildinggadgets.construction_block": "Строительный блок",
+  "block.buildinggadgets.construction_block_dense": "Плотный строительный блок",
+  "block.buildinggadgets.construction_block_powder": "Порошок строительного блока",
+  "block.buildinggadgets.effect_block": "Блок эффекта (не используется)",
+  "block.buildinggadgets.template_manager": "Менеджер шаблонов",
+  "block.buildinggadgets.charging_station": "Зарядная станция"
+}
