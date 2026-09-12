@@ -246,6 +246,7 @@ def deploy_pack() -> None:
             "enforce-secure-profile=true\n"
             "gamemode=survival\n"
             "level-name=world\n"
+            "level-type=skyblockbuilder\\:skyblock\n"
             "max-players=20\n"
             "motd=Astropolis RU 2.2\n"
             "online-mode=true\n"
@@ -255,6 +256,20 @@ def deploy_pack() -> None:
             "simulation-distance=8\n",
             encoding="utf-8",
         )
+    enforce_server_property(properties, "level-type", r"skyblockbuilder\:skyblock")
+
+
+def enforce_server_property(path: Path, key: str, value: str) -> None:
+    lines = path.read_text(encoding="utf-8").splitlines()
+    replacement = f"{key}={value}"
+    found = False
+    for index, line in enumerate(lines):
+        if line.startswith(f"{key}="):
+            lines[index] = replacement
+            found = True
+    if not found:
+        lines.append(replacement)
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def main() -> int:
