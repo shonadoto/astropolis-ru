@@ -1,0 +1,18 @@
+{
+  "block.extendedcrafting.enhanced_redstone_ingot_block": "Блок слитков усиленного редстоуна",
+  "block.extendedcrafting.flux_star_block": "Блок флаксовой звезды",
+  "block.extendedcrafting.auto_ender_crafter": "Автоматический эндер-верстак",
+  "block.extendedcrafting.flux_alternator": "Флаксовый альтернатор",
+  "block.extendedcrafting.flux_crafter": "Флаксовый верстак",
+  "block.extendedcrafting.auto_flux_crafter": "Автоматический флаксовый верстак",
+  "item.extendedcrafting.enhanced_redstone_ingot": "Слиток усиленного редстоуна",
+  "item.extendedcrafting.enhanced_redstone_nugget": "Кусочек усиленного редстоуна",
+  "item.extendedcrafting.enhanced_redstone_catalyst": "Катализатор усиленного редстоуна",
+  "item.extendedcrafting.enhanced_redstone_component": "Компонент усиленного редстоуна",
+  "item.extendedcrafting.flux_star": "Флаксовая звезда",
+  "container.extendedcrafting.flux_alternator": "Флаксовый альтернатор",
+  "container.extendedcrafting.flux_crafter": "Флаксовый крафт",
+  "jei.category.extendedcrafting.flux_crafting": "Флаксовый крафт",
+  "config.jade.plugin_extendedcrafting.flux_crafter": "Сведения о флаксовом верстаке",
+  "book.extendedcrafting.entry.flux_crafting": "Флаксовый крафт"
+}
