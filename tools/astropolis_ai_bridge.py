@@ -20,6 +20,10 @@ from urllib.request import Request, urlopen
 
 
 ROOT = Path(__file__).resolve().parents[1]
+SERVER_DIR = Path(os.environ.get("ASTROPOLIS_SERVER_DIR", ROOT / "server")).resolve()
+QUEUE_DIR = SERVER_DIR / "kubejs" / "ai_bridge"
+REQUEST_DIR = QUEUE_DIR / "requests"
+RESULT_DIR = QUEUE_DIR / "results"
 HOST = os.environ.get("AI_BRIDGE_HOST", "127.0.0.1")
 PORT = int(os.environ.get("AI_BRIDGE_PORT", "8765"))
 MODEL = os.environ.get("OPENAI_MODEL", "gpt-5.4-mini")
@@ -337,6 +341,80 @@ def run_job(job_id: str, player: str, question: str, live_context: str) -> None:
         JOBS[job_id] = result
 
 
+def write_queue_result(job_id: str, result: dict[str, object]) -> None:
+    RESULT_DIR.mkdir(parents=True, exist_ok=True)
+    target = RESULT_DIR / f"{job_id}.json"
+    temporary = RESULT_DIR / f".{job_id}.{secrets.token_hex(4)}.tmp"
+    temporary.write_text(json.dumps(result, ensure_ascii=False), encoding="utf-8")
+    temporary.replace(target)
+
+
+def run_queue_job(job_id: str, player: str, question: str, live_context: str) -> None:
+    try:
+        result = call_openai(player, question, live_context)
+    except Exception as exc:
+        result = {"ok": False, "error": str(exc)[:700]}
+    try:
+        write_queue_result(job_id, result)
+    except OSError as exc:
+        print(f"[ai-bridge] could not write result {job_id}: {exc}", flush=True)
+
+
+def queue_loop() -> None:
+    REQUEST_DIR.mkdir(parents=True, exist_ok=True)
+    RESULT_DIR.mkdir(parents=True, exist_ok=True)
+    while True:
+        now = time.time()
+        for old_result in RESULT_DIR.glob("*.json"):
+            try:
+                if old_result.stat().st_mtime < now - RESULT_TTL:
+                    old_result.unlink(missing_ok=True)
+            except OSError:
+                pass
+
+        for request_path in REQUEST_DIR.glob("*.json"):
+            job_id = request_path.stem
+            claimed = request_path.with_suffix(".processing")
+            try:
+                request_path.replace(claimed)
+            except OSError:
+                continue
+            try:
+                data = json.loads(claimed.read_text(encoding="utf-8"))
+                player = str(data.get("player", "")).strip()
+                question = str(data.get("message", "")).strip()
+                live_context = str(data.get("context", "")).strip()[:1500]
+                if player.lower() not in ALLOWED_PLAYERS:
+                    write_queue_result(job_id, {"ok": False, "error": "нет доступа к /ai"})
+                    continue
+                if not question or len(question) > MAX_QUESTION:
+                    write_queue_result(
+                        job_id,
+                        {"ok": False, "error": "сообщение должно быть от 1 до 700 символов"},
+                    )
+                    continue
+                monotonic_now = time.monotonic()
+                remaining = COOLDOWN - (monotonic_now - LAST_REQUEST.get(player.lower(), 0))
+                if remaining > 0:
+                    write_queue_result(
+                        job_id,
+                        {"ok": False, "error": f"подожди ещё {remaining:.0f} сек."},
+                    )
+                    continue
+                LAST_REQUEST[player.lower()] = monotonic_now
+                threading.Thread(
+                    target=run_queue_job,
+                    args=(job_id, player, question, live_context),
+                    daemon=True,
+                    name=f"ai-file-{player}",
+                ).start()
+            except (OSError, ValueError, json.JSONDecodeError) as exc:
+                write_queue_result(job_id, {"ok": False, "error": f"неверный запрос: {exc}"})
+            finally:
+                claimed.unlink(missing_ok=True)
+        time.sleep(0.2)
+
+
 def purge_jobs() -> None:
     cutoff = time.time() - RESULT_TTL
     with JOBS_LOCK:
@@ -436,6 +514,7 @@ def main() -> None:
         f"documents={len(DOCUMENTS)}; configured={'yes' if API_KEY else 'no'}",
         flush=True,
     )
+    threading.Thread(target=queue_loop, daemon=True, name="ai-file-queue").start()
     ThreadingHTTPServer((HOST, PORT), Handler).serve_forever()
 
 

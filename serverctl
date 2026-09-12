@@ -21,8 +21,8 @@ BACKUP_DIR="${BACKUP_DIR:-$ROOT_DIR/backups}"
 AI_BRIDGE_SCRIPT="$ROOT_DIR/tools/astropolis_ai_bridge.py"
 AI_KUBEJS_SOURCE="$ROOT_DIR/server-assets/kubejs/server_scripts/astropolis_ai.js"
 AI_KUBEJS_TARGET="$SERVER_DIR/kubejs/server_scripts/astropolis_ai.js"
-AI_KUBEJS_CONFIG_SOURCE="$ROOT_DIR/server-assets/kubejs/config/common.properties"
-AI_KUBEJS_CONFIG_TARGET="$SERVER_DIR/kubejs/config/common.properties"
+KUBEJS_COMMON_SOURCE="$ROOT_DIR/overrides/kubejs/config/common.properties"
+KUBEJS_COMMON_TARGET="$SERVER_DIR/kubejs/config/common.properties"
 AI_PID_FILE="$SERVER_DIR/.ai-bridge.pid"
 AI_LOG="$SERVER_DIR/ai-bridge.log"
 AI_BRIDGE_PORT="${AI_BRIDGE_PORT:-8765}"
@@ -72,7 +72,7 @@ start_ai_bridge() {
   touch "$AI_LOG"
   (
     cd "$ROOT_DIR"
-    setsid python3 -u "$AI_BRIDGE_SCRIPT" >> "$AI_LOG" 2>&1 &
+    ASTROPOLIS_SERVER_DIR="$SERVER_DIR" setsid python3 -u "$AI_BRIDGE_SCRIPT" >> "$AI_LOG" 2>&1 &
     printf '%s\n' "$!" > "$AI_PID_FILE"
   )
   for _ in {1..50}; do
@@ -94,8 +94,9 @@ start_ai_bridge() {
 deploy_ai_integration() {
   [[ -f "$AI_KUBEJS_SOURCE" ]] || die "AI KubeJS script is missing: $AI_KUBEJS_SOURCE"
   mkdir -p "$(dirname "$AI_KUBEJS_TARGET")"
+  mkdir -p "$SERVER_DIR/kubejs/ai_bridge/requests" "$SERVER_DIR/kubejs/ai_bridge/results"
   install -m 0644 "$AI_KUBEJS_SOURCE" "$AI_KUBEJS_TARGET"
-  install -m 0644 "$AI_KUBEJS_CONFIG_SOURCE" "$AI_KUBEJS_CONFIG_TARGET"
+  install -m 0644 "$KUBEJS_COMMON_SOURCE" "$KUBEJS_COMMON_TARGET"
   say "AI KubeJS command deployed"
 }
 

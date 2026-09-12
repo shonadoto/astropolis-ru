@@ -1,41 +1,10 @@
-// Astropolis pack-aware assistant. The OpenAI key stays in the loopback Python bridge.
-const AstropolisAIHttpClient = Java.loadClass('java.net.http.HttpClient')
-const AstropolisAIHttpRequest = Java.loadClass('java.net.http.HttpRequest')
-const AstropolisAIBodyPublishers = Java.loadClass('java.net.http.HttpRequest$BodyPublishers')
-const AstropolisAIBodyHandlers = Java.loadClass('java.net.http.HttpResponse$BodyHandlers')
-const AstropolisAIURI = Java.loadClass('java.net.URI')
-const AstropolisAIDuration = Java.loadClass('java.time.Duration')
-const AstropolisAISystem = Java.loadClass('java.lang.System')
-
-const ASTROPOLIS_AI_PORT = AstropolisAISystem.getenv('AI_BRIDGE_PORT') || '8765'
-const ASTROPOLIS_AI_URL = 'http://127.0.0.1:' + ASTROPOLIS_AI_PORT
-const ASTROPOLIS_AI_CLIENT = AstropolisAIHttpClient.newBuilder()
-  .connectTimeout(AstropolisAIDuration.ofSeconds(2))
-  .build()
+// Astropolis pack-aware assistant. Requests use JsonIO so no unsafe Java classes are exposed.
+const ASTROPOLIS_AI_REQUEST_DIR = 'kubejs/ai_bridge/requests/'
+const ASTROPOLIS_AI_RESULT_DIR = 'kubejs/ai_bridge/results/'
 const ASTROPOLIS_AI_JOBS = {}
 const ASTROPOLIS_AI_BUSY = {}
 const ASTROPOLIS_AI_PENDING = {}
 let astropolisAiTick = 0
-
-function astropolisAiHttp(method, path, payload) {
-  let builder = AstropolisAIHttpRequest.newBuilder()
-    .uri(AstropolisAIURI.create(ASTROPOLIS_AI_URL + path))
-    .timeout(AstropolisAIDuration.ofSeconds(3))
-    .header('Accept', 'application/json')
-  if (method === 'POST') {
-    builder.header('Content-Type', 'application/json; charset=utf-8')
-    builder.POST(AstropolisAIBodyPublishers.ofString(JSON.stringify(payload)))
-  } else {
-    builder.GET()
-  }
-  let response = ASTROPOLIS_AI_CLIENT.send(
-    builder.build(),
-    AstropolisAIBodyHandlers.ofString()
-  )
-  let body = JSON.parse(String(response.body()))
-  body.httpStatus = response.statusCode()
-  return body
-}
 
 function astropolisAiTell(player, message, color) {
   let text = String(message || '').replace(/\s+/g, ' ').trim()
@@ -90,23 +59,19 @@ function astropolisAiAsk(ctx, message) {
     return 0
   }
   try {
-    let response = astropolisAiHttp('POST', '/ask', {
+    let jobId = `${Date.now()}-${key}-${Math.floor(Math.random() * 1000000000)}`
+    JsonIO.write(ASTROPOLIS_AI_REQUEST_DIR + jobId + '.json', {
       player: name,
       message: String(message),
       context: astropolisAiPlayerContext(player)
     })
-    if (!response.ok || !response.job_id) {
-      astropolisAiTell(player, response.error || 'Мост отклонил запрос.', 'red')
-      return 0
-    }
-    let jobId = String(response.job_id)
     ASTROPOLIS_AI_BUSY[key] = true
     ASTROPOLIS_AI_JOBS[jobId] = { player: name, key: key, started: Date.now() }
     astropolisAiTell(player, 'Думаю…', 'yellow')
     return 1
   } catch (error) {
-    astropolisAiTell(player, 'AI-мост недоступен. Проверь ./serverctl ai-status.', 'red')
-    console.error(`[Astropolis AI] request failed: ${error}`)
+    astropolisAiTell(player, 'Не удалось записать запрос для AI-моста.', 'red')
+    console.error(`[Astropolis AI] queue write failed: ${error}`)
     return 0
   }
 }
@@ -182,8 +147,8 @@ ServerEvents.tick(event => {
       return
     }
     try {
-      let result = astropolisAiHttp('GET', '/result/' + jobId, null)
-      if (result.pending) return
+      let result = JsonIO.read(ASTROPOLIS_AI_RESULT_DIR + jobId + '.json')
+      if (!result || Object.keys(result).length === 0) return
       delete ASTROPOLIS_AI_JOBS[jobId]
       delete ASTROPOLIS_AI_BUSY[job.key]
       let player = event.server.getPlayer(job.player)
@@ -210,7 +175,7 @@ ServerEvents.tick(event => {
       delete ASTROPOLIS_AI_BUSY[job.key]
       let player = event.server.getPlayer(job.player)
       if (player) astropolisAiTell(player, 'Связь с AI-мостом потеряна.', 'red')
-      console.error(`[Astropolis AI] polling failed: ${error}`)
+      console.error(`[Astropolis AI] queue read failed: ${error}`)
     }
   })
 })
