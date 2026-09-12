@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "astropolis:block/never_ender_ore_base"
+    }
+}

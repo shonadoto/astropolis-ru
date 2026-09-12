@@ -1,0 +1,24 @@
+{
+  "items": [    
+  {
+      "item": "cosmopolis:space_suit_helmet",
+      "count": 1,
+      "Slot": "head"
+  },  
+  {
+      "item": "cosmopolis:space_suit_chestplate",
+      "count": 1,
+      "Slot": "chest"
+  },  
+  {
+      "item": "cosmopolis:space_suit_leggings",
+      "count": 1,
+      "Slot": "legs"
+  },  
+  {
+      "item": "cosmopolis:space_suit_boots",
+      "count": 1,
+      "Slot": "feet"
+  }
+  ]
+}

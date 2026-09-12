@@ -1,0 +1,33 @@
+
+["Cosmopolis config file"]
+	#Chance that red sandstone on mars drops a random gem, 0.0 = always, 1.0 = never, 0.5 = 50% chance, default = 0.25
+	"Gems on Mars chance" = 0.95
+	#Chance that hammer drops ice shards, 0.0 = always, 1.0 = never, 0.5 = 50% chance, default = 0.25
+	"Is Shard Drop Chance" = 0.5
+	#Chance that hammer drops water drops, 0.0 = always, 1.0 = never, 0.5 = 50% chance, default = 0.25
+	"Water Drop Chance" = 0.25
+	#Chance that organic powder drops, 0.0 = always, 1.0 = never, 0.5 = 50% chance, default = 0.25
+	"Organic Drop Chance" = 0.25
+	#Chance that asteroid rocks drops, 0.0 = always, 1.0 = never, 0.5 = 50% chance, default = 0.25
+	"Asteroid Drop Chance" = 0.25
+	#Chance that rocks drops, 0.0 = always, 1.0 = never, 0.5 = 50% chance, default = 0.25
+	"Rock Drop Chance" = 0.25
+	#RF produced per tick of the gravity generator on Mars, must be a whole number
+	Mars = 50
+	#RF produced per tick of the gravity generator on Venus, must be a whole number
+	Venus = 50
+	#RF produced per tick of the gravity generator on Moon, must be a whole number
+	Moon = 20
+	#RF produced per tick of the gravity generator in Space, must be a whole number
+	Space = 30
+	#RF produced per tick of the gravity generator in Mining Belt, must be a whole number
+	"Mining Belt" = 40
+	#RF produced per tick of the gravity generator on the Overworld, must be a whole number
+	Overworld = 10
+	#RF produced per tick of the gravity generator on the Nether, must be a whole number
+	Nether = 10
+	#RF produced per tick of the gravity generator on the End, must be a whole number
+	End = 10
+	#Chance that red sandstone on mars drops a random gem, 0.0 = always, 1.0 = never, 0.5 = 50% chance, default = 0.25
+	"Prismarine on the Moon chance" = 0.95
+

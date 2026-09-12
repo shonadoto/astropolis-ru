@@ -1,0 +1,74 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "off_to_mars"
+	group: "64D925DE5BD6613C"
+	icon: "cosmopolis:mars_portal_frame"
+	id: "436EA6201C755E8D"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["03885DA50223B13B"]
+			description: ["Используется для создания портала на Марс. Требуется 10 блоков"]
+			id: "16EC4B2B089383FC"
+			subtitle: "НАВЕДИТЕ КУРСОР НА ПРЕДМЕТ И НАЖМИТЕ U, ЧТОБЫ ПОСМОТРЕТЬ РЕЦЕПТ"
+			tasks: [{
+				id: "46E693977C27674A"
+				item: "cosmopolis:mars_portal_frame"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["16EC4B2B089383FC"]
+			description: ["Выпадает из красного песчаника на Марсе ниже уровня Y=0 вместе с другими самоцветами"]
+			id: "5A08DC478E9F5F4D"
+			tasks: [{
+				id: "3C5387D0F48F31FB"
+				item: "astropolis:ruby"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["16EC4B2B089383FC"]
+			description: ["Выпадает из красного песчаника на Марсе ниже уровня Y=0 вместе с другими самоцветами"]
+			id: "5CF762CB9431FA5D"
+			tasks: [{
+				id: "01ED00C65E245A19"
+				item: "astropolis:sapphire"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["5A08DC478E9F5F4D"]
+			description: ["Бесконечные руды"]
+			id: "5BD73468D54F6BE2"
+			tasks: [{
+				id: "52B9D2CF604B66CC"
+				item: "neverenderore:never_ender_ruby_ore"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5CF762CB9431FA5D"]
+			description: ["Бесконечные руды"]
+			id: "049C17730C4B6446"
+			tasks: [{
+				id: "7794F54188BBAD36"
+				item: "neverenderore:never_ender_sapphire_ore"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -2.0d
+		}
+	]
+	title: "Отправляемся на Марс"
+}

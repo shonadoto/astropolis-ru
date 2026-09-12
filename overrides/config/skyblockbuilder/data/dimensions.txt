@@ -1,0 +1,12 @@
+minecraft:overworld
+minecraft:the_end
+cosmopolis:moon
+minecraft:the_nether
+compactmachines:compact_world
+cosmopolis:space
+cosmopolis:mars
+cosmopolis:venus
+deeperdarker:otherside
+cosmopolis:mining_belt
+lostcities:lostcity
+ae2:spatial_storage

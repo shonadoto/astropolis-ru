@@ -1,0 +1,13 @@
+{
+  "item.astropolis.machinist_research_pack": "Исследовательский набор механика",
+  "item.astropolis.foodies_research_pack": "Исследовательский набор гурмана",
+  "item.astropolis.miners_research_pack": "Исследовательский набор шахтёра",
+  "item.astropolis.water_core": "Ядро воды",
+  "item.astropolis.ingot_of_ingots": "Слиток слитков",
+  "item.astropolis.gem_of_gems": "Самоцвет самоцветов",
+  "item.astropolis.ruby": "Рубин",
+  "item.astropolis.sapphire": "Сапфир",
+  "item.astropolis.overworld_core": "Ядро Верхнего мира",
+  "item.astropolis.shard_of_shards": "Осколок осколков",
+  "block.astropolis.never_ender_ore_base": "Основа бесконечной эндер-руды"
+}

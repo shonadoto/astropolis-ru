@@ -1,0 +1,5 @@
+
+["Caveopolis Config File"]
+	#Should colored stone spawn in world?, default = true
+	"Spawn Colored Stone" = 1
+

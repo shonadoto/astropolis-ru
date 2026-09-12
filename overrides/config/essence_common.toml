@@ -1,0 +1,13 @@
+
+["Essence config file"]
+	#Mob essence drop chance 0.0 = always, 1.0 = never, 0.5 = 50% chance, default = 0.75
+	"Mob Drop Chance" = 0.75
+	#Chance that spawner shards drop from spawners, default = 0.0
+	"Spawner Shard Drop Chance" = 0.0
+	#Amount of shards that drop from spawners, default = 1
+	"Spawner Shard Amount Dropped" = 1
+	#Lowest possible height that essence ore will spawn, default = -60
+	"Min Essence Ore Spawn Height" = -60
+	#Maximum possible height that essence ore will spawn, default = 20
+	"Max Essence Ore Spawn Height" = 20
+

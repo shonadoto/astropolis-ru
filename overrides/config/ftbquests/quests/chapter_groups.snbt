@@ -1,0 +1,13 @@
+{
+	chapter_groups: [
+		{ id: "0D2AD34C2CBF122F", title: "Добро пожаловать в Astropolis" }
+		{ id: "4084AAEFF25CED3D", title: "Космомаркет" }
+		{ id: "21D41279DA8A4EF0", title: "Первые астероиды" }
+		{ id: "340DA8E9F6F96A5B", title: "Железо" }
+		{ id: "5ABCAD26A5B5A9FC", title: "Шахтёрский пояс" }
+		{ id: "2B6989CB689DF96C", title: "Венера" }
+		{ id: "247F799727C527B4", title: "Луна" }
+		{ id: "64D925DE5BD6613C", title: "Марс" }
+		{ id: "62DD82AAB9CD0D19", title: "Дом, милый дом" }
+	]
+}

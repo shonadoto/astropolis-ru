@@ -1,0 +1,531 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "wood_tech"
+	group: "21D41279DA8A4EF0"
+	icon: "minecraft:oak_log"
+	id: "77EE7C025E630445"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["15B281C4C3E0FA48"]
+			description: ["Это заняло некоторое время..."]
+			id: "775F56BEF4137CF6"
+			rewards: [{
+				id: "2EE2A5095BF09DAA"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "02FDE1A136965C17"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "minecraft:logs"
+					}
+				}
+				title: "Любой предмет из тега #minecraft:logs"
+				type: "item"
+			}]
+			title: "Брёвна"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["775F56BEF4137CF6"]
+			description: ["Из древесины создаются доски"]
+			id: "18D2109E7163C21A"
+			rewards: [{
+				id: "5ED307213E4E158E"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0D740EC6E365A87E"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "minecraft:planks"
+					}
+				}
+				title: "Любой предмет из тега #minecraft:planks"
+				type: "item"
+			}]
+			title: "Доски"
+			x: 0.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["18D2109E7163C21A"]
+			description: ["Палки можно сделать из досок"]
+			id: "4B91E965EA9969C5"
+			rewards: [{
+				id: "623E91187D385A6B"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2E0AD168CE171BE2"
+				item: "minecraft:stick"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["775F56BEF4137CF6"]
+			description: ["Более эффективное топливо для печи"]
+			id: "5FB86A8B73F7D43F"
+			rewards: [{
+				id: "3EE32BCB9CE203B9"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "342B621C1488B8F0"
+				item: "minecraft:charcoal"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5FB86A8B73F7D43F"]
+			description: ["Переплавляет один предмет"]
+			id: "5F11758BA30A14AB"
+			rewards: [{
+				id: "2603275689CAC2A5"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "30F2F225BE6BBD79"
+				item: "cosmopolis:mini_charcoal"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["18D2109E7163C21A"]
+			description: ["Больше сундуков"]
+			id: "3F16A69720BFB822"
+			rewards: [{
+				id: "030BDC7160729F0D"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2279A65144F4F4C4"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:chests/wooden"
+					}
+				}
+				title: "Любой предмет из тега #forge:chests/wooden"
+				type: "item"
+			}]
+			title: "Сундук"
+			x: -1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["3F16A69720BFB822"]
+			description: ["Перемещает предметы"]
+			id: "4C666277098E3E39"
+			rewards: [{
+				id: "543D541A2137E448"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "49FE67A89A790FA5"
+				item: "pipez:item_pipe"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["1A5063D026C316FE"]
+			description: ["При копчении брёвен получается зола"]
+			id: "1F1983CB009FC9A5"
+			rewards: [{
+				id: "6A7098ED25DA8592"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "756DF34ADB181525"
+				item: "supplementaries:ash"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["1F1983CB009FC9A5"]
+			description: ["При переплавке золы получаются кирпичи из золы"]
+			id: "6A9C3AA9F40531A0"
+			rewards: [{
+				id: "49C01ABECDEF47A8"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0E6EC308E478782A"
+				item: "supplementaries:ash_brick"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6A9C3AA9F40531A0"]
+			description: ["Используется для создания мультиблоков Immersive Engineering"]
+			id: "578978E4F1F0CFC5"
+			rewards: [
+				{
+					id: "37E7AEB62BBA76EC"
+					item: "opolisutilities:b_bucks"
+					type: "item"
+				}
+				{
+					id: "4D9710E88D19AECF"
+					item: "immersiveengineering:manual"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "20850957D6720B22"
+				item: {
+					Count: 1b
+					id: "immersiveengineering:hammer"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["578978E4F1F0CFC5"]
+			description: ["Сложите куб 3x3x3 и ударьте по нему инженерным молотом, чтобы построить доменную печь. В ней некоторые блоки можно перерабатывать в кусочки металлов"]
+			id: "2D1318EDA00ECA97"
+			rewards: [{
+				id: "05FFCC417A9137EA"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "244D4118CA470979"
+				item: "immersiveengineering:blastbrick"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["775F56BEF4137CF6"]
+			description: ["Коптит предметы"]
+			id: "1A5063D026C316FE"
+			rewards: [{
+				id: "01A12B770FB5B387"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "443680DB83AD860E"
+				item: "minecraft:smoker"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["6A9C3AA9F40531A0"]
+			description: ["Сложите куб 3x3x3 и ударьте по нему инженерным молотом, чтобы построить коксовую печь"]
+			id: "721697F5D7CD5AD6"
+			rewards: [{
+				id: "55A046AD54E4B585"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "58C8D85F2C683051"
+				item: "immersiveengineering:cokebrick"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["721697F5D7CD5AD6"]
+			description: ["Создаётся из досок, пропитанных креозотом"]
+			id: "0AAE6A63CAE81078"
+			rewards: [{
+				id: "4A0B21E53B753FE7"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "741FED62899444F0"
+				item: "immersiveengineering:treated_wood_horizontal"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0AAE6A63CAE81078"]
+			description: ["Используется вместе с чертежами для создания предметов"]
+			id: "22D5A4A08E51547B"
+			rewards: [{
+				id: "0A872C886707C2C7"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1AA1ECBD7B356223"
+				item: "immersiveengineering:workbench"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["2D1318EDA00ECA97"]
+			description: ["Создаётся в доменной печи"]
+			id: "72CD470A84E470B9"
+			rewards: [{
+				id: "286F44F2D802C0A4"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "3F091A471A2B1024"
+				item: "opolisutilities:copper_nugget"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["72CD470A84E470B9"]
+			description: ["Из кусочков можно создавать слитки"]
+			id: "7D88149DAA0394A7"
+			rewards: [{
+				id: "41EA92CACDADEEEF"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "42E24309EB0A3318"
+				item: "minecraft:copper_ingot"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 7.0d
+		}
+		{
+			dependencies: ["2D1318EDA00ECA97"]
+			description: ["Создаётся в доменной печи"]
+			id: "7FB4F23DE7D495D4"
+			rewards: [{
+				id: "51F8AEC1B2D029C8"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "3624E0042A3E3C7D"
+				item: "mekanism:nugget_tin"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7FB4F23DE7D495D4"]
+			description: ["Из кусочков можно создавать слитки"]
+			id: "226D671DB96AC186"
+			rewards: [{
+				id: "66E551DB2EA29F6D"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5C27180B34EB8AB2"
+				item: "mekanism:ingot_tin"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 7.0d
+		}
+		{
+			dependencies: ["18D2109E7163C21A"]
+			description: ["Работают как складские ящики, но обладают дополнительными возможностями"]
+			id: "3F5A44AA3C538DD8"
+			rewards: [{
+				id: "257AB3B98499C083"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "6E5E923F5A1F167F"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "functionalstorage:drawer"
+					}
+				}
+				title: "Любой предмет из тега #functionalstorage:drawer"
+				type: "item"
+			}]
+			title: "Functional Storage"
+			x: 1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"5F11758BA30A14AB"
+				"3F5A44AA3C538DD8"
+			]
+			description: ["Создайте собственные складские ящики!"]
+			id: "7B394DB84AE6D7F8"
+			rewards: [{
+				id: "74D1ED1E65288A75"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "082104DFD740E7C9"
+				item: "functionalstorage:framed_1"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["7B394DB84AE6D7F8"]
+			description: ["Одним инструментом запирает ящики и переключает отображение количества предметов, улучшений и содержимого"]
+			id: "757C52118F4EB345"
+			rewards: [{
+				id: "2869EA9B5D892F69"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7158C713AAB70CBF"
+				item: {
+					Count: 1b
+					id: "functionalstorage:configuration_tool"
+					tag: {
+						Mode: "LOCKING"
+					}
+				}
+				type: "item"
+			}]
+			x: 3.0d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"483C972E91A1443E"
+				"757C52118F4EB345"
+			]
+			description: ["Сердце сети складских ящиков"]
+			id: "1A6DB1597EA06C66"
+			rewards: [{
+				id: "7BB12816332F39D0"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "78F6023E78EE6452"
+				item: "functionalstorage:storage_controller"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["757C52118F4EB345"]
+			description: ["Если рецепт работает в обе стороны, этот ящик предоставит оба варианта предмета. На него также можно установить рамку"]
+			id: "5D195A56570084F1"
+			rewards: [{
+				id: "50A75765EBFF42B6"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "10368B6FE6B2EBB0"
+				item: "functionalstorage:compacting_drawer"
+				type: "item"
+			}]
+			x: 4.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["3F16A69720BFB822"]
+			description: ["Простая транспортировка предметов"]
+			id: "708A2AD2F88BA62C"
+			rewards: [{
+				id: "7AAC47C40B4FEFDE"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2FB5232218DB6009"
+				item: "woodenhopper:wooden_hopper"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["757C52118F4EB345"]
+			description: ["Связывает контроллер со складскими ящиками"]
+			id: "0ED5B951309553B2"
+			rewards: [{
+				id: "35819E714E6C1E96"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5FDCF9DF87E1CB38"
+				item: {
+					Count: 1b
+					id: "functionalstorage:linking_tool"
+					tag: {
+						Action: "ADD"
+						Mode: "SINGLE"
+					}
+				}
+				type: "item"
+			}]
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["775F56BEF4137CF6"]
+			description: ["Улучшенный генератор ресурсов."]
+			id: "413FB41CF423E723"
+			tasks: [{
+				id: "0063EDC3BF307FCE"
+				item: "opolisutilities:resource_generator_2"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 1.0d
+		}
+	]
+	title: "Деревянные технологии"
+}

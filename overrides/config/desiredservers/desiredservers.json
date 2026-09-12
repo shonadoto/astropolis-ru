@@ -1,0 +1,13 @@
+[
+  {
+    "serverName": "Patreon Server",
+    "serverIP": "astropolis.lotp.it",
+    "forceResourcePack": "true"
+  },
+  {
+    "serverName": "Official Public Server",
+    "serverIP": "astropolis.symphony-gaming.com",
+    "forceResourcePack": "false"
+  }
+]
+]

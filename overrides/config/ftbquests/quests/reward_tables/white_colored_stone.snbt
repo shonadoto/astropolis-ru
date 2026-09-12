@@ -1,0 +1,7 @@
+{
+	id: "4D68D9D99D2073F2"
+	loot_size: 1
+	order_index: 0
+	rewards: [{ count: 16, item: "caveopolis:white_colored_stone" }]
+	title: "Белый цветной камень"
+}

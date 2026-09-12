@@ -1,0 +1,411 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "bronze_age"
+	group: "21D41279DA8A4EF0"
+	icon: "geodeopolis:cluster_template"
+	id: "24627E0B323DFC39"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["6A9C3AA9F40531A0"]
+			description: ["Сложите куб 2x2x2 и ударьте по нему инженерным молотом, чтобы построить сплавную печь"]
+			id: "667D873A79451A8B"
+			rewards: [{
+				id: "54403F9130CE889E"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "368D3D7D182EA02E"
+				item: "immersiveengineering:alloybrick"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["667D873A79451A8B"]
+			description: ["Сплав меди и олова, который получают в сплавной печи"]
+			id: "4425754D15691AAC"
+			rewards: [{
+				id: "318CC2D30D9F9116"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5D96564681DE005B"
+				item: "mekanism:ingot_bronze"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["4425754D15691AAC"]
+			description: ["Исследовательский набор шахтёра используется для создания различных руд и жеод"]
+			id: "0FC788269CBE0357"
+			rewards: [{
+				id: "485A83B2FAEB49E0"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "743380F59A31EE1B"
+				item: "astropolis:miners_research_pack"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["2934F2F3254E7A42"]
+			description: ["Получается при переплавке яркого камня в булыжной печи"]
+			id: "4EBD65C43DB02C17"
+			rewards: [{
+				id: "4E590B098AD71F49"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7A9494CA71089F53"
+				item: "caveopolis:bright_shard"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["4EBD65C43DB02C17"]
+			description: ["После размещения в мире выращивает кристаллы. Также их можно выращивать в садовом клоше с шаблоном кластера"]
+			id: "08196C6D5F73A1E3"
+			rewards: [{
+				id: "342DB241C422204C"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0A17DAE1BE2D24A5"
+				item: "geodeopolis:budding_copper"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -7.0d
+		}
+		{
+			dependencies: ["4EBD65C43DB02C17"]
+			description: ["После размещения в мире выращивает кристаллы. Также их можно выращивать в садовом клоше с шаблоном кластера"]
+			id: "44578AEF2CFCD0E7"
+			rewards: [{
+				id: "48BCFA62F7359C4F"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "35E3F9D30D557EBB"
+				item: "geodeopolis:budding_coal"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -7.0d
+		}
+		{
+			dependencies: ["4EBD65C43DB02C17"]
+			description: ["После размещения в мире выращивает кристаллы. Также их можно выращивать в садовом клоше с шаблоном кластера"]
+			id: "6D13E0859D05C7A1"
+			rewards: [{
+				id: "62D13198E8323006"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7F0A808F04327E90"
+				item: "geodeopolis:budding_tin"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -7.0d
+		}
+		{
+			dependencies: ["0FC788269CBE0357"]
+			description: ["Создаётся из камня и исследовательских наборов шахтёра"]
+			id: "2934F2F3254E7A42"
+			rewards: [{
+				id: "747504ACAF17A03E"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "751D39CF41B468B7"
+				item: "caveopolis:bright_stone"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["4EBD65C43DB02C17"]
+			description: ["Позволяет выращивать кристаллы в садовом клоше"]
+			id: "6CE6C3ED3351F959"
+			rewards: [{
+				id: "03D51D71DD4D6A12"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "411C2BEE42C1D557"
+				item: "geodeopolis:cluster_template"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["08196C6D5F73A1E3"]
+			description: ["Выращивается в садовом клоше"]
+			id: "660DFC02DC83FA0C"
+			optional: true
+			rewards: [{
+				id: "7E1918B796F51582"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "6A802222A6C15D2A"
+				item: "geodeopolis:copper_cluster"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["44578AEF2CFCD0E7"]
+			description: ["Выращивается в садовом клоше"]
+			id: "0EC828AF356BE922"
+			optional: true
+			rewards: [{
+				id: "25DCE5463628C018"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "3D4D0DA8706ED122"
+				item: "geodeopolis:coal_cluster"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["6D13E0859D05C7A1"]
+			description: ["Выращивается в садовом клоше"]
+			id: "3407DF972564E7A7"
+			optional: true
+			rewards: [{
+				id: "130882C1790C43D0"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "20CB63A2F5842170"
+				item: "geodeopolis:tin_cluster"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["660DFC02DC83FA0C"]
+			description: ["Выпадает при разрушении кластеров. Из кластеров можно создавать соответствующие слитки или самоцветы"]
+			id: "4E73B1CA2192CDB7"
+			rewards: [{
+				id: "5FDD474E262719C1"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "16ABC4350A932413"
+				item: "geodeopolis:copper_shard"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -9.0d
+		}
+		{
+			dependencies: ["0EC828AF356BE922"]
+			description: ["Выпадает при разрушении кластеров. Из кластеров можно создавать соответствующие слитки или самоцветы"]
+			id: "78BF0A76986B7DB2"
+			rewards: [{
+				id: "6B1FEB1D3D365ECF"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "3A43E1A9F88AEEC8"
+				item: "geodeopolis:coal_shard"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -9.0d
+		}
+		{
+			dependencies: ["3407DF972564E7A7"]
+			description: ["Выпадает при разрушении кластеров. Из кластеров можно создавать соответствующие слитки или самоцветы"]
+			id: "42EDD9BCE0E3EC85"
+			rewards: [{
+				id: "48D6EE63CFADC7D3"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4629D83F4A5EF7F9"
+				item: "geodeopolis:tin_shard"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -9.0d
+		}
+		{
+			dependencies: ["2081F70CFEB58494"]
+			description: ["Прочный стержень"]
+			id: "5CE5DB36EE2A68B6"
+			rewards: [{
+				id: "4F20EB5F79D53EDF"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5834C2924D1CB2CD"
+				item: "engineersdecor:metal_bar"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -10.0d
+		}
+		{
+			dependencies: [
+				"721697F5D7CD5AD6"
+				"2081F70CFEB58494"
+			]
+			description: ["Создаётся в коксовой печи"]
+			id: "5F99A5A7920CEF25"
+			rewards: [{
+				id: "17E3C09A424BE4D9"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "31C1F491F054FDB1"
+				item: "immersiveengineering:coal_coke"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -10.0d
+		}
+		{
+			dependencies: ["78BF0A76986B7DB2"]
+			description: ["Используется как топливо для переплавки"]
+			id: "2081F70CFEB58494"
+			rewards: [{
+				id: "241BA64A97B8AF11"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "288BEAE80DE461DD"
+				item: "minecraft:coal"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -10.0d
+		}
+		{
+			dependencies: ["4EBD65C43DB02C17"]
+			description: ["После размещения в мире выращивает кристаллы. Также их можно выращивать в садовом клоше с шаблоном кластера"]
+			id: "00520CCC90B074D1"
+			rewards: [{
+				id: "31AEE578FCE2C1F7"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "17F62F0CED909910"
+				item: "minecraft:budding_amethyst"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["00520CCC90B074D1"]
+			description: ["Выращивается в садовом клоше"]
+			id: "2E8B6F6159FF8F02"
+			optional: true
+			rewards: [{
+				id: "7EA519A10D157C0A"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "152879EF13A66E01"
+				item: "minecraft:amethyst_cluster"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["2E8B6F6159FF8F02"]
+			description: ["Выпадает при разрушении кластеров. Кластеры можно переплавлять в соответствующие слитки или самоцветы"]
+			id: "4C6A46EE935EBF18"
+			rewards: [{
+				id: "20F9B6A488B2954C"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2A091D68ECAF337B"
+				item: "minecraft:amethyst_shard"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["5CE5DB36EE2A68B6"]
+			description: ["Хранит жидкости и сохраняет содержимое после разрушения"]
+			id: "34B22035DA5F2B48"
+			rewards: [{
+				id: "00A9ADB0C0FAD681"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "539F6DEAD8CE4059"
+				item: "engineersdecor:fluid_barrel"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -10.0d
+		}
+		{
+			dependencies: ["34B22035DA5F2B48"]
+			description: ["Подайте воду и энергию, чтобы получать лёд. Воронка снизу будет автоматически забирать готовый лёд"]
+			id: "1132792E02BBDE16"
+			rewards: [{
+				id: "0D179592EF550AAB"
+				item: "opolisutilities:b_bucks"
+				type: "item"
+			}]
+			tasks: [{
+				id: "6D2F68D9C1597272"
+				item: "engineersdecor:small_freezer"
+				type: "item"
+			}]
+			x: -3.0d
+			y: -10.0d
+		}
+	]
+	title: "Выращивание кристаллов"
+}

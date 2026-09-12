@@ -1,0 +1,15 @@
+{
+  "name": "cosmopolis:osmium_asteroid",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "cosmopolis:osmium_asteroid",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

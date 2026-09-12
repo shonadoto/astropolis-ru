@@ -1,0 +1,4 @@
+#Max Energy Stored, range 100 - 100,000,000, default 100,000
+#Range: 100 ~ 100000000
+maxEnergyStored = 100000
+

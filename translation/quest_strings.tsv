@@ -1,0 +1,495 @@
+file	line	english	russian	status
+overrides/config/ftbquests/quests/chapter_groups.snbt	3	Welcome To Astropolis	Добро пожаловать в Astropolis	reviewed
+overrides/config/ftbquests/quests/chapter_groups.snbt	4	Space Mart	Космомаркет	reviewed
+overrides/config/ftbquests/quests/chapter_groups.snbt	5	First Asteroids	Первые астероиды	reviewed
+overrides/config/ftbquests/quests/chapter_groups.snbt	6	Iron	Железо	reviewed
+overrides/config/ftbquests/quests/chapter_groups.snbt	7	Mining Belt	Шахтёрский пояс	reviewed
+overrides/config/ftbquests/quests/chapter_groups.snbt	8	Venus	Венера	reviewed
+overrides/config/ftbquests/quests/chapter_groups.snbt	9	Moon	Луна	reviewed
+overrides/config/ftbquests/quests/chapter_groups.snbt	10	Mars	Марс	reviewed
+overrides/config/ftbquests/quests/chapter_groups.snbt	11	Home Sweet Home	Дом, милый дом	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	16	A big machine used to double ores as well as crafting new items	Большая машина, которая удваивает руду и позволяет создавать новые предметы	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	78	Arc Furnace	Дуговая печь	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	84	Used to make a faster version of the blast furnace. Create a 3x3x3 of reinforced blast bricks with a hopper on the top middle block	Позволяет построить улучшенную доменную печь. Сложите куб 3x3x3 из укреплённых доменных кирпичей и установите воронку сверху по центру	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	104	Used to increase the speed of the blast furnace	Используется для увеличения скорости доменной печи	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	121	Can provide furnaces with heat using RF instead of using fuel	Нагревает печи энергией RF вместо обычного топлива	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	138	Can be used as power transport as a alternative to pipes	Передаёт энергию по проводам — альтернатива трубам	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	155	Connects to blocks that produce or require power	Соединяет провода с блоками, которые вырабатывают или потребляют энергию	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	172	Allows multiple wire to be connected to it and allows you to build a power grid	Позволяет соединить несколько проводов и построить электросеть	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	193	Used inside the arc furnace 	Используется в дуговой печи	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	216	Used to crush up items and blocks. Can be used to turn clusters into dusts	Дробит предметы и блоки; в частности, превращает кластеры в пыль	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	255	Crusher	Дробилка	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	261	Smelted HOP graphite dust	Переплавленная графитовая пыль HOP	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	278	Made in the squeezer	Создаётся в выжимателе	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	295	Squeezes items and blocks. Can be used to make water	Выжимает предметы и блоки; также позволяет получать воду	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	345	Squeezer	Выжиматель	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	351	Made inside the crusher	Создаётся в дробилке	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	368	Places blocks	Размещает блоки	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	385	Break blocks	Ломает блоки	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	402	Can be made in a arc furnace	Создаётся в дуговой печи	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	419	A better furnace	Улучшенная печь	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	436	An even better furnace	Ещё более эффективная печь	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	467	Drops items	Выбрасывает предметы	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	484	Can be placed in any direction	Можно установить в любом направлении	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	501	Can be used to make graphite rods more efficiently	Можно использовать для более эффективного изготовления графитовых стержней	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	525	Used to upgrade you infinite water source, right click the original in world to upgrade	Улучшает бесконечный источник воды: нажмите ПКМ по установленному в мире источнику	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	545	Made from old industrial wooden planks and iron. After getting redstone you will have the ability to use x net	Создаётся из старых промышленных досок и железа. После получения редстоуна станет доступна сеть XNet	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	562	Just smaller machine frames	Уменьшенные корпуса машин	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	579	Allows redstone signal on timers	Подаёт сигнал редстоуна по таймеру	reviewed
+overrides/config/ftbquests/quests/chapters/arc_furnace.snbt	596	Allows the auto crafting of a set recipe	Автоматически создаёт предмет по заданному рецепту	reviewed
+overrides/config/ftbquests/quests/chapters/basic_information.snbt	11	Welcome to Astropolis 	Добро пожаловать в Astropolis	reviewed
+overrides/config/ftbquests/quests/chapters/basic_information.snbt	20	Welcome to Astropolis	Добро пожаловать в Astropolis	reviewed
+overrides/config/ftbquests/quests/chapters/basic_information.snbt	28	If you fall off your asteroid you will respawn above the world and drop back down	Если вы упадёте с астероида, то возродитесь над миром и упадёте обратно	reviewed
+overrides/config/ftbquests/quests/chapters/basic_information.snbt	37	Forgiving Void	Прощающая пустота	reviewed
+overrides/config/ftbquests/quests/chapters/basic_information.snbt	45	The shop will slowly unlock as you complete more and more quests. Most quests will reward B Bucks	Ассортимент магазина будет расширяться по мере выполнения заданий. За большинство заданий вы получите B-баксы	reviewed
+overrides/config/ftbquests/quests/chapters/basic_information.snbt	61	The Shop	Магазин	reviewed
+overrides/config/ftbquests/quests/chapters/basic_information.snbt	69	You may have noticed that you can jump higher. Space dimensions have reduced gravity making you jump higher. Fall damage will not hurt you in space	Вы могли заметить, что здесь прыгаете выше. В космических измерениях понижена гравитация, а урон от падения отсутствует	reviewed
+overrides/config/ftbquests/quests/chapters/basic_information.snbt	78	Gravity	Гравитация	reviewed
+overrides/config/ftbquests/quests/chapters/basic_information.snbt	86	Join the discord here. https://discord.gg/UpJknJ8	Присоединяйтесь к серверу Discord: https://discord.gg/UpJknJ8	reviewed
+overrides/config/ftbquests/quests/chapters/basic_information.snbt	104	Join the discord for tips, tricks and suggestions	Загляните в Discord за советами, подсказками и обсуждением сборки	reviewed
+overrides/config/ftbquests/quests/chapters/basic_information.snbt	107	Discord	Discord	reviewed
+overrides/config/ftbquests/quests/chapters/basic_information.snbt	113	Press L to create your sky block island	Нажмите L, чтобы создать свой остров в небе	reviewed
+overrides/config/ftbquests/quests/chapters/basic_information.snbt	122	Press L	Нажмите L	reviewed
+overrides/config/ftbquests/quests/chapters/basic_information.snbt	130	Use /ftbteams to create a party so your quests sync	Создайте команду с помощью /ftbteams, чтобы синхронизировать прогресс заданий	reviewed
+overrides/config/ftbquests/quests/chapters/basic_information.snbt	139	FTB Quests	FTB Quests	reviewed
+overrides/config/ftbquests/quests/chapters/basic_information.snbt	147	FTB Ultimine can be used to break up to 64 blocks of the same type. Break a block when holding the grave button to use	FTB Ultimine позволяет сломать до 64 одинаковых блоков за раз. Для этого ломайте блок, удерживая клавишу тильды (~)	reviewed
+overrides/config/ftbquests/quests/chapters/basic_information.snbt	158	FTB Ultimine	FTB Ultimine	reviewed
+overrides/config/ftbquests/quests/chapters/basic_information.snbt	164	If you do die you can get a new space suit in the emergency items section of the quests	Если вы погибнете, новый скафандр можно получить в разделе экстренных предметов книги заданий	reviewed
+overrides/config/ftbquests/quests/chapters/basic_information.snbt	175	Death	Смерть	reviewed
+overrides/config/ftbquests/quests/chapters/basic_information.snbt	180	Basic Information	Основная информация	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	16	Allows your network to use more channels. The max channel amount can be outputted from each side. Can be a mulitblock to provide even more channels!	Увеличивает число каналов МЭ-сети. Максимальное число каналов доступно с каждой стороны; несколько контроллеров можно объединить в мультиблок	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	33	A place to store your storage drives	Сюда устанавливаются ячейки хранения	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	50	Used to create the pattens for recipes	Создаёт шаблоны рецептов	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	67	View items stored in your network, and craft from them	Показывает предметы в МЭ-сети и позволяет создавать из них новые	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	84	View saved patterns	Показывает сохранённые шаблоны	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	101	Basic connecting cable for ae2	Базовый соединительный кабель AE2	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	118	Shows amount of used channels	Показывает число занятых каналов	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	134	Any #ae2:smart_cable	Любой предмет из тега #ae2:smart_cable	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	137	Smart Cable	Умный кабель	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	159	Any #ae2:smart_dense_cable	Любой #ae2:smart_dense_cable	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	162	Dense Smart Cable	Плотный умный кабель	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	200	Allows more channels through the cable	Передаёт больше каналов по одному кабелю	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	216	Any #ae2:covered_cable	Любой предмет из тега #ae2:covered_cable	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	219	Covered Cable	Закрытый кабель	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	225	Allows the max amount of channels through the cable	Передаёт максимальное число каналов по одному кабелю	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	241	Any #ae2:covered_dense_cable	Любой предмет из тега #ae2:covered_dense_cable	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	244	Dense Covered Cable	Плотный закрытый кабель	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	250	Smelted sky stone block	Переплавленный блок небесного камня	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	267	Made in the inscriber	Создаётся в высекателе	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	301	Can be placed onto fluix cables, produces light, used in making other terminals	Устанавливается на флюиксовый кабель, излучает свет и используется для создания других терминалов	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	318	Building	Строительство	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	335	Destroying	Разрушение	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	356	View items stored in your network	Показывает предметы, хранящиеся в МЭ-сети	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	373	When patterns are placed in adjacent pattern providers will all the crafting of saved items	Вместе с соседними поставщиками шаблонов автоматически создаёт предметы по сохранённым рецептам	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	394	Placed on molecular assemblers to add crafting recipes to them. Placed on machines to craft inside them instead	Рядом с молекулярным сборщиком добавляет ему рецепты создания; рядом с машиной запускает обработку внутри неё	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	410	Any #ae2:pattern_provider	Любой предмет из тега #ae2:pattern_provider	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	413	Pattern Providers	Поставщики шаблонов	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	422	The base of crafting storage	Основа хранилища создания	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	439	Allows crafting of items automatically, the higher the storage the bigger the crafting recipes. Placed onto a connected cable	Автоматически создаёт предметы. Чем больше объём хранилища, тем сложнее могут быть рецепты. Устанавливается на подключённый кабель	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	456	Allows multiple crafting storages to work together on the same recipe or seperatly	Позволяет нескольким хранилищам создания обрабатывать один рецепт совместно или работать раздельно	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	473	Stores items	Хранит предметы	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	494	Imports item into the network	Импортирует предметы в сеть	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	511	Exports items from the network	Экспортирует предметы из сети	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	528	Allows your network to view items that are not stored in it. Connect to a storage controller to view all item in your storage drawers	Позволяет сети видеть предметы во внешнем хранилище. Подключите шину к контроллеру, чтобы видеть содержимое всех складских ящиков	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	549	Interface	Интерфейс	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	565	Any #ae2:interface	Любой предмет из тега #ae2:interface	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	568	Interfaces	Интерфейсы	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	574	Power your network	Питает вашу сеть энергией	reviewed
+overrides/config/ftbquests/quests/chapters/better_storage.snbt	590	Better Storage	Улучшенное хранение	reviewed
+overrides/config/ftbquests/quests/chapters/bronze_age.snbt	13	When placed in a 2x2x2 and using the hammer on then will create the alloy kiln	Сложите куб 2x2x2 и ударьте по нему инженерным молотом, чтобы построить сплавную печь	reviewed
+overrides/config/ftbquests/quests/chapters/bronze_age.snbt	30	An alloy of copper and tin, can be made in the alloy kiln	Сплав меди и олова, который получают в сплавной печи	reviewed
+overrides/config/ftbquests/quests/chapters/bronze_age.snbt	47	The miners science pack can be used to create different ores and geodes	Исследовательский набор шахтёра используется для создания различных руд и жеод	reviewed
+overrides/config/ftbquests/quests/chapters/bronze_age.snbt	64	Comes from bright stone when cooked in a cobblestone furnace	Получается при переплавке яркого камня в булыжной печи	reviewed
+overrides/config/ftbquests/quests/chapters/bronze_age.snbt	81	When placed in the world will grow crystals. Alternatively can be grown in the garden cloche with a cluster template	После размещения в мире выращивает кристаллы. Также их можно выращивать в садовом клоше с шаблоном кластера	reviewed
+overrides/config/ftbquests/quests/chapters/bronze_age.snbt	132	Can be crafted from stone and miners research packs.	Создаётся из камня и исследовательских наборов шахтёра	reviewed
+overrides/config/ftbquests/quests/chapters/bronze_age.snbt	149	Used to grow crystals inside the garden cloche	Позволяет выращивать кристаллы в садовом клоше	reviewed
+overrides/config/ftbquests/quests/chapters/bronze_age.snbt	166	Grown inside a garden cloche	Выращивается в садовом клоше	reviewed
+overrides/config/ftbquests/quests/chapters/bronze_age.snbt	220	Drops from broken clusters, Cluster can be crafted into there ingot or gem varients	Выпадает при разрушении кластеров. Из кластеров можно создавать соответствующие слитки или самоцветы	reviewed
+overrides/config/ftbquests/quests/chapters/bronze_age.snbt	271	Hard bar	Прочный стержень	reviewed
+overrides/config/ftbquests/quests/chapters/bronze_age.snbt	291	Made inside the coke oven	Создаётся в коксовой печи	reviewed
+overrides/config/ftbquests/quests/chapters/bronze_age.snbt	308	Useful for smelting items	Используется как топливо для переплавки	reviewed
+overrides/config/ftbquests/quests/chapters/bronze_age.snbt	360	Drops from broken clusters, Cluster can be smelted into there ingot or gem varients	Выпадает при разрушении кластеров. Кластеры можно переплавлять в соответствующие слитки или самоцветы	reviewed
+overrides/config/ftbquests/quests/chapters/bronze_age.snbt	377	Stores fluids, retains fluids when broken	Хранит жидкости и сохраняет содержимое после разрушения	reviewed
+overrides/config/ftbquests/quests/chapters/bronze_age.snbt	394	Provide with water and power to produce ice, hopper underneath to automatically extract created ice	Подайте воду и энергию, чтобы получать лёд. Воронка снизу будет автоматически забирать готовый лёд	reviewed
+overrides/config/ftbquests/quests/chapters/bronze_age.snbt	410	Growing Crystals	Выращивание кристаллов	reviewed
+overrides/config/ftbquests/quests/chapters/clusters_again.snbt	272	Clusters Again	Снова кластеры	reviewed
+overrides/config/ftbquests/quests/chapters/computer.snbt	210	Processors	Процессоры	reviewed
+overrides/config/ftbquests/quests/chapters/decorations.snbt	11	Of the old days	Напоминание о былых временах	reviewed
+overrides/config/ftbquests/quests/chapters/decorations.snbt	27	Globe	Глобус	reviewed
+overrides/config/ftbquests/quests/chapters/decorations.snbt	32	Need dye?	Нужны красители?	reviewed
+overrides/config/ftbquests/quests/chapters/decorations.snbt	49	Dyes	Красители	reviewed
+overrides/config/ftbquests/quests/chapters/decorations.snbt	54	Decorations	Украшения	reviewed
+overrides/config/ftbquests/quests/chapters/electrum.snbt	13	A alloy of gold and silver	Сплав золота и серебра	reviewed
+overrides/config/ftbquests/quests/chapters/electrum.snbt	30	Made by breaking glowstone blocks, can also be made in machines from glowstone blocks	Выпадает при разрушении блоков светокамня; также создаётся из них в машинах	reviewed
+overrides/config/ftbquests/quests/chapters/electrum.snbt	47	Charges items	Заряжает предметы	reviewed
+overrides/config/ftbquests/quests/chapters/electrum.snbt	64	Made in the charger from redstone. You can also make glowstone geodes	Создаётся из редстоуна в заряднике. Также можно создавать жеоды светокамня	reviewed
+overrides/config/ftbquests/quests/chapters/electrum.snbt	81	Smelted quartz dust in a arc furnace	Переплавленная кварцевая пыль из дуговой печи	reviewed
+overrides/config/ftbquests/quests/chapters/electrum.snbt	98	Made in the charger from glowstone dust	Создаётся из пыли светокамня в заряднике	reviewed
+overrides/config/ftbquests/quests/chapters/electrum.snbt	115	Made in the charger	Создаётся в заряднике	reviewed
+overrides/config/ftbquests/quests/chapters/electrum.snbt	135	Made inside the arc furance from charged quartz, redstone, glowstone, certus quartz dust and electrum	Создаётся в дуговой печи из заряженного истинного кварца, редстоуна, светокамня, пыли истинного кварца и электрума	reviewed
+overrides/config/ftbquests/quests/chapters/electrum.snbt	152	Made inside the arc furnace	Создаётся в дуговой печи	reviewed
+overrides/config/ftbquests/quests/chapters/electrum.snbt	169	Electrum dust	Электрумовая пыль	reviewed
+overrides/config/ftbquests/quests/chapters/electrum.snbt	186	A block of fluix 	Блок флюикса	reviewed
+overrides/config/ftbquests/quests/chapters/electrum.snbt	203	This will give you one of every press for applied energistics. You only need to break this only once	При разрушении выдаёт по одному прессу каждого вида для Applied Energistics 2. Сломать его достаточно один раз	reviewed
+overrides/config/ftbquests/quests/chapters/electrum.snbt	220	Used to make processors	Используется для изготовления процессоров	reviewed
+overrides/config/ftbquests/quests/chapters/electrum.snbt	253	Made in the arc furnace from fluix blocks	Создаётся из блоков флюикса в дуговой печи	reviewed
+overrides/config/ftbquests/quests/chapters/electrum.snbt	270	Can be made by throwing certus quartz block and charged certus into water. Compact machines allow water to be placed in them	Бросьте блок истинного кварца и заряженный истинный кварц в воду. Воду можно разместить внутри компактной машины	reviewed
+overrides/config/ftbquests/quests/chapters/electrum.snbt	287	Better budding quartz	Улучшенный растущий истинный кварц	reviewed
+overrides/config/ftbquests/quests/chapters/electrum.snbt	304	Even better budding quartz	Продвинутый растущий истинный кварц	reviewed
+overrides/config/ftbquests/quests/chapters/electrum.snbt	321	Perfection, this can now be used in a garden cloche	Идеально! Теперь его можно использовать в садовом клоше	reviewed
+overrides/config/ftbquests/quests/chapters/electrum.snbt	337	Electrum	Электрум	reviewed
+overrides/config/ftbquests/quests/chapters/extreme_crafting.snbt	13	First tier of crafting table not to useful	Первый уровень верстака — пока не слишком полезный	reviewed
+overrides/config/ftbquests/quests/chapters/extreme_crafting.snbt	30	Used to make some machines	Используется для изготовления некоторых машин	reviewed
+overrides/config/ftbquests/quests/chapters/extreme_crafting.snbt	47	Made from black iron in a metal press with a plate mold	Создаётся из чёрного железа в прессе для металла с пресс-формой для пластин	reviewed
+overrides/config/ftbquests/quests/chapters/extreme_crafting.snbt	64	Raw coal can be obtained from never ender coal ore	Необработанный уголь добывается из бесконечной эндер-руды угля	reviewed
+overrides/config/ftbquests/quests/chapters/extreme_crafting.snbt	81	Much more advanced crafting	Гораздо более продвинутое создание предметов	reviewed
+overrides/config/ftbquests/quests/chapters/extreme_crafting.snbt	98	Used with the crafting core	Используется вместе с ядром создания	reviewed
+overrides/config/ftbquests/quests/chapters/extreme_crafting.snbt	115	Uses energy and items around it on pedestals	Использует энергию и предметы, размещённые вокруг на пьедесталах	reviewed
+overrides/config/ftbquests/quests/chapters/extreme_crafting.snbt	135	Its BACK! Can be used to create more alien artifacts	ОНО ВЕРНУЛОСЬ! Позволяет создавать новые инопланетные артефакты	reviewed
+overrides/config/ftbquests/quests/chapters/extreme_crafting.snbt	152	Don't we all love this machine !!! We all know what comes next	Ну кто не любит эту машину?! Все мы знаем, что будет дальше	reviewed
+overrides/config/ftbquests/quests/chapters/extreme_crafting.snbt	168	Extreme Crafting	Экстремальное создание	reviewed
+overrides/config/ftbquests/quests/chapters/gem_of_gems.snbt	16	The gem of gems 	Самоцвет самоцветов	reviewed
+overrides/config/ftbquests/quests/chapters/gem_of_gems.snbt	28	A bigger bigger crafting table	Ещё более огромный верстак	reviewed
+overrides/config/ftbquests/quests/chapters/gem_of_gems.snbt	51	The biggest and the best crafting table	Самый большой и лучший верстак	reviewed
+overrides/config/ftbquests/quests/chapters/gem_of_gems.snbt	63	Shard of shards	Осколок осколков	reviewed
+overrides/config/ftbquests/quests/chapters/gem_of_gems.snbt	78	Getting ready to go home sweet home	Готовимся вернуться домой, в родные края	reviewed
+overrides/config/ftbquests/quests/chapters/gem_of_gems.snbt	90	Overworld core is used to make the frame for the space portal	Ядро Верхнего мира используется для создания рамы космического портала	reviewed
+overrides/config/ftbquests/quests/chapters/gem_of_gems.snbt	101	Overworld Core	Ядро Верхнего мира	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	17	Using the engineers manual you can create the metal press	Следуя руководству инженера, вы сможете построить пресс для металла	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	61	Metal Press	Пресс для металла	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	67	Allows the metal press to make plates	Позволяет прессу для металла изготавливать пластины	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	87	Allows the metal press to make rods	Позволяет прессу для металла изготавливать стержни	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	104	Used to cut	Используется для резки	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	127	Made in the metal press	Создаётся в прессе для металла	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	161	Made from iron plates	Создаётся из железных пластин	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	178	Used to move fluids	Используется для перемещения жидкостей	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	198	Allows the metal press to make wires	Позволяет прессу для металла изготавливать провода	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	215	Basic wire	Простой провод	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	235	Cuts logs into planks and sawdust	Распиливает брёвна на доски и опилки	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	280	Sawmill	Лесопилка	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	286	Can be used to make paper	Можно использовать для изготовления бумаги	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	303	Paper	Бумага	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	323	Allows the crafting of other metal press molds	Позволяет создавать другие пресс-формы для пресса по металлу	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	346	A base to craft some dyes	Основа для создания красителей	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	363	Water drops and dye base can be used to make blue dye	Из капель воды и основы красителя можно получить синий краситель	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	380	Right click to install onto the sawmill	Нажмите ПКМ, чтобы установить на лесопилку	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	403	Can be used to make mechanical parts a lot cheaper	Значительно удешевляет создание механических деталей	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	421	Used to make compact machines which are small pocket dimensions ideal for putting machines	Используется для создания компактных машин — небольших карманных измерений, удобных для размещения механизмов	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	438	Allows you to enter your compact machines	Позволяет входить в компактные машины	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	455	Moves energy into and out of the compact machine	Передаёт энергию внутрь компактной машины и наружу	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	480	Moves items into and out of the compact machine	Передаёт предметы внутрь компактной машины и наружу	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	505	Moves fluid into and out of the compact machine	Передаёт жидкости внутрь компактной машины и наружу	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	534	Keeps your compact machine loaded	Поддерживает компактную машину загруженной	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	562	Keeps track of foods eaten the more you eat the more health you get	Учитывает съеденные виды пищи: чем разнообразнее ваш рацион, тем больше максимальный запас здоровья	reviewed
+overrides/config/ftbquests/quests/chapters/impressive.snbt	578	Impressive	Впечатляющие технологии	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	13	Made inside the blast furnace	Создаётся в доменной печи	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	30	Nuggets can be turned into ingots	Из кусочков можно создавать слитки	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	116	Used to make different machines	Используется для изготовления различных машин	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	133	Moves blocks	Перемещает блоки	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	150	Crafted in a crafting table can be made more efficiently using the metal press	Можно создать на верстаке, но пресс для металла расходует материалы эффективнее	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	167	Used to create immersive engineering multiblock machines, can also be climbed	Используется в мультиблочных механизмах Immersive Engineering; по этому блоку также можно карабкаться	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	184	Used to create immersive engineering multiblock machines	Используется в мультиблочных механизмах Immersive Engineering	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	201	Used to make heavy engineering blocks	Используется для создания тяжёлых инженерных блоков	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	235	Growing hemp	Выращивание технической конопли	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	252	Grown from hemp seeds	Выращивается из семян технической конопли	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	269	Made from hemp	Создаётся из технической конопли	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	286	Made with hemp	Создаётся из технической конопли	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	303	Fake leather	Искусственная кожа	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	323	Used to create immersive engineering multiblock machines, can also be used to move items	Используется в мультиблочных механизмах Immersive Engineering и для перемещения предметов	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	340	Block of string, please dont make a bed it will explode and kill you in space	Блок нити. Не делайте из него кровать: в космосе она взорвётся и убьёт вас	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	374	Better power cables, unlocks the gravity generator in the shop	Улучшенные энергокабели; открывают гравитационный генератор в магазине	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	391	Stores power	Хранит энергию	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	408	Made in the drying table	Создаётся на сушильном столе	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	425	When broken drops a random seed	При разрушении выпадают случайные семена	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	445	When broken drops a random mushroom	При разрушении выпадает случайный гриб	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	462	Just a bucket	Просто ведро	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	479	Can be crafted with water drops and ersalz leather	Создаётся из капель воды и искусственной кожи	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	496	New foods	Новая еда	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	547	Moving fluids around	Перемещение жидкостей	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	564	Generates water 	Генерирует воду	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	581	Used to craft a infinite water source	Используется для создания бесконечного источника воды	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	614	Storage on the go, can be placed in world with shift right click	Переносное хранилище. Нажмите Shift+ПКМ, чтобы поставить его в мире	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	644	Used to configure mekanism pipes	Настраивает трубы Mekanism	reviewed
+overrides/config/ftbquests/quests/chapters/iron_cluster.snbt	660	Iron Cluster	Железный кластер	reviewed
+overrides/config/ftbquests/quests/chapters/jet_suit.snbt	17	An alloy of gold and obsidian made in the arc furnace	Сплав золота и обсидиана, получаемый в дуговой печи	reviewed
+overrides/config/ftbquests/quests/chapters/jet_suit.snbt	34	Used to make better cooler armor	Используется для создания более совершенной и эффектной брони	reviewed
+overrides/config/ftbquests/quests/chapters/jet_suit.snbt	51	Can be used instead of the boots in the space suit. Provides basic flight	Заменяет ботинки скафандра и даёт возможность простого полёта	reviewed
+overrides/config/ftbquests/quests/chapters/jet_suit.snbt	92	Can be used instead of the helmet in the space suit	Заменяет шлем скафандра	reviewed
+overrides/config/ftbquests/quests/chapters/jet_suit.snbt	113	Can be used instead of the leggings in the space suit	Заменяет поножи скафандра	reviewed
+overrides/config/ftbquests/quests/chapters/jet_suit.snbt	134	Can be used instead of the chestplate in the space suit	Заменяет нагрудник скафандра	reviewed
+overrides/config/ftbquests/quests/chapters/jet_suit.snbt	154	Jet Suit	Реактивный костюм	reviewed
+overrides/config/ftbquests/quests/chapters/more_geodes.snbt	426	More Clusters	Новые кластеры	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	13	Water drops and dirt can be used to make clay	Из капель воды и земли можно создать глину	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	30	Dirt can be made from organic powder	Земля создаётся из органического порошка	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	47	Broken blocks of clay	Получается при разрушении блоков глины	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	64	Sand can be made from gravel in a drying table	Песок получают из гравия на сушильном столе	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	81	Smelted sand makes glass	При переплавке песка получается стекло	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	98	Glass bottles can be made from glass	Стеклянные бутылки можно сделать из стекла	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	115	Water drops can be used to make water bottles	Из капель воды можно создавать бутылочки воды	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	138	Clay bucket mold	Глиняная форма для ведра	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	155	A smelted unfired clay bucket	Обожгите необожжённое глиняное ведро в печи	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	172	A bucket of water useful!	Наконец-то целое ведро воды!	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	202	Getting those saplings growing	Пора вырастить саженцы	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	219	Smelted clay blocks	Получается при обжиге блоков глины	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	236	Smelted clay balls	Получается при обжиге комков глины	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	253	Bricks can be used to make brick blocks	Кирпичи можно использовать для изготовления кирпичных блоков	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	273	Used to fill pipes and blocks with fluids. Buckets can be used on this	Заполняет трубы и блоки жидкостями; с ним можно использовать вёдра	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	290	Snow balls	Снежки	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	307	Block of snow	Блок снега	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	324	Colder ice	Ещё более холодный лёд	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	346	When placed in world requires a hot block and a colder block on adjacent sides to produce power	После установки вырабатывает энергию, если с соседних сторон находятся горячий и холодный блоки	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	363	Organic powder and artificial sticks can be used to make a oak sapling. This can not be grown in space!	Из органического порошка и искусственных палок можно создать саженец дуба. В космосе он не растёт!	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	383	Used to move power around	Передаёт энергию	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	400	Can be made with gravel in a crafting table, also drop sometimes when gravel is broken	Создаётся из гравия на верстаке и иногда выпадает при разрушении гравия	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	417	Just a block of flint, nice and warm	Обычный блок кремня — зато тёплый	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	434	Used to change pipez pipes between extract and insert	Переключает трубы Pipez между извлечением и приёмом	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	451	Stores fluids	Хранит жидкости	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	468	Used to change some basic blocks into different versions	Превращает некоторые базовые блоки в их разновидности	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	485	When broken drops a random sapling	При разрушении выпадает случайный саженец	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	497	Blue Ice: 200	Синий лёд: 200	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	497	Packed Ice: 240	Плотный лёд: 240	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	497	Ice: 260	Лёд: 260	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	497	Snow: 273	Снег: 273	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	497	Flint: 1100	Кремень: 1100	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	497	Magma: 1300	Магма: 1300	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	497	Uranium: 2000	Уран: 2000	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	512	Bigger the temperature differnce the better	Чем больше разница температур, тем лучше	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	515	Heating Options	Источники тепла	reviewed
+overrides/config/ftbquests/quests/chapters/more_materials.snbt	522	First Wood	Первая древесина	reviewed
+overrides/config/ftbquests/quests/chapters/never_ender_ores.snbt	13	This can be used to make other never ender ores which cannot be broken or moved unless you use the ore remover	Используется для создания других бесконечных эндер-руд. Их нельзя сломать или переместить без удалителя руды	reviewed
+overrides/config/ftbquests/quests/chapters/never_ender_ores.snbt	30	Used to remove never ender ores	Удаляет блоки бесконечной эндер-руды	reviewed
+overrides/config/ftbquests/quests/chapters/never_ender_ores.snbt	37	WIP	В разработке	reviewed
+overrides/config/ftbquests/quests/chapters/never_ender_ores.snbt	54	Provide this block with power and a never ender ore underneath to get unlimited amounts of that ore	Подайте на блок энергию и поместите под него соответствующую бесконечную эндер-руду, чтобы добывать её без ограничений	reviewed
+overrides/config/ftbquests/quests/chapters/never_ender_ores.snbt	71	Infused ender pearls	Наполненный эндер-жемчуг	reviewed
+overrides/config/ftbquests/quests/chapters/never_ender_ores.snbt	91	Never ending ores	Бесконечные руды	reviewed
+overrides/config/ftbquests/quests/chapters/never_ender_ores.snbt	134	Dhardy goodness... again?	Dhardy снова здесь?..	reviewed
+overrides/config/ftbquests/quests/chapters/never_ender_ores.snbt	480	Never Ender Ores	Бесконечные эндер-руды	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_mars.snbt	13	Used to create the portal to Mars. Requires 10 blocks	Используется для создания портала на Марс. Требуется 10 блоков	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_mars.snbt	15	PRESS U ON THE ITEM TO VIEW RECIPE	НАВЕДИТЕ КУРСОР НА ПРЕДМЕТ И НАЖМИТЕ U, ЧТОБЫ ПОСМОТРЕТЬ РЕЦЕПТ	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_mars.snbt	26	Drops from red sandstone on the mars below y level 0 along with other gems	Выпадает из красного песчаника на Марсе ниже уровня Y=0 вместе с другими самоцветами	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_mars.snbt	73	Off To Mars	Отправляемся на Марс	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_the_moon.snbt	13	Used to create the portal to the Moon. Requires 10 blocks	Используется для создания портала на Луну. Требуется 10 блоков	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_the_moon.snbt	30	Cheese spawns on the moon, obviously	Сыр, разумеется, встречается на Луне	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_the_moon.snbt	47	Spawns inside houses and large asteroids on the moon	Встречается внутри домов и крупных астероидов на Луне	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_the_moon.snbt	64	Drops from blackstone on the moon below y level 0	Выпадает из чернита на Луне ниже уровня Y=0	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_the_moon.snbt	81	Made with amethyst shard and prismarine shards	Создаётся из осколка аметиста и призмариновых кристаллов	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_the_moon.snbt	98	Just a light	Просто свет	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_the_moon.snbt	114	Off To The Moon	Отправляемся на Луну	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_venus.snbt	13	Collected from ores on venus	Добывается из руд на Венере	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_venus.snbt	63	Any #forge:raw_materials/uranium	Любой предмет из тега #forge:raw_materials/uranium	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_venus.snbt	66	Raw Uranium	Необработанный уран	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_venus.snbt	105	Any #forge:raw_materials/osmium	Любой предмет из тега #forge:raw_materials/osmium	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_venus.snbt	108	Raw Osmium	Необработанный осмий	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_venus.snbt	118	Used to create the portal to venus. Requires 10 blocks	Используется для создания портала на Венеру. Требуется 10 блоков	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_venus.snbt	135	The lower levels of venus are full of lava	Нижние уровни Венеры полны лавы.	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_venus.snbt	152	Below the red sand and red sandstone there is blackstone and ores	Под красным песком и красным песчаником залегают чернит и руды	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_venus.snbt	169	From smelting chunks	Получается переплавкой кусков руды	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_venus.snbt	203	Can be made with redstone shards and sand	Создаётся из осколков редстоуна и песка	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_venus.snbt	220	Obtained from killing enderman on venus	Выпадает из эндерменов на Венере	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_venus.snbt	237	Obtained from killing blazes on venus	Выпадает из всполохов на Венере	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_venus.snbt	257	Magical eyes	Волшебные глаза	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_venus.snbt	274	Made from blaze rods	Создаётся из огненных стержней	reviewed
+overrides/config/ftbquests/quests/chapters/off_to_venus.snbt	290	Off To Venus	Отправляемся на Венеру	reviewed
+overrides/config/ftbquests/quests/chapters/portal.snbt	13	Used to create portal frames	Используется для создания рам портала	reviewed
+overrides/config/ftbquests/quests/chapters/portal.snbt	30	Used to light the portal to the mining belt	Активирует портал в Шахтёрский пояс	reviewed
+overrides/config/ftbquests/quests/chapters/portal.snbt	50	Used to create the portal to the mining belt. Requires 10 blocks	Используется для создания портала в Шахтёрский пояс. Требуется 10 блоков	reviewed
+overrides/config/ftbquests/quests/chapters/portal.snbt	67	Used to upgrade tools and create portal frames	Улучшает инструменты и используется для создания рам портала	reviewed
+overrides/config/ftbquests/quests/chapters/portal.snbt	84	The structure compass can be used to find structures in dimensions. Useful for finding ores in the mining belt	Компас структур помогает искать структуры в разных измерениях — например, рудные астероиды в Шахтёрском поясе	reviewed
+overrides/config/ftbquests/quests/chapters/portal.snbt	101	Collected from ores in the mining belt	Добывается из руд в Шахтёрском поясе	reviewed
+overrides/config/ftbquests/quests/chapters/portal.snbt	288	Made from smelted chunks. Used to make spray cans which can be used to color stone blocks	Создаётся из переплавленных кусков руды. Используется для баллончиков, которыми можно окрашивать каменные блоки	reviewed
+overrides/config/ftbquests/quests/chapters/portal.snbt	355	Portal	Портал	reviewed
+overrides/config/ftbquests/quests/chapters/returning_to_the_overworld.snbt	13	Home sweet home!	Дом, милый дом!	reviewed
+overrides/config/ftbquests/quests/chapters/returning_to_the_overworld.snbt	30	See you soon 	До скорой встречи	reviewed
+overrides/config/ftbquests/quests/chapters/returning_to_the_overworld.snbt	39	Thanks For Playing 	Спасибо за игру!	reviewed
+overrides/config/ftbquests/quests/chapters/returning_to_the_overworld.snbt	46	Returning To The Overworld	Возвращение в Верхний мир	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	13	Used for the casing of a fission reactor	Используется для корпуса реактора деления	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	30	Used to add and remove coolent, fuel and waste	Подаёт и отводит теплоноситель, топливо и отходы	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	63	Must be placed on the top of fission fuel assembly	Устанавливается сверху на топливную сборку реактора деления	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	80	Can also be used on the reactor	Также используется в конструкции реактора	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	100	Used to create a range of different chemicals	Используется для создания ряда различных химических веществ	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	117	Enriched uranium	Обогащённый уран	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	134	A mix of yellow cake uranium and quartz	Смесь жёлтого кека и кварца	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	170	Made from yellow cake uranium in a chemical oxidizer	Создаётся из жёлтого кека в химическом окислителе	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	180	Uranium	Уран	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	183	Uranium Oxide	Оксид урана	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	198	Uranium Hexafluoride	Гексафторид урана	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	225	Made in the chemical dissolution chamber with fluorite and sulfuric acid	Создаётся в камере химического растворения из флюорита и серной кислоты	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	235	Hydrofluoric Acid	Плавиковая кислота	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	243	Used to break down chemicals and items	Расщепляет химические вещества и предметы	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	253	Sulfuric Acid	Серная кислота	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	261	Can be made in a range of different ways. A simple way is using blaze rods in a immersive crusher	Получается несколькими способами; один из простых — дробление огненных стержней в дробилке Immersive Engineering	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	278	Turns uranium hexafuorite into fissile fuel which can be fed into a fission reactor	Превращает гексафторид урана в делящееся топливо для реактора деления	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	298	Nuclear waste is a by-product of running a fission reactor	Ядерные отходы являются побочным продуктом работы реактора деления	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	307	Nuclear Waste	Ядерные отходы	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	318	High volume of steam can be made in the fission reactor. You can use this steam in a turbine to create power	Реактор деления производит много пара. Направьте его в турбину для выработки энергии	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	328	Steam	Пар	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	336	Used for the case of the turbine	Используется для корпуса турбины	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	353	Used to extract power or insert steam	Выводит энергию или подаёт пар	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	370	These are placed around the rotational complex	Устанавливаются вокруг вращающего комплекса	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	387	These blocks are then place on top of the electromagnetic coils	Затем эти блоки помещаются поверх электромагнитных катушек.	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	404	Must have a least one in the structure to vent steam. Can be attached to fluid pipes to take water out of the turbine	В конструкции нужен хотя бы один блок для отвода пара. К нему можно подключить жидкостные трубы и выводить воду из турбины	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	421	Attaches to the turbin rotor up to 2 blades can be right clicked onto the rotor	К каждой секции ротора турбины можно прикрепить до двух лопастей нажатием ПКМ	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	438	Goes through the center middle of the turbine	Проходит по центру турбины	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	455	Connects to the top block of a turbine rotor	Подключается к верхнему блоку ротора турбины	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	475	These are then placed on top of all pressure dispersers and the rotation complex	Устанавливаются поверх всех рассеивателей давления и вращающего комплекса	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	492	Made from plutonium	Создаётся из плутония	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	509	Made from nuclear waste	Создаётся из ядерных отходов	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	518	Plutinium	Плутоний	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	521	Plutonium	Плутоний	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	540	Create A Fission Reactor	Постройте реактор деления	reviewed
+overrides/config/ftbquests/quests/chapters/serious_power.snbt	547	Serious Power	Серьёзная энергетика	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	12	Can be made into stairs walls slabs and has brick variants	Из этого камня можно создавать ступени, ограды, плиты и кирпичные варианты	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	29	Red Colored Stone	Красный цветной камень	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	52	Yellow Colored Stone	Жёлтый цветной камень	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	75	Black Colored Stone	Чёрный цветной камень	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	99	White Colored Stone	Белый цветной камень	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	122	Blue Colored Stone	Голубой цветной камень	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	145	Pink Colored Stone	Розовый цветной камень	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	168	Purple Colored Stone	Фиолетовый цветной камень	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	191	Magenta Colored Stone	Пурпурный цветной камень	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	214	Light Blue Colored Stone	Светло-голубой цветной камень	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	237	Cyan Colored Stone	Бирюзовый цветной камень	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	260	Gray Colored Stone	Серый цветной камень	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	283	Brown Colored Stone	Коричневый цветной камень	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	306	Light Gray Colored Stone	Светло-серый цветной камень	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	329	Orange Colored Stone	Оранжевый цветной камень	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	352	Green Colored Stone	Зелёный цветной камень	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	375	Lime Colored Stone	Лаймовый цветной камень	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	381	Provides a easier way to travel up and down around your base	Упрощает перемещение между уровнями базы	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	397	White Elevator	Белый лифт	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	419	Black Elevator	Чёрный лифт	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	441	Red Elevator	Красный лифт	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	463	Yellow Elevator	Жёлтый лифт	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	485	Blue Elevator	Голубой лифт	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	507	Pink Elevator	Розовый лифт	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	529	Purple Elevator	Фиолетовый лифт	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	551	Magenta Elevator	Пурпурный лифт	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	573	Light Blue Elevator	Голубой лифт	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	595	Cyan Elevator	Бирюзовый лифт	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	617	Gray Elevator	Серый лифт	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	639	Brown Elevator	Коричневый лифт	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	661	Light Gray Elevator	Светло-серый лифт	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	683	Orange Elevator	Оранжевый лифт	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	705	Green Elevator	Зелёный лифт	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	727	Lime Elevator	Лаймовый лифт	reviewed
+overrides/config/ftbquests/quests/chapters/shop.snbt	732	Block Shop	Магазин блоков	reviewed
+overrides/config/ftbquests/quests/chapters/starting_up.snbt	19	4 rocks make a asteroid block	Из четырёх астероидных камней получается блок астероида	reviewed
+overrides/config/ftbquests/quests/chapters/starting_up.snbt	36	A crafting table but from stone?	Верстак, только из камня?	reviewed
+overrides/config/ftbquests/quests/chapters/starting_up.snbt	53	First tools	Первые инструменты	reviewed
+overrides/config/ftbquests/quests/chapters/starting_up.snbt	168	Can be made from asteroid blocks	Создаётся из блоков астероида	reviewed
+overrides/config/ftbquests/quests/chapters/starting_up.snbt	185	Used to smelt items, asteroid rocks will smelt items	Переплавляет предметы; астероидные камни служат топливом	reviewed
+overrides/config/ftbquests/quests/chapters/starting_up.snbt	202	Asteroid blocks can be broken by hand to get asteroid rocks	Ломайте блоки астероида рукой, чтобы получить астероидные камни	reviewed
+overrides/config/ftbquests/quests/chapters/starting_up.snbt	219	Used to dry items and blocks into other items	Высушивает предметы и блоки, превращая их в другие материалы	reviewed
+overrides/config/ftbquests/quests/chapters/starting_up.snbt	236	Breaking asteroid blocks with the hammer will drop different items including water drops and ice shards	Разбивайте блоки астероида молотом, чтобы получать разные материалы, включая капли воды и осколки льда	reviewed
+overrides/config/ftbquests/quests/chapters/starting_up.snbt	259	Has a chance to drop when a hammer is used on a asteroid block	Может выпасть при разрушении блока астероида молотом	reviewed
+overrides/config/ftbquests/quests/chapters/starting_up.snbt	310	Using organic powder on a asteroid block in world will transform it into a asteroid plank	Примените органический порошок к установленному блоку астероида, чтобы превратить его в астероидные доски	reviewed
+overrides/config/ftbquests/quests/chapters/starting_up.snbt	327	Planks make sticks	Из досок создаются палки	reviewed
+overrides/config/ftbquests/quests/chapters/starting_up.snbt	344	Rocks can be used to make stone	Из камней можно создавать обычный камень	reviewed
+overrides/config/ftbquests/quests/chapters/starting_up.snbt	361	A mix of asteroid rocks and rocks	Смесь астероидных и обычных камней	reviewed
+overrides/config/ftbquests/quests/chapters/starting_up.snbt	378	Just a wooden bowl	Просто деревянная чаша	reviewed
+overrides/config/ftbquests/quests/chapters/starting_up.snbt	398	Yummy	Вкусно!	reviewed
+overrides/config/ftbquests/quests/chapters/starting_up.snbt	415	Mine stone, get cobblestone	Добывайте камень, чтобы получить булыжник	reviewed
+overrides/config/ftbquests/quests/chapters/starting_up.snbt	435	Drying cobblestone will make gravel	После сушки булыжник превращается в гравий	reviewed
+overrides/config/ftbquests/quests/chapters/starting_up.snbt	452	Has a chance to drop when a hammer is used on a asteroid block. Spare ice can be turned into water drops	Может выпасть при разрушении блока астероида молотом. Лишний лёд можно превратить в капли воды	reviewed
+overrides/config/ftbquests/quests/chapters/starting_up.snbt	469	Ice and cold. Cannot be placed in space	Холодный лёд. В космосе установить нельзя	reviewed
+overrides/config/ftbquests/quests/chapters/starting_up.snbt	486	Storing those items	Хранение этих предметов	reviewed
+overrides/config/ftbquests/quests/chapters/starting_up.snbt	506	A simple stone generator, can be used to make more asteroid blocks	Простой генератор камня, который поможет создавать больше блоков астероида	reviewed
+overrides/config/ftbquests/quests/chapters/starting_up.snbt	523	A slightly better source of food 	Источник пищи немного получше	reviewed
+overrides/config/ftbquests/quests/chapters/starting_up.snbt	539	Starting Up	Первые шаги	reviewed
+overrides/config/ftbquests/quests/chapters/steel_casing.snbt	13	Used to make mekanism machines	Используется для создания машин Mekanism	reviewed
+overrides/config/ftbquests/quests/chapters/steel_casing.snbt	30	Smelted netherite dust	Получается переплавкой незеритовой пыли	reviewed
+overrides/config/ftbquests/quests/chapters/steel_casing.snbt	47	Infuses items into others	Наполняет одни предметы веществом из других	reviewed
+overrides/config/ftbquests/quests/chapters/steel_casing.snbt	64	A basic circuit	Базовая схема управления	reviewed
+overrides/config/ftbquests/quests/chapters/steel_casing.snbt	81	A basic alloy	Основной сплав	reviewed
+overrides/config/ftbquests/quests/chapters/steel_casing.snbt	98	A mix of gold and netherite scrap	Смесь золота и незеритового лома	reviewed
+overrides/config/ftbquests/quests/chapters/steel_casing.snbt	118	Reinforced alloy	Укреплённый сплав	reviewed
+overrides/config/ftbquests/quests/chapters/steel_casing.snbt	138	Advanced circuit	Улучшенная схема управления	reviewed
+overrides/config/ftbquests/quests/chapters/steel_casing.snbt	158	Elite circuit	Элитная схема управления	reviewed
+overrides/config/ftbquests/quests/chapters/steel_casing.snbt	178	Ulitmate circuit	Высшая схема управления	reviewed
+overrides/config/ftbquests/quests/chapters/steel_casing.snbt	198	Atomic alloy	Атомный сплав	reviewed
+overrides/config/ftbquests/quests/chapters/steel_casing.snbt	215	Comes from ancient debris	Получается из древних обломков	reviewed
+overrides/config/ftbquests/quests/chapters/steel_casing.snbt	232	Infuses items with osmium	Наполняет предметы осмием	reviewed
+overrides/config/ftbquests/quests/chapters/steel_casing.snbt	250	Made inside the osmium compressor	Создаётся в осмиевом компрессоре	reviewed
+overrides/config/ftbquests/quests/chapters/steel_casing.snbt	284	Used to make atomic alloy, using enriched obsidian is a lot more efficient	Используется для создания атомного сплава; обогащённый обсидиан значительно эффективнее обычного	reviewed
+overrides/config/ftbquests/quests/chapters/steel_casing.snbt	301	Crushes items	Дробит предметы	reviewed
+overrides/config/ftbquests/quests/chapters/steel_casing.snbt	319	Used to make reinforced alloy, using enriched diamond is a lot more efficient	Используется для создания укреплённого сплава; обогащённый алмаз значительно эффективнее обычного	reviewed
+overrides/config/ftbquests/quests/chapters/steel_casing.snbt	352	Can be used to transfer enery, items, fluids and gases across large distances and across dimensions	Передаёт энергию, предметы, жидкости и газы на большие расстояния, в том числе между измерениями	reviewed
+overrides/config/ftbquests/quests/chapters/steel_casing.snbt	368	Steel Casing	Стальной корпус	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	12	Useful because crafting them is awful am a right	Пригодится: создавать это вручную каждый раз — то ещё удовольствие, правда?	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	29	Flux Plug	Флакс-разъём	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	52	Flux Point	Флакс-точка	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	58	Stores time, can be used to speed up blocks	Накапливает время, которое можно тратить на ускорение блоков	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	82	Time In A Bottle	Время в бутылке	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	88	Can be used to teleport to a saved location, in any dimension	Телепортирует в сохранённую точку из любого измерения	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	116	Super Home Stone	Суперкамень возвращения	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	121	Just incase you don't complete a questline, love Ben	На случай, если вы не завершите цепочку заданий. С любовью, Бен	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	138	Sound Of Money	Звон монет	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	144	A spare Immersive Engineering Manual	Запасное руководство инженера из Immersive Engineering	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	159	Immersive Engineering Manual	Руководство инженера Immersive Engineering	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	165	A friendly luggage that will help carry your items. Shift right click to pick up	Дружелюбный сундук на ножках поможет переносить вещи. Чтобы подобрать его, нажмите Shift+ПКМ	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	181	Luggage	Багаж	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	186	Auto feed the player wearing the backpack	Автоматически кормит владельца рюкзака	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	202	Feeding Upgrade	Улучшение кормления	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	207	Allow the backpack to collect nearby items	Позволяет рюкзаку собирать предметы поблизости	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	223	Magnet Upgrade	Магнитное улучшение	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	228	Allows the backback to compact 	Позволяет рюкзаку автоматически уплотнять предметы	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	244	Compacting Upgrade	Уплотняющее улучшение	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	249	Makes the backpack immune to void and despawning	Защищает рюкзак от пустоты и исчезновения предметов	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	265	Everlasting Upgrade	Вечное улучшение	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	270	Allows the backpack to smelt	Позволяет переплавлять предметы прямо в рюкзаке	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	286	Smelting Upgrade	Плавильное улучшение	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	291	Allows the backpack to craft	Добавляет в рюкзак сетку создания	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	307	Crafting Upgrade	Улучшение создания	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	312	Allows the backpack to store fluids	Позволяет рюкзаку хранить жидкости	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	328	Tank Upgrade	Улучшение-резервуар	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	333	Allows the backback to store energy	Позволяет рюкзаку хранить энергию	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	349	Battery Upgrade	Улучшение-аккумулятор	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	355	Produces power based on the dimension its placed in. Doesn't store RF	Вырабатывает энергию в зависимости от измерения, где установлен. RF внутри не хранит	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	371	Gravity Generator	Гравитационный генератор	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	376	Space in the air without block support	Позволяет строить в воздухе без опорных блоков	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	392	Floating Block	Парящий блок	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	398	Move items across dimensions	Перемещает предметы между измерениями	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	415	Ender Chest	Эндер-сундук	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	421	Moves fluids across dimensions	Перемещает жидкости между измерениями	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	438	Ender Tank	Эндер-резервуар	reviewed
+overrides/config/ftbquests/quests/chapters/useful_items.snbt	443	Useful Items	Полезные предметы	reviewed
+overrides/config/ftbquests/quests/chapters/wireless_power.snbt	18	The base of flux networks	Основа сетей Flux Networks	reviewed
+overrides/config/ftbquests/quests/chapters/wireless_power.snbt	35	Adds energy to your wireless network	Передаёт энергию в беспроводную сеть	reviewed
+overrides/config/ftbquests/quests/chapters/wireless_power.snbt	52	Takes energy from your wireless network	Забирает энергию из беспроводной сети	reviewed
+overrides/config/ftbquests/quests/chapters/wireless_power.snbt	69	The core	Ядро	reviewed
+overrides/config/ftbquests/quests/chapters/wireless_power.snbt	89	Allows for wireless charging of items in your inventory	Беспроводным способом заряжает предметы в инвентаре	reviewed
+overrides/config/ftbquests/quests/chapters/wireless_power.snbt	106	Stores power for your wireless network	Хранит энергию беспроводной сети	reviewed
+overrides/config/ftbquests/quests/chapters/wireless_power.snbt	122	Wireless Power	Беспроводная энергия	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	13	That took a while...	Это заняло некоторое время...	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	29	Any #minecraft:logs	Любой предмет из тега #minecraft:logs	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	32	Logs	Брёвна	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	38	Planks can be made from wood	Из древесины создаются доски	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	54	Any #minecraft:planks	Любой предмет из тега #minecraft:planks	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	57	Planks	Доски	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	63	Sticks can be made from planks	Палки можно сделать из досок	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	80	Better furnace fuel	Более эффективное топливо для печи	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	97	Smelts one item	Переплавляет один предмет	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	114	More chests	Больше сундуков	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	130	Any #forge:chests/wooden	Любой предмет из тега #forge:chests/wooden	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	133	Chest	Сундук	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	139	Move items around 	Перемещает предметы	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	156	Smoking logs will make ash	При копчении брёвен получается зола	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	173	Smelted ash makes ash bricks	При переплавке золы получаются кирпичи из золы	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	190	Used to create immersive engineering multiblocks	Используется для создания мультиблоков Immersive Engineering	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	220	When placed in a 3x3x3 and using the hammer on then will create the blast furnace . This can be used to break some blocks down into certain nuggets	Сложите куб 3x3x3 и ударьте по нему инженерным молотом, чтобы построить доменную печь. В ней некоторые блоки можно перерабатывать в кусочки металлов	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	237	Smokes items	Коптит предметы	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	254	When placed in a 3x3x3 and using the hammer on then will create the coke oven	Сложите куб 3x3x3 и ударьте по нему инженерным молотом, чтобы построить коксовую печь	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	271	Made with creosote and planks	Создаётся из досок, пропитанных креозотом	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	288	Used with blue prints to make items	Используется вместе с чертежами для создания предметов	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	373	Work like storage drawers but with additional stuff	Работают как складские ящики, но обладают дополнительными возможностями	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	389	Any #functionalstorage:drawer	Любой предмет из тега #functionalstorage:drawer	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	392	Functional Storage	Functional Storage	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	401	Create your own drawers!	Создайте собственные складские ящики!	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	418	Allows you to lock drawers, show or hide drawers counts, show or hide upgrades, show or hide items. All in one tool	Одним инструментом запирает ящики и переключает отображение количества предметов, улучшений и содержимого	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	444	The heart of your drawer network	Сердце сети складских ящиков	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	461	If a recipe can be crafted and uncrafted this drawer will provide both outputs. Can also be framed	Если рецепт работает в обе стороны, этот ящик предоставит оба варианта предмета. На него также можно установить рамку	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	478	Basic item transport	Простая транспортировка предметов	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	495	Can be used to link a controller to drawers	Связывает контроллер со складскими ящиками	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	519	An improved resource generator.	Улучшенный генератор ресурсов.	reviewed
+overrides/config/ftbquests/quests/chapters/wood_tech.snbt	530	Wood Tech	Деревянные технологии	reviewed
+overrides/config/ftbquests/quests/data.snbt	50	Astropolis	Astropolis	reviewed
