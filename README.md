@@ -13,7 +13,7 @@ ID заданий, зависимости, условия, награды, ре�
 
 ## Установка клиента
 
-1. Скачайте готовый архив из раздела Releases или соберите его командой `./tools/build.sh`.
+1. Скачайте [готовый архив Astropolis-RU-2.2-ru.1.zip](https://github.com/shonadoto/astropolis-ru/raw/main/dist/Astropolis-RU-2.2-ru.1.zip) или соберите его командой `./tools/build.sh`.
 2. В CurseForge App выберите **Minecraft → My Modpacks → Import**.
 3. Укажите `Astropolis-RU-2.2-ru.1.zip`.
 4. В настройках Minecraft выберите язык **Русский (Россия)**.
