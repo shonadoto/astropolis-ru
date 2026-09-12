@@ -65,6 +65,7 @@ sync_resource_pack_hash() {
   local url base_url fetch_url digest current versioned_url escaped_url
   url="$(sed -n 's/^resource-pack=//p' "$properties" | head -n 1)"
   url="${url//\\:/:}"
+  url="${url//\\=/=}"
   [[ -n "$url" ]] || return 0
 
   # The resource-pack-latest release asset is replaced in place. Give both the
