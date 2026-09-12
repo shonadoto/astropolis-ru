@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:jack_o_lantern"
+    },
+    "title": {
+      "text": "Хэллоуин",
+      "color": "white"
+    },
+    "description": {
+      "text": "Откройте вкладку достижений Хэллоуина",
+      "color": "orange"
+    },
+    "background": "minecraft:textures/block/blackstone.png",
+    "frame": "challenge",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "maidensmerrymaking:trick_or_treat_bag"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

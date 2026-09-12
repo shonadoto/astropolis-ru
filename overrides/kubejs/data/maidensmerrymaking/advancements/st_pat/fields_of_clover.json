@@ -1,0 +1,26 @@
+{
+  "parent": "maidensmerrymaking:st_pat/root",
+  "display": {
+    "icon": {
+      "item": "maidensmerrymaking:clover"
+    },
+    "title": {
+      "text": "Клеверные поля",
+      "color": "white"
+    },
+    "description": {
+      "text": "Пройдите через заросли клевера.",
+      "color": "dark_green"
+    },
+    "frame": "goal",
+    "announce_to_chat": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:enter_block",
+      "conditions": {
+        "block": "maidensmerrymaking:clover"
+      }
+    }
+  }
+}

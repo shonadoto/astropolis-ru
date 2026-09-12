@@ -1,0 +1,35 @@
+{
+  "parent": "maidensmerrymaking:easter/root",
+  "display": {
+    "icon": {
+      "item": "maidensmerrymaking:easter_card"
+    },
+    "title": {
+      "text": "Подарок из прошлого",
+      "color": "light_purple"
+    },
+    "description": {
+      "text": "Найдите в одном из сундуков старую пасхальную открытку.",
+      "color": "white"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "maidensmerrymaking:easter_card"
+            ],
+            "count": 1
+          }
+        ]
+      }
+    }
+  }
+}

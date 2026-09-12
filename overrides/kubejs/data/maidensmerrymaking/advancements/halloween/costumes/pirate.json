@@ -1,0 +1,54 @@
+{
+  "parent": "maidensmerrymaking:halloween/frightful_fashion",
+  "display": {
+    "title": {
+      "text": "Костюм пирата",
+      "color": "white"
+    },
+    "description": {
+      "text": "Найдите все части костюма пирата (алмазный уровень)",
+      "color": "dark_red"
+    },
+    "icon": {
+      "item": "maidensmerrymaking:pirate_mask"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "pirate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "maidensmerrymaking:pirate_mask"
+            ]
+          },
+          {
+            "items": [
+              "maidensmerrymaking:pirate_body"
+            ]
+          },
+          {
+            "items": [
+              "maidensmerrymaking:pirate_pants"
+            ]
+          },
+          {
+            "items": [
+              "maidensmerrymaking:pirate_plunderers"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "pirate"
+    ]
+  ]
+}

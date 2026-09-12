@@ -1,0 +1,36 @@
+{
+  "parent": "maidensmerrymaking:st_pat/root",
+  "display": {
+    "icon": {
+      "item": "maidensmerrymaking:green_beer"
+    },
+    "title": {
+      "text": "Берите кувшин — его хватит надолго!",
+      "color": "white"
+    },
+    "description": {
+      "text": "Пейте зелёное пиво, пока всё перед глазами не поплывёт.",
+      "color": "dark_green"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "loot": [
+      "maidensmerrymaking:green_trophy_loot"
+    ]
+  },
+  "criteria": {
+    "drunk_on_green_beer": {
+      "trigger": "maidensmerrymaking:drunk_on_green_beer",
+      "conditions": {}
+    }
+  },
+  "requirements": [
+    [
+      "drunk_on_green_beer"
+    ]
+  ]
+}

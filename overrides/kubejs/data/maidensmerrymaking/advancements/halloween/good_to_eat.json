@@ -1,0 +1,103 @@
+{
+  "parent": "maidensmerrymaking:halloween/root",
+  "display": {
+    "icon": {
+      "item": "maidensmerrymaking:caramel_apple",
+      "nbt": "{Damage:1}"
+    },
+    "title": {
+      "text": "Дайте чего-нибудь вкусного!",
+      "color": "orange"
+    },
+    "description": {
+      "text": "Попробуйте все угощения для Хэллоуина",
+      "color": "yellow"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "caramel_apple": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "maidensmerrymaking:caramel_apple"
+          ]
+        }
+      }
+    },
+    "caramel_popcorn": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "maidensmerrymaking:caramel_popcorn"
+          ]
+        }
+      }
+    },
+    "candy_corn": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "maidensmerrymaking:candy_corn"
+          ]
+        }
+      }
+    },
+    "pumpkin_bread": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "maidensmerrymaking:pumpkin_bread"
+          ]
+        }
+      }
+    },
+    "popcorn": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "maidensmerrymaking:popcorn"
+          ]
+        }
+      }
+    },
+    "apple_cider": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "maidensmerrymaking:apple_cider"
+          ]
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "caramel_apple"
+    ],
+    [
+      "caramel_popcorn"
+    ],
+    [
+      "candy_corn"
+    ],
+    [
+      "popcorn"
+    ],
+    [
+      "pumpkin_bread"
+    ],
+    [
+      "apple_cider"
+    ]
+  ]
+}

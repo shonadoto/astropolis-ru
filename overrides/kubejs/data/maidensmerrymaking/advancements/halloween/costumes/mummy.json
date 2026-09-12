@@ -1,0 +1,54 @@
+{
+  "parent": "maidensmerrymaking:halloween/frightful_fashion",
+  "display": {
+    "title": {
+      "text": "Костюм мумии",
+      "color": "white"
+    },
+    "description": {
+      "text": "Найдите все части костюма мумии (алмазный уровень)",
+      "color": "white"
+    },
+    "icon": {
+      "item": "maidensmerrymaking:mummy_mask"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "mummy": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "maidensmerrymaking:mummy_mask"
+            ]
+          },
+          {
+            "items": [
+              "maidensmerrymaking:mummy_body"
+            ]
+          },
+          {
+            "items": [
+              "maidensmerrymaking:mummy_leggings"
+            ]
+          },
+          {
+            "items": [
+              "maidensmerrymaking:mummy_feet"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "mummy"
+    ]
+  ]
+}

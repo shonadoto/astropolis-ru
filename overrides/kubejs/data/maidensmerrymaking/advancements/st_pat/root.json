@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "maidensmerrymaking:lucky_hat"
+    },
+    "title": {
+      "text": "День святого Патрика",
+      "color": "white"
+    },
+    "description": {
+      "text": "Откройте вкладку достижений ко Дню святого Патрика",
+      "color": "dark_green"
+    },
+    "background": "minecraft:textures/block/blackstone.png",
+    "frame": "challenge",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:enter_block",
+      "conditions": {
+        "block": "maidensmerrymaking:clover"
+      }
+    }
+  }
+}

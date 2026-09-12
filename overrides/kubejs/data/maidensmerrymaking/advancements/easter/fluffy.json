@@ -1,0 +1,161 @@
+{
+  "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+  "parent": "maidensmerrymaking:easter/root",
+  "display": {
+    "title": {
+      "text": "Какой пушистый!",
+      "color": "aqua"
+    },
+    "description": {
+      "text": "Найдите ручного кролика в пасхальной корзине и приручите его."
+    },
+    "icon": {
+      "item": "maidensmerrymaking:bunny_face"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "pink_bun": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "maidensmerrymaking:pink_bunny"
+        }
+      }
+    },
+    "pink_bun_small": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "maidensmerrymaking:pink_bunny_small"
+        }
+      }
+    },
+    "pink_bun_large": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "maidensmerrymaking:pink_bunny_large"
+        }
+      }
+    },
+    "purple_bun": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "maidensmerrymaking:purple_bunny"
+        }
+      }
+    },
+    "purple_bun_small": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "maidensmerrymaking:purple_bunny_small"
+        }
+      }
+    },
+    "purple_bun_large": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "maidensmerrymaking:purple_bunny_large"
+        }
+      }
+    },
+    "blue_bun": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "maidensmerrymaking:blue_bunny"
+        }
+      }
+    },
+    "blue_bun_small": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "maidensmerrymaking:blue_bunny_small"
+        }
+      }
+    },
+    "blue_bun_large": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "maidensmerrymaking:blue_bunny_large"
+        }
+      }
+    },
+    "yellow_bun": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "maidensmerrymaking:yellow_bunny"
+        }
+      }
+    },
+    "yellow_bun_small": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "maidensmerrymaking:yellow_bunny_small"
+        }
+      }
+    },
+    "yellow_bun_large": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "maidensmerrymaking:yellow_bunny_large"
+        }
+      }
+    },
+    "cyan_bun": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "maidensmerrymaking:cyan_bunny"
+        }
+      }
+    },
+    "cyan_bun_small": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "maidensmerrymaking:cyan_bunny_small"
+        }
+      }
+    },
+    "cyan_bun_large": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "maidensmerrymaking:cyan_bunny_large"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "pink_bun",
+      "pink_bun_small",
+      "pink_bun_large",
+      "purple_bun",
+      "purple_bun_small",
+      "purple_bun_large",
+      "blue_bun",
+      "blue_bun_small",
+      "blue_bun_large",
+      "yellow_bun",
+      "yellow_bun_small",
+      "yellow_bun_large",
+      "cyan_bun",
+      "cyan_bun_small",
+      "cyan_bun_large"
+    ]
+  ]
+}

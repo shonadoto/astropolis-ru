@@ -1,0 +1,54 @@
+{
+  "parent": "maidensmerrymaking:halloween/frightful_fashion",
+  "display": {
+    "title": {
+      "text": "Костюм водяного",
+      "color": "white"
+    },
+    "description": {
+      "text": "Найдите все части костюма водяного (алмазный уровень)",
+      "color": "dark_blue"
+    },
+    "icon": {
+      "item": "maidensmerrymaking:merman_mask"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "merman": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "maidensmerrymaking:merman_mask"
+            ]
+          },
+          {
+            "items": [
+              "maidensmerrymaking:merman_body"
+            ]
+          },
+          {
+            "items": [
+              "maidensmerrymaking:merman_tail"
+            ]
+          },
+          {
+            "items": [
+              "maidensmerrymaking:merman_fins"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "merman"
+    ]
+  ]
+}

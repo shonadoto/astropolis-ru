@@ -1,0 +1,54 @@
+{
+  "parent": "maidensmerrymaking:halloween/frightful_fashion",
+  "display": {
+    "title": {
+      "text": "Костюм русалки",
+      "color": "white"
+    },
+    "description": {
+      "text": "Найдите все части костюма русалки (алмазный уровень)",
+      "color": "dark_aqua"
+    },
+    "icon": {
+      "item": "maidensmerrymaking:mermaid_mask"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "mermaid": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "maidensmerrymaking:mermaid_mask"
+            ]
+          },
+          {
+            "items": [
+              "maidensmerrymaking:mermaid_body"
+            ]
+          },
+          {
+            "items": [
+              "maidensmerrymaking:mermaid_tail"
+            ]
+          },
+          {
+            "items": [
+              "maidensmerrymaking:mermaid_fins"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "mermaid"
+    ]
+  ]
+}

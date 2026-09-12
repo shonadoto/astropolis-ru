@@ -1,0 +1,53 @@
+{
+  "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+  "parent": "maidensmerrymaking:easter/root",
+  "display": {
+    "title": {
+      "text": "Яйц-ключительный вкус",
+      "color": "aqua"
+    },
+    "description": {
+      "text": "Соберите яйца всех 4 цветов, выпадающие из жёлтых куриц"
+    },
+    "icon": {
+      "item": "maidensmerrymaking:blue_egg"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "maidensmerrymaking:pink_egg"
+            ],
+            "count": 1
+          },
+          {
+            "items": [
+              "maidensmerrymaking:purple_egg"
+            ],
+            "count": 1
+          },
+          {
+            "items": [
+              "maidensmerrymaking:blue_egg"
+            ],
+            "count": 1
+          },
+          {
+            "items": [
+              "maidensmerrymaking:yellow_egg"
+            ],
+            "count": 1
+          }
+        ]
+      }
+    }
+  }
+}

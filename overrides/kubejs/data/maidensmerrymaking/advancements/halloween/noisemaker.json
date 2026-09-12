@@ -1,0 +1,36 @@
+{
+  "parent": "maidensmerrymaking:halloween/root",
+  "display": {
+    "icon": {
+      "item": "maidensmerrymaking:noisemaker",
+      "nbt": "{Damage:1}"
+    },
+    "title": {
+      "text": "Пошумим!",
+      "color": "white"
+    },
+    "description": {
+      "text": "Найдите трещотку в мешочке «Сладость или гадость».",
+      "color": "Green"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "maidensmerrymaking:noisemaker"
+            ],
+            "count": 1
+          }
+        ]
+      }
+    }
+  }
+}

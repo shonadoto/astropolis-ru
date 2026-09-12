@@ -1,0 +1,54 @@
+{
+  "parent": "maidensmerrymaking:halloween/frightful_fashion",
+  "display": {
+    "title": {
+      "text": "Костюм невесты",
+      "color": "white"
+    },
+    "description": {
+      "text": "Найдите все части костюма невесты (алмазный уровень)",
+      "color": "white"
+    },
+    "icon": {
+      "item": "maidensmerrymaking:bride_mask"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "bride": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "maidensmerrymaking:bride_mask"
+            ]
+          },
+          {
+            "items": [
+              "maidensmerrymaking:bride_body"
+            ]
+          },
+          {
+            "items": [
+              "maidensmerrymaking:bride_breeches"
+            ]
+          },
+          {
+            "items": [
+              "maidensmerrymaking:bride_boots"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "bride"
+    ]
+  ]
+}

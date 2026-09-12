@@ -1,0 +1,83 @@
+{
+  "parent": "maidensmerrymaking:easter/root",
+  "display": {
+    "icon": {
+      "item": "maidensmerrymaking:easter_basket_trophy_block"
+    },
+    "title": {
+      "text": "Яичный голод — высший класс!",
+      "color": "aqua"
+    },
+    "description": {
+      "text": "Найдите все разновидности пасхальных яиц!",
+      "color": "light_purple"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "loot": [
+      "maidensmerrymaking:easter_basket_trophy_loot"
+    ]
+  },
+  "criteria": {
+    "dotted_eggs": {
+      "trigger": "maidensmerrymaking:found_eggs",
+      "conditions": {
+        "advancement": "maidensmerrymaking:easter/find_eggs/polka_dots"
+      }
+    },
+    "chevron_eggs": {
+      "trigger": "maidensmerrymaking:found_eggs",
+      "conditions": {
+        "advancement": "maidensmerrymaking:easter/find_eggs/zigzags"
+      }
+    },
+    "fade_eggs": {
+      "trigger": "maidensmerrymaking:found_eggs",
+      "conditions": {
+        "advancement": "maidensmerrymaking:easter/find_eggs/fades"
+      }
+    },
+    "rainbow_egg": {
+      "trigger": "maidensmerrymaking:found_eggs",
+      "conditions": {
+        "advancement": "maidensmerrymaking:easter/find_eggs/rainbow"
+      }
+    },
+    "flower_eggs": {
+      "trigger": "maidensmerrymaking:found_eggs",
+      "conditions": {
+        "advancement": "maidensmerrymaking:easter/find_eggs/flowers"
+      }
+    },
+    "striped_eggs": {
+      "trigger": "maidensmerrymaking:found_eggs",
+      "conditions": {
+        "advancement": "maidensmerrymaking:easter/find_eggs/stripes"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "dotted_eggs"
+    ],
+    [
+      "striped_eggs"
+    ],
+    [
+      "rainbow_egg"
+    ],
+    [
+      "flower_eggs"
+    ],
+    [
+      "chevron_eggs"
+    ],
+    [
+      "fade_eggs"
+    ]
+  ]
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit Russian item/block localization coverage in the installed mod set."""
+"""Audit complete Russian localization coverage in the installed mod set."""
 
 from __future__ import annotations
 
@@ -20,6 +20,8 @@ OUTPUT = ROOT / "translation" / "mod_inventory.tsv"
 REGISTRY_ID_RE = re.compile(r'(?<![\w.-])([a-z0-9_.-]+):([a-z0-9_./-]+)')
 MOD_ID_RE = re.compile(r'^\s*modId\s*=\s*["\']([^"\']+)', re.MULTILINE)
 DISPLAY_NAME_RE = re.compile(r'^\s*displayName\s*=\s*["\']([^"\']+)', re.MULTILINE)
+CYRILLIC_RE = re.compile(r"[А-Яа-яЁё]")
+LATIN_WORD_RE = re.compile(r"\b[A-Za-z]{3,}\b")
 
 
 def read_json(raw: bytes) -> dict[str, str]:
@@ -32,6 +34,9 @@ def read_json(raw: bytes) -> dict[str, str]:
 
 def item_block_keys(values: dict[str, str], namespace: str) -> set[str]:
     prefixes = (f"item.{namespace}.", f"block.{namespace}.")
+    # Rechiseled 1.19.2 uses the legacy inverse form `rechiseled.block.*`.
+    if namespace == "rechiseled":
+        prefixes += ("rechiseled.item.", "rechiseled.block.")
     return {key for key in values if key.startswith(prefixes)}
 
 
@@ -85,25 +90,52 @@ def main() -> None:
                     en_keys = item_block_keys(en, namespace)
                     upstream_keys = item_block_keys(upstream_ru, namespace)
                     custom_keys = item_block_keys(custom_ru, namespace)
-                    covered = upstream_keys | custom_keys
-                    missing = en_keys - covered
-                    equal = {
+                    covered_item_blocks = upstream_keys | custom_keys
+                    missing_item_blocks = en_keys - covered_item_blocks
+                    merged_ru = {**upstream_ru, **custom_ru}
+                    covered_all = set(merged_ru)
+                    missing_all = set(en) - covered_all
+                    equal_item_blocks = {
                         key for key in en_keys & upstream_keys
                         if isinstance(en.get(key), str)
                         and en.get(key) == upstream_ru.get(key)
+                    }
+                    equal_all = {
+                        key for key in set(en) & covered_all
+                        if isinstance(en.get(key), str)
+                        and en.get(key) == merged_ru.get(key)
+                    }
+                    mixed = {
+                        key for key, value in merged_ru.items()
+                        if key in en
+                        and isinstance(value, str)
+                        and CYRILLIC_RE.search(value)
+                        and LATIN_WORD_RE.search(value)
                     }
                     refs = quest_ids.get(namespace, set())
                     quest_missing = {
                         registry_id for registry_id in refs
                         if not any(
-                            key in covered
-                            for key in (
+                            key in covered_item_blocks
+                            for key in ((
                                 f"item.{namespace}.{registry_id.split(':', 1)[1].replace('/', '.')}",
                                 f"block.{namespace}.{registry_id.split(':', 1)[1].replace('/', '.')}",
-                            )
+                            ) + ((
+                                f"rechiseled.item.{registry_id.split(':', 1)[1].replace('/', '.')}",
+                                f"rechiseled.block.{registry_id.split(':', 1)[1].replace('/', '.')}",
+                            ) if namespace == "rechiseled" else ()))
                         )
                     }
-                    priority = "DONE" if not missing else ("P0" if quest_missing else ("P1" if refs else "P2"))
+                    if quest_missing:
+                        priority = "P0"
+                    elif missing_all and refs:
+                        priority = "P1"
+                    elif missing_all:
+                        priority = "P2"
+                    elif mixed:
+                        priority = "REVIEW"
+                    else:
+                        priority = "DONE"
                     rows.append({
                         "priority": priority,
                         "namespace": namespace,
@@ -115,13 +147,18 @@ def main() -> None:
                         "en_item_block_keys": len(en_keys),
                         "upstream_ru_keys": len(upstream_keys),
                         "pack_ru_keys": len(custom_keys),
-                        "missing_ru_keys": len(missing),
-                        "upstream_equal_to_en": len(equal),
+                        "missing_ru_keys": len(missing_item_blocks),
+                        "upstream_equal_to_en": len(equal_item_blocks),
+                        "en_all_keys": len(en),
+                        "covered_all_keys": len(set(en) & covered_all),
+                        "missing_all_keys": len(missing_all),
+                        "equal_to_en_all": len(equal_all),
+                        "mixed_ru_en": len(mixed),
                     })
         except zipfile.BadZipFile:
             continue
 
-    order = {"P0": 0, "P1": 1, "P2": 2, "DONE": 3}
+    order = {"P0": 0, "P1": 1, "P2": 2, "REVIEW": 3, "DONE": 4}
     rows.sort(key=lambda row: (order[str(row["priority"])], -int(row["quest_refs"]), str(row["namespace"])))
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     fieldnames = list(rows[0]) if rows else []
@@ -132,8 +169,13 @@ def main() -> None:
 
     totals = Counter(str(row["priority"]) for row in rows)
     print(f"Wrote {OUTPUT}")
-    print("Namespaces: " + ", ".join(f"{key}={totals[key]}" for key in ("P0", "P1", "P2", "DONE")))
+    print("Namespaces: " + ", ".join(f"{key}={totals[key]}" for key in ("P0", "P1", "P2", "REVIEW", "DONE")))
     print(f"Missing item/block keys: {sum(int(row['missing_ru_keys']) for row in rows)}")
+    all_keys = sum(int(row["en_all_keys"]) for row in rows)
+    missing_all = sum(int(row["missing_all_keys"]) for row in rows)
+    print(f"All language keys: {all_keys - missing_all}/{all_keys} covered ({missing_all} missing)")
+    print(f"Covered strings equal to English: {sum(int(row['equal_to_en_all']) for row in rows)}")
+    print(f"Mixed Cyrillic/Latin strings to review: {sum(int(row['mixed_ru_en']) for row in rows)}")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,53 @@
+{
+  "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+  "parent": "maidensmerrymaking:easter/eggstraordinaire",
+  "display": {
+    "title": {
+      "text": "Найдите все полосатые яйца",
+      "color": "aqua"
+    },
+    "description": {
+      "text": "Соберите яйца этого вида"
+    },
+    "icon": {
+      "item": "maidensmerrymaking:purple_stripes_easter_egg_block"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "maidensmerrymaking:cyan_monochrome_easter_egg_block"
+            ],
+            "count": 1
+          },
+          {
+            "items": [
+              "maidensmerrymaking:yellow_monochrome_easter_egg_block"
+            ],
+            "count": 1
+          },
+          {
+            "items": [
+              "maidensmerrymaking:pink_monochrome_easter_egg_block"
+            ],
+            "count": 1
+          },
+          {
+            "items": [
+              "maidensmerrymaking:purple_stripes_easter_egg_block"
+            ],
+            "count": 1
+          }
+        ]
+      }
+    }
+  }
+}

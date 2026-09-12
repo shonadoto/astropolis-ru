@@ -1,0 +1,36 @@
+{
+  "parent": "maidensmerrymaking:st_pat/root",
+  "display": {
+    "icon": {
+      "item": "maidensmerrymaking:four_leaf_clover",
+      "nbt": "{Damage:1}"
+    },
+    "title": {
+      "text": "Повезло!",
+      "color": "white"
+    },
+    "description": {
+      "text": "Найдите и используйте четырёхлистный клевер, чтобы привлечь удачу.",
+      "color": "dark_green"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "maidensmerrymaking:four_leaf_clover"
+            ],
+            "count": 1
+          }
+        ]
+      }
+    }
+  }
+}

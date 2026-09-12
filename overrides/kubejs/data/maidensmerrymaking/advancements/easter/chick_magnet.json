@@ -1,0 +1,38 @@
+{
+  "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+  "parent": "maidensmerrymaking:easter/root",
+  "display": {
+    "title": {
+      "text": "Цыплячий магнит",
+      "color": "yellow"
+    },
+    "description": {
+      "text": "Разведите двух жёлтых куриц",
+      "color": "white"
+    },
+    "icon": {
+      "item": "maidensmerrymaking:colored_chicken_spawn_egg"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "parent": {
+          "type": "maidensmerrymaking:colored_chicken"
+        },
+        "partner": {
+          "type": "maidensmerrymaking:colored_chicken"
+        },
+        "child": {
+          "type": "maidensmerrymaking:colored_chicken"
+        }
+      }
+    }
+  }
+}

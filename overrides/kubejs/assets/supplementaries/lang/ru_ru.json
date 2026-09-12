@@ -6,5 +6,7 @@
   "block.supplementaries.structure_temp": "0",
   "item.supplementaries.cartographers_quill": "Перо картографа",
   "item.supplementaries.altimeter": "Высотомер",
-  "item.supplementaries.slice_map": "Карта-срез"
+  "item.supplementaries.slice_map": "Карта-срез",
+  "block.supplementaries.hanging_sign": "Висячая табличка",
+  "item.supplementaries.sign_post": "Указатель"
 }

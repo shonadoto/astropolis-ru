@@ -1,0 +1,79 @@
+{
+  "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+  "parent": "maidensmerrymaking:easter/root",
+  "display": {
+    "title": {
+      "text": "Отличные кролики!",
+      "color": "aqua"
+    },
+    "description": {
+      "text": "Приручите кроликов всех 5 окрасов."
+    },
+    "icon": {
+      "item": "minecraft:carrot"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "pink_bun": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "maidensmerrymaking:pink_bunny"
+        }
+      }
+    },
+    "purple_bun": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "maidensmerrymaking:purple_bunny"
+        }
+      }
+    },
+    "blue_bun": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "maidensmerrymaking:blue_bunny"
+        }
+      }
+    },
+    "yellow_bun": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "maidensmerrymaking:cyan_bunny"
+        }
+      }
+    },
+    "cyan_bun": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "maidensmerrymaking:yellow_bunny"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "pink_bun"
+    ],
+    [
+      "purple_bun"
+    ],
+    [
+      "blue_bun"
+    ],
+    [
+      "yellow_bun"
+    ],
+    [
+      "cyan_bun"
+    ]
+  ]
+}

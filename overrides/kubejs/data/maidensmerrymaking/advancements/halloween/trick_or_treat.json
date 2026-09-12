@@ -1,0 +1,36 @@
+{
+  "parent": "maidensmerrymaking:halloween/root",
+  "display": {
+    "icon": {
+      "item": "maidensmerrymaking:trick_or_treat_bag",
+      "nbt": "{Damage:1}"
+    },
+    "title": {
+      "text": "Сладость или гадость!",
+      "color": "white"
+    },
+    "description": {
+      "text": "Получите мешочек «Сладость или гадость» от монстра в костюме.",
+      "color": "Orange"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "maidensmerrymaking:trick_or_treat_bag"
+            ],
+            "count": 1
+          }
+        ]
+      }
+    }
+  }
+}

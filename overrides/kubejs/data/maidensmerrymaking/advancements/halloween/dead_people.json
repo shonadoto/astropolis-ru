@@ -1,0 +1,55 @@
+{
+  "parent": "maidensmerrymaking:halloween/root",
+  "display": {
+    "icon": {
+      "item": "maidensmerrymaking:gravestone_plain",
+      "nbt": "{Damage:1}"
+    },
+    "title": {
+      "text": "Я вижу мёртвых",
+      "color": "white"
+    },
+    "description": {
+      "text": "Замените надгробие. Вы на 99% уверены, что оно не проклято.",
+      "color": "light_gray"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "place_grave_1": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "maidensmerrymaking:gravestone_plain"
+      }
+    },
+    "place_grave_2": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "maidensmerrymaking:gravestone_topped"
+      }
+    },
+    "place_grave_3": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "maidensmerrymaking:gravestone_cross"
+      }
+    },
+    "place_grave_4": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "maidensmerrymaking:gravestone_obelisk"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "place_grave_1",
+      "place_grave_2",
+      "place_grave_3",
+      "place_grave_4"
+    ]
+  ]
+}

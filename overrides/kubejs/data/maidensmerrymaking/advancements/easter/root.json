@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "maidensmerrymaking:easter_basket_block"
+    },
+    "title": {
+      "text": "Пасха",
+      "color": "white"
+    },
+    "description": {
+      "text": "Откройте вкладку пасхальных достижений",
+      "color": "light_purple"
+    },
+    "background": "minecraft:textures/block/purpur_block.png",
+    "frame": "challenge",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:enter_block",
+      "conditions": {
+        "block": "minecraft:grass"
+      }
+    }
+  }
+}
