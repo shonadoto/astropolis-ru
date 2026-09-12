@@ -2,8 +2,6 @@ priority	namespace	mod_name	jar	quest_refs	quest_ids	quest_ids_without_ru	en_ite
 P0	immersiveengineering	Immersive Engineering	231951-5222176.jar	91	59	1	579	541	0	38	51
 P0	ae2	Applied Energistics 2	223794-5014801.jar	65	57	10	381	321	0	60	0
 P0	caveopolis	Caveopolis	639186-4556334.jar	39	22	22	204	0	0	204	0
-P0	neverenderore	Never Ender Ore	678083-4082134.jar	22	21	21	46	0	0	46	0
-P0	functionalstorage	Functional Storage	556861-4992914.jar	7	6	6	56	0	0	56	0
 P0	rftoolsbase	RFToolsBase	326041-4474182.jar	4	4	4	24	0	0	24	0
 P0	rftoolsutility	RFToolsUtility	342466-4938948.jar	4	4	4	71	0	0	71	0
 P1	sophisticatedbackpacks	Sophisticated Backpacks	422301-5194759.jar	17	9	0	111	107	0	16	0
@@ -39,11 +37,13 @@ DONE	geodeopolis	Geodeopolis	688774-4101868.jar	56	52	0	134	0	134	0	0
 DONE	mekanism	Mekanism	268560-4644795.jar	48	46	0	367	367	0	0	0
 DONE	cosmopolis	Cosmopolis	556904-4101838.jar	40	34	0	71	0	71	0	0
 DONE	elevatorid	Elevator Mod	250832-4859577.jar	32	16	0	16	16	0	0	0
+DONE	neverenderore	Never Ender Ore	678083-4082134.jar	22	21	0	46	0	46	0	0
 DONE	mekanismgenerators	Mekanism: Generators	268566-4644798.jar	13	13	0	35	35	0	0	0
 DONE	itemfilters	Item Filters	309674-4553326.jar	12	1	0	33	33	0	0	0
 DONE	fluxnetworks	Flux Networks	248020-4620438.jar	11	6	0	11	11	0	0	0
 DONE	compactmachines	Compact Machines 5	224218-3907274.jar	10	8	5	15	11	5	0	0
 DONE	engineersdecor	Engineer	313866-4672319.jar	10	10	0	217	217	0	0	1
+DONE	functionalstorage	Functional Storage	556861-4992914.jar	7	6	1	56	0	56	0	0
 DONE	jetboots	Jet Boots	373208-4014989.jar	7	6	0	15	0	15	0	0
 DONE	enderstorage	EnderStorage	245174-3951059.jar	4	2	0	3	3	0	0	0
 DONE	pipez	Pipez	443900-4916626.jar	4	4	0	12	12	0	0	0
