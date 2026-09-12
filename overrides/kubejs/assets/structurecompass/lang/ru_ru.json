@@ -1,0 +1,25 @@
+{
+  "_comment": "Управление",
+  "itemGroup.structurecompass": "Компас структур",
+  "structurecompass.screen.selection.title": "Выбор структуры",
+  "structurecompass.screen.selection.select": "Выбрать",
+  "structurecompass.screen.selection.selected": "Структура выбрана. Нажмите ПКМ с компасом, чтобы найти её.",
+  "structurecompass.screen.search": "Поиск",
+  "structurecompass.screen.search.a_to_z": "А–Я",
+  "structurecompass.screen.search.z_to_a": "Я–А",
+  "item.structurecompass.structure_compass": "Компас структур",
+  "structurecompass.locate.invalid": "Выбранная структура недействительна. Выберите её заново.",
+  "structurecompass.locate.fail": "Не удалось найти выбранную структуру поблизости.",
+  "structurecompass.locate.distance": "До выбранной структуры: %s блоков",
+  "structurecompass.locate.toggled": "Интерфейс компаса структур: %s",
+  "structurecompass.structure.locating": "Идёт поиск %s, подождите…",
+  "structurecompass.structure.found": "Структура %s найдена в %s блоках отсюда. Компас указывает в её сторону.",
+  "structurecompass.structure.found.tooltip": "Структура %s найдена. Компас указывает в её сторону.",
+  "structurecompass.structure.failed": "Не удалось найти %s в радиусе %s блоков. Исследуйте местность и повторите попытку.",
+  "structurecompass.structure.failed.tooltip": "Не удалось найти %s. Попробуйте ещё раз позже.",
+  "structurecompass.structure.wrong_dimension.tooltip": "Вы находитесь не в том измерении, где была найдена структура %s.",
+  "structurecompass.structure.unset.tooltip": "Структура не выбрана. Нажмите Shift+ПКМ, чтобы выбрать её.",
+  "category.structurecompass.main": "Компас структур",
+  "key.structurecompass.hide": "Скрыть интерфейс компаса структур"
+}
+
