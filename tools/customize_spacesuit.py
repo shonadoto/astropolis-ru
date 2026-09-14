@@ -2,8 +2,9 @@
 """Create the Astropolis RU spacesuit texture overrides.
 
 The Cosmopolis suit uses the legacy 64x32 humanoid armor atlas.  This script
-replaces the opaque helmet with short hair and a small kippah, adds a small
-front/back number and an upper-arm tricolour band, and builds a matching icon.
+replaces the opaque helmet with a reptilian face, short hair, a small kippah
+and long sidelocks, adds a small front/back number and an upper-arm tricolour
+band, and builds a matching icon.
 """
 
 from __future__ import annotations
@@ -45,6 +46,12 @@ HAIR = (
 KIPPAH_DARK = (10, 18, 45, 255)
 KIPPAH = (20, 38, 87, 255)
 KIPPAH_LIGHT = (39, 65, 126, 255)
+PAYOT = ((23, 15, 10, 255), (49, 31, 19, 255), (76, 48, 28, 255))
+REPTILE_DARK = (28, 66, 35, 255)
+REPTILE = (48, 105, 51, 255)
+REPTILE_LIGHT = (78, 139, 66, 255)
+REPTILE_EYE = (226, 193, 38, 255)
+REPTILE_PUPIL = (7, 12, 7, 255)
 TRANSPARENT = (0, 0, 0, 0)
 
 
@@ -178,7 +185,7 @@ def fill_hair(
 
 
 def draw_hair_and_kippah(pixels: bytearray, width: int) -> None:
-    """Replace the legacy helmet UV with short hair and a small skullcap."""
+    """Build a reptilian head with short hair, a skullcap and sidelocks."""
     # Clear the old opaque spacesuit helmet, including its underside and visor.
     for y in range(0, 8):
         for x in range(8, 24):
@@ -221,6 +228,43 @@ def draw_hair_and_kippah(pixels: bytearray, width: int) -> None:
         for x in range(x0 + 2, x0 + 6):
             set_pixel(pixels, width, x, 8, KIPPAH_DARK if x in (x0 + 2, x0 + 5) else KIPPAH)
 
+    # Reptilian face on the front head face (x=8..15).  The darker alternating
+    # pixels suggest scales; bright yellow eyes and a flat snout keep it
+    # readable at the native eight-pixel face resolution.
+    for y in range(11, 16):
+        for x in range(9, 15):
+            colour = REPTILE_LIGHT if (x * 3 + y) % 7 == 0 else REPTILE
+            set_pixel(pixels, width, x, y, colour)
+    set_pixel(pixels, width, 10, 12, REPTILE_EYE)
+    set_pixel(pixels, width, 13, 12, REPTILE_EYE)
+    set_pixel(pixels, width, 10, 13, REPTILE_PUPIL)
+    set_pixel(pixels, width, 13, 13, REPTILE_PUPIL)
+    set_pixel(pixels, width, 11, 14, REPTILE_DARK)
+    set_pixel(pixels, width, 12, 14, REPTILE_DARK)
+    for x in range(10, 14):
+        set_pixel(pixels, width, x, 15, REPTILE_DARK)
+
+    # Sidelocks begin at the front corners of the head and continue down the
+    # two torso side faces.  The alternating columns create a loose curl while
+    # keeping the chest and both "67" markings clear.
+    for index, y in enumerate(range(11, 16)):
+        offset = index % 2
+        colour = PAYOT[index % len(PAYOT)]
+        set_pixel(pixels, width, 8 + offset, y, colour)
+        set_pixel(pixels, width, 15 - offset, y, colour)
+
+    curl_pattern = (0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1)
+    for index, y in enumerate(range(20, 32)):
+        offset = curl_pattern[index]
+        colour = PAYOT[index % len(PAYOT)]
+        left_x = 19 - offset
+        right_x = 28 + offset
+        set_pixel(pixels, width, left_x, y, colour)
+        set_pixel(pixels, width, right_x, y, colour)
+        if index in (2, 5, 8, 11):
+            set_pixel(pixels, width, 19 - (1 - offset), y, PAYOT[0])
+            set_pixel(pixels, width, 28 + (1 - offset), y, PAYOT[0])
+
 
 def build_helmet_icon(source: bytes) -> bytes:
     width, height, pixels = decode_rgba(source)
@@ -231,7 +275,7 @@ def build_helmet_icon(source: bytes) -> bytes:
         for x in range(width):
             set_pixel(pixels, width, x, y, TRANSPARENT)
 
-    # Compact inventory sprite: a curved kippah with a narrow hair edge.
+    # Compact inventory sprite: kippah, hair, reptilian face and sidelocks.
     icon_rows = {
         4: (7, 8),
         5: (5, 10),
@@ -250,6 +294,28 @@ def build_helmet_icon(source: bytes) -> bytes:
             set_pixel(pixels, width, x, y, colour)
     for x in range(4, 12):
         set_pixel(pixels, width, x, 9, hair_pixel(x, 9, 10))
+    for y in range(10, 15):
+        for x in range(5, 11):
+            set_pixel(
+                pixels,
+                width,
+                x,
+                y,
+                REPTILE_LIGHT if (x + y * 2) % 7 == 0 else REPTILE,
+            )
+    set_pixel(pixels, width, 6, 11, REPTILE_EYE)
+    set_pixel(pixels, width, 9, 11, REPTILE_EYE)
+    set_pixel(pixels, width, 6, 12, REPTILE_PUPIL)
+    set_pixel(pixels, width, 9, 12, REPTILE_PUPIL)
+    set_pixel(pixels, width, 7, 13, REPTILE_DARK)
+    set_pixel(pixels, width, 8, 13, REPTILE_DARK)
+    for x in range(6, 10):
+        set_pixel(pixels, width, x, 14, REPTILE_DARK)
+    for index, y in enumerate(range(9, 15)):
+        offset = index % 2
+        colour = PAYOT[index % len(PAYOT)]
+        set_pixel(pixels, width, 4 + offset, y, colour)
+        set_pixel(pixels, width, 11 - offset, y, colour)
     return encode_rgba(width, height, pixels)
 
 
