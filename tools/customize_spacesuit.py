@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Create the Astropolis RU spacesuit texture override.
+"""Create the Astropolis RU spacesuit texture overrides.
 
 The Cosmopolis suit uses the legacy 64x32 humanoid armor atlas.  This script
-keeps the original atlas byte-for-byte at the pixel level except for a small
-front/back number and an upper-arm tricolour band.
+adds a fur shtreimel-style helmet with sidelocks, a small front/back number,
+an upper-arm tricolour band, and a matching inventory icon.
 """
 
 from __future__ import annotations
@@ -17,10 +17,12 @@ from zipfile import ZipFile
 
 ROOT = Path(__file__).resolve().parent.parent
 MEMBER = "assets/cosmopolis/textures/models/armor/space_suit_layer_1.png"
+ITEM_MEMBER = "assets/cosmopolis/textures/item/space_suit_helmet.png"
 OUTPUT = (
     ROOT
     / "overrides/kubejs/assets/cosmopolis/textures/models/armor/space_suit_layer_1.png"
 )
+ITEM_OUTPUT = ROOT / "overrides/kubejs/assets/cosmopolis/textures/item/space_suit_helmet.png"
 
 
 def find_cosmopolis_jar() -> Path:
@@ -32,6 +34,17 @@ def find_cosmopolis_jar() -> Path:
         except Exception:
             continue
     raise SystemExit("Could not find the Cosmopolis mod jar")
+
+
+FUR = (
+    (31, 20, 14, 255),
+    (45, 29, 20, 255),
+    (58, 38, 26, 255),
+    (72, 47, 31, 255),
+    (87, 57, 37, 255),
+)
+PAYOT = ((25, 17, 12, 255), (49, 31, 21, 255), (72, 46, 30, 255))
+TRANSPARENT = (0, 0, 0, 0)
 
 
 def paeth(left: int, above: int, upper_left: int) -> int:
@@ -141,12 +154,92 @@ def draw_number(pixels: bytearray, width: int, x: int, y: int) -> None:
         cursor += 4
 
 
+def fur_pixel(x: int, y: int, salt: int = 0) -> tuple[int, int, int, int]:
+    """Return a deterministic, high-contrast pixel-fur colour."""
+    value = (x * 17 + y * 29 + x * y * 7 + salt * 13) % 19
+    if value in (0, 1):
+        return FUR[4]
+    if value in (2, 3, 4):
+        return FUR[0]
+    return FUR[1 + (value % 3)]
+
+
+def fill_fur(
+    pixels: bytearray,
+    width: int,
+    x0: int,
+    y0: int,
+    x1: int,
+    y1: int,
+    salt: int = 0,
+) -> None:
+    for y in range(y0, y1 + 1):
+        for x in range(x0, x1 + 1):
+            set_pixel(pixels, width, x, y, fur_pixel(x, y, salt))
+
+
+def draw_shtreimel(pixels: bytearray, width: int) -> None:
+    """Paint the standard legacy helmet UV as a fur hat with visible sidelocks."""
+    # Head top and underside.
+    fill_fur(pixels, width, 8, 0, 15, 7, 1)
+    fill_fur(pixels, width, 16, 0, 23, 7, 2)
+
+    # The upper five pixels of every head face form a thick, continuous fur hat.
+    fill_fur(pixels, width, 0, 8, 31, 12, 3)
+
+    # Remove the old spacesuit visor below the brim so the player's face shows.
+    for y in range(13, 16):
+        for x in range(0, 32):
+            set_pixel(pixels, width, x, y, TRANSPARENT)
+
+    # Short curls on the two lower corners of the front head face.
+    for index, y in enumerate(range(13, 16)):
+        set_pixel(pixels, width, 8 + (index % 2), y, PAYOT[index % len(PAYOT)])
+        set_pixel(pixels, width, 15 - (index % 2), y, PAYOT[index % len(PAYOT)])
+
+    # Continue the curls over the two torso side faces.  These columns sit next
+    # to the chest front, leaving both front and back "67" markings untouched.
+    left_curl = ((19, 20), (18, 21), (19, 22), (18, 23), (19, 24), (18, 25), (19, 26))
+    right_curl = ((28, 20), (29, 21), (28, 22), (29, 23), (28, 24), (29, 25), (28, 26))
+    for index, ((lx, ly), (rx, ry)) in enumerate(zip(left_curl, right_curl)):
+        colour = PAYOT[index % len(PAYOT)]
+        set_pixel(pixels, width, lx, ly, colour)
+        set_pixel(pixels, width, rx, ry, colour)
+
+
+def build_helmet_icon(source: bytes) -> bytes:
+    width, height, pixels = decode_rgba(source)
+    if (width, height) != (16, 16):
+        raise SystemExit(f"Unexpected helmet icon size: {width}x{height}")
+
+    for y in range(height):
+        for x in range(width):
+            set_pixel(pixels, width, x, y, TRANSPARENT)
+
+    # Broad fur crown with slightly rounded corners.
+    for y in range(2, 9):
+        inset = 1 if y in (2, 8) else 0
+        for x in range(2 + inset, 14 - inset):
+            set_pixel(pixels, width, x, y, fur_pixel(x, y, 7))
+    for x in range(2, 14):
+        set_pixel(pixels, width, x, 7, FUR[0 if x % 3 == 0 else 2])
+
+    # Two twisted sidelocks below the hat.
+    for index, y in enumerate(range(9, 15)):
+        offset = index % 2
+        set_pixel(pixels, width, 4 + offset, y, PAYOT[index % len(PAYOT)])
+        set_pixel(pixels, width, 11 - offset, y, PAYOT[index % len(PAYOT)])
+    return encode_rgba(width, height, pixels)
+
+
 def main() -> None:
     source_jar = find_cosmopolis_jar()
     with ZipFile(source_jar) as archive:
         width, height, pixels = decode_rgba(archive.read(MEMBER))
     if (width, height) != (64, 32):
         raise SystemExit(f"Unexpected armor atlas size: {width}x{height}")
+
+    draw_shtreimel(pixels, width)
 
     # Torso front (20..27) and back (32..39), centered vertically.
     draw_number(pixels, width, 20, 23)
@@ -161,7 +254,12 @@ def main() -> None:
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_bytes(encode_rgba(width, height, pixels))
+    with ZipFile(source_jar) as archive:
+        item_png = build_helmet_icon(archive.read(ITEM_MEMBER))
+    ITEM_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    ITEM_OUTPUT.write_bytes(item_png)
     print(f"Built {OUTPUT.relative_to(ROOT)} from {source_jar.name}")
+    print(f"Built {ITEM_OUTPUT.relative_to(ROOT)} from {source_jar.name}")
 
 
 if __name__ == "__main__":
