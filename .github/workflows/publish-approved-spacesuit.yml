@@ -48,3 +48,5 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh release upload resourcepack-latest dist/Astropolis-RU-ResourcePack-2.2-ru.1.zip --clobber
+
+# Approved armband revision: 784af74042e99cd7b5f0a84d4f1131ccf2e233a5
