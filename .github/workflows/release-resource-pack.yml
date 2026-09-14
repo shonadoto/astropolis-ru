@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "overrides/kubejs/assets/**/lang/ru_ru.json"
+      - "overrides/kubejs/assets/**"
       - "tools/build_resource_pack.py"
       - ".github/workflows/release-resource-pack.yml"
 

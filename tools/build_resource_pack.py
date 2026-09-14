@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the client-side Astropolis RU language resource pack."""
+"""Build the client-side Astropolis RU resource pack."""
 
 from __future__ import annotations
 
@@ -44,7 +44,7 @@ def main() -> None:
             zip_info("pack.mcmeta"),
             json.dumps(pack_meta, ensure_ascii=False, indent=2).encode("utf-8") + b"\n",
         )
-        for path in language_files:
+        for path in sorted(path for path in ASSETS.rglob("*") if path.is_file()):
             archive.writestr(
                 zip_info((Path("assets") / path.relative_to(ASSETS)).as_posix()),
                 path.read_bytes(),
