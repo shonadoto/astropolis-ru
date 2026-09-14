@@ -2,8 +2,8 @@
 """Create the Astropolis RU spacesuit texture overrides.
 
 The Cosmopolis suit uses the legacy 64x32 humanoid armor atlas.  This script
-adds a fur shtreimel-style helmet with sidelocks, a small front/back number,
-an upper-arm tricolour band, and a matching inventory icon.
+replaces the opaque helmet with short hair and a small kippah, adds a small
+front/back number and an upper-arm tricolour band, and builds a matching icon.
 """
 
 from __future__ import annotations
@@ -36,14 +36,15 @@ def find_cosmopolis_jar() -> Path:
     raise SystemExit("Could not find the Cosmopolis mod jar")
 
 
-FUR = (
-    (31, 20, 14, 255),
-    (45, 29, 20, 255),
-    (58, 38, 26, 255),
-    (72, 47, 31, 255),
-    (87, 57, 37, 255),
+HAIR = (
+    (29, 19, 13, 255),
+    (43, 28, 18, 255),
+    (59, 38, 23, 255),
+    (76, 49, 29, 255),
 )
-PAYOT = ((25, 17, 12, 255), (49, 31, 21, 255), (72, 46, 30, 255))
+KIPPAH_DARK = (10, 18, 45, 255)
+KIPPAH = (20, 38, 87, 255)
+KIPPAH_LIGHT = (39, 65, 126, 255)
 TRANSPARENT = (0, 0, 0, 0)
 
 
@@ -154,17 +155,15 @@ def draw_number(pixels: bytearray, width: int, x: int, y: int) -> None:
         cursor += 4
 
 
-def fur_pixel(x: int, y: int, salt: int = 0) -> tuple[int, int, int, int]:
-    """Return a deterministic, high-contrast pixel-fur colour."""
-    value = (x * 17 + y * 29 + x * y * 7 + salt * 13) % 19
+def hair_pixel(x: int, y: int, salt: int = 0) -> tuple[int, int, int, int]:
+    """Return a deterministic dark-brown pixel-hair colour."""
+    value = (x * 17 + y * 29 + x * y * 7 + salt * 13) % 13
     if value in (0, 1):
-        return FUR[4]
-    if value in (2, 3, 4):
-        return FUR[0]
-    return FUR[1 + (value % 3)]
+        return HAIR[0]
+    return HAIR[1 + (value % 3)]
 
 
-def fill_fur(
+def fill_hair(
     pixels: bytearray,
     width: int,
     x0: int,
@@ -175,36 +174,52 @@ def fill_fur(
 ) -> None:
     for y in range(y0, y1 + 1):
         for x in range(x0, x1 + 1):
-            set_pixel(pixels, width, x, y, fur_pixel(x, y, salt))
+            set_pixel(pixels, width, x, y, hair_pixel(x, y, salt))
 
 
-def draw_shtreimel(pixels: bytearray, width: int) -> None:
-    """Paint the standard legacy helmet UV as a fur hat with visible sidelocks."""
-    # Head top and underside.
-    fill_fur(pixels, width, 8, 0, 15, 7, 1)
-    fill_fur(pixels, width, 16, 0, 23, 7, 2)
-
-    # The upper five pixels of every head face form a thick, continuous fur hat.
-    fill_fur(pixels, width, 0, 8, 31, 12, 3)
-
-    # Remove the old spacesuit visor below the brim so the player's face shows.
-    for y in range(13, 16):
+def draw_hair_and_kippah(pixels: bytearray, width: int) -> None:
+    """Replace the legacy helmet UV with short hair and a small skullcap."""
+    # Clear the old opaque spacesuit helmet, including its underside and visor.
+    for y in range(0, 8):
+        for x in range(8, 24):
+            set_pixel(pixels, width, x, y, TRANSPARENT)
+    for y in range(8, 16):
         for x in range(0, 32):
             set_pixel(pixels, width, x, y, TRANSPARENT)
 
-    # Short curls on the two lower corners of the front head face.
-    for index, y in enumerate(range(13, 16)):
-        set_pixel(pixels, width, 8 + (index % 2), y, PAYOT[index % len(PAYOT)])
-        set_pixel(pixels, width, 15 - (index % 2), y, PAYOT[index % len(PAYOT)])
+    # Hair on the top, sides and back of the head.  The central front remains
+    # transparent so each player's own face texture is visible through it.
+    fill_hair(pixels, width, 8, 0, 15, 7, 1)
+    fill_hair(pixels, width, 0, 9, 7, 12, 2)
+    fill_hair(pixels, width, 16, 9, 23, 12, 3)
+    fill_hair(pixels, width, 24, 9, 31, 13, 4)
+    fill_hair(pixels, width, 8, 9, 15, 10, 5)
+    for x in (8, 9, 11, 14, 15):
+        set_pixel(pixels, width, x, 11, hair_pixel(x, 11, 6))
+    for y in range(11, 14):
+        set_pixel(pixels, width, 8, y, hair_pixel(8, y, 7))
+        set_pixel(pixels, width, 15, y, hair_pixel(15, y, 8))
+    for x in (24, 26, 28, 31):
+        set_pixel(pixels, width, x, 14, hair_pixel(x, 14, 9))
 
-    # Continue the curls over the two torso side faces.  These columns sit next
-    # to the chest front, leaving both front and back "67" markings untouched.
-    left_curl = ((19, 20), (18, 21), (19, 22), (18, 23), (19, 24), (18, 25), (19, 26))
-    right_curl = ((28, 20), (29, 21), (28, 22), (29, 23), (28, 24), (29, 25), (28, 26))
-    for index, ((lx, ly), (rx, ry)) in enumerate(zip(left_curl, right_curl)):
-        colour = PAYOT[index % len(PAYOT)]
-        set_pixel(pixels, width, lx, ly, colour)
-        set_pixel(pixels, width, rx, ry, colour)
+    # Small rounded dark-navy kippah centred on the top face.
+    cap_rows = {
+        1: (11, 12),
+        2: (10, 13),
+        3: (9, 14),
+        4: (10, 13),
+    }
+    for y, (x0, x1) in cap_rows.items():
+        for x in range(x0, x1 + 1):
+            colour = KIPPAH_LIGHT if (x + y) % 5 == 0 else KIPPAH
+            set_pixel(pixels, width, x, y, colour)
+    for x in (9, 14):
+        set_pixel(pixels, width, x, 3, KIPPAH_DARK)
+
+    # A one-pixel rim makes the cap readable from normal third-person angles.
+    for x0 in (0, 8, 16, 24):
+        for x in range(x0 + 2, x0 + 6):
+            set_pixel(pixels, width, x, 8, KIPPAH_DARK if x in (x0 + 2, x0 + 5) else KIPPAH)
 
 
 def build_helmet_icon(source: bytes) -> bytes:
@@ -216,19 +231,25 @@ def build_helmet_icon(source: bytes) -> bytes:
         for x in range(width):
             set_pixel(pixels, width, x, y, TRANSPARENT)
 
-    # Broad fur crown with slightly rounded corners.
-    for y in range(2, 9):
-        inset = 1 if y in (2, 8) else 0
-        for x in range(2 + inset, 14 - inset):
-            set_pixel(pixels, width, x, y, fur_pixel(x, y, 7))
-    for x in range(2, 14):
-        set_pixel(pixels, width, x, 7, FUR[0 if x % 3 == 0 else 2])
-
-    # Two twisted sidelocks below the hat.
-    for index, y in enumerate(range(9, 15)):
-        offset = index % 2
-        set_pixel(pixels, width, 4 + offset, y, PAYOT[index % len(PAYOT)])
-        set_pixel(pixels, width, 11 - offset, y, PAYOT[index % len(PAYOT)])
+    # Compact inventory sprite: a curved kippah with a narrow hair edge.
+    icon_rows = {
+        4: (7, 8),
+        5: (5, 10),
+        6: (4, 11),
+        7: (3, 12),
+        8: (3, 12),
+    }
+    for y, (x0, x1) in icon_rows.items():
+        for x in range(x0, x1 + 1):
+            if y == 8 or x in (x0, x1):
+                colour = KIPPAH_DARK
+            elif (x + y) % 5 == 0:
+                colour = KIPPAH_LIGHT
+            else:
+                colour = KIPPAH
+            set_pixel(pixels, width, x, y, colour)
+    for x in range(4, 12):
+        set_pixel(pixels, width, x, 9, hair_pixel(x, 9, 10))
     return encode_rgba(width, height, pixels)
 
 
@@ -239,7 +260,7 @@ def main() -> None:
     if (width, height) != (64, 32):
         raise SystemExit(f"Unexpected armor atlas size: {width}x{height}")
 
-    draw_shtreimel(pixels, width)
+    draw_hair_and_kippah(pixels, width)
 
     # Torso front (20..27) and back (32..39), centered vertically.
     draw_number(pixels, width, 20, 23)
