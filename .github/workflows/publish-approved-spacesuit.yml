@@ -1,0 +1,50 @@
+name: Publish approved spacesuit
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/publish-approved-spacesuit.yml"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: resource-pack-release
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Restore approved textures and check archive
+        run: |
+          python3 - <<'PY'
+          import base64, json
+          from pathlib import Path
+          bundle = json.loads(Path("tools/spacesuit-approved-deployment.json").read_text())
+          prefix = "overrides/kubejs/assets/cosmopolis/textures/"
+          for name, data in bundle["files"].items():
+              assert name.startswith(prefix) and ".." not in Path(name).parts and name.endswith(".png")
+              path = Path(name)
+              path.parent.mkdir(parents=True, exist_ok=True)
+              path.write_bytes(base64.b64decode(data, validate=True))
+          PY
+          python3 tools/build_resource_pack.py
+          python3 - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          expected = json.loads(Path("tools/spacesuit-approved-deployment.json").read_text())["pack_sha1"]
+          actual = hashlib.sha1(Path("dist/Astropolis-RU-ResourcePack-2.2-ru.1.zip").read_bytes()).hexdigest()
+          assert actual == expected, (actual, expected)
+          PY
+      - name: Save textures in repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add overrides/kubejs/assets/cosmopolis/textures
+          if ! git diff --cached --quiet; then
+            git commit -m "Deploy approved spacesuit artwork"
+            git push
+          fi
+      - name: Publish resource pack
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload resourcepack-latest dist/Astropolis-RU-ResourcePack-2.2-ru.1.zip --clobber
